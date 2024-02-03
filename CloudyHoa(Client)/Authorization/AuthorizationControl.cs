@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CloudyHoa_Client_
+namespace CloudyHoa_Client_.Authorization
 {
-    public partial class Form1 : Form
+    public partial class AuthorizationControl : UserControl
     {
-        public Form1()
+        public AuthorizationControl()
         {
             InitializeComponent();
         }
