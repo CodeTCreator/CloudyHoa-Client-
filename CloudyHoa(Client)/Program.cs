@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CloudyHoa_Client_.Authorization;
+using CloudyHoa_Client_.General;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +18,27 @@ namespace CloudyHoa_Client_
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            if (Auth())
+            {
+                Application.Run(new MainForm.MainForm());
+            }
+        }
+        static bool Auth()
+        {
+            var authService = new AuthService();
+            string login = default;
+            string password = default;
+            bool remember = false;
+            bool auto = false;
+
+            authService.LoadSecure(out login, out password);
+            if(!(string.IsNullOrEmpty(login) || string.IsNullOrEmpty(password)))
+            {
+                auto = true;
+            }
+            Form dialog = new LoginForm(authService, login,password,remember,auto);
+            dialog.ShowDialog();
+            return UserContext.Instance.IsAuthed;
         }
     }
 }
