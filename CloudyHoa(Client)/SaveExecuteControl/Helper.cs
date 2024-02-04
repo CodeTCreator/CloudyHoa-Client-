@@ -22,7 +22,7 @@ namespace CloudyHoa_Client_.SaveExecuteControl
             LoadingControl loading = new LoadingControl();
             //Anchor = AnchorStyles.None;
 
-            var x = parent.ClientSize.Width / 2 + loading.Width / 2;
+            var x = parent.ClientSize.Width / 2 - loading.Width / 2;
             var y = parent.ClientSize.Height / 2 - loading.Height / 2;
 
             loading.Location = new System.Drawing.Point(x, y);
@@ -45,5 +45,7 @@ namespace CloudyHoa_Client_.SaveExecuteControl
                     control.LockControl.Enabled = true;
             }
         }
+
+
     }
 }

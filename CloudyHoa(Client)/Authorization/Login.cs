@@ -43,7 +43,6 @@ namespace CloudyHoa_Client_
         private async void loginButton_Click(object sender, EventArgs e) 
             => await SignIn();
         
-
         private async Task SignIn()
         {
             var login = loginEdit.Text;
@@ -53,15 +52,26 @@ namespace CloudyHoa_Client_
             {
                 await this.SafeUIExecuteAsync(async () =>
                 {
-                    if (await _authService.Auth(login, password, remember))
+                    try
                     {
-                        //DialogResult = DialogResult.OK;
-                        Close();
+                        if (await _authService.Auth(login, password, remember))
+                        {
+                            //DialogResult = DialogResult.OK;
+                            Close();
+                        }
+                        else
+                        // Сделать проверку доступности сервера / различать неверность логина или пароля
+                        {
+                            MessageBox.Show(this, "Неверный логин или пароль", null, MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                        }
                     }
-                    else
+                    catch (Exception e)
                     {
-                        MessageBox.Show(this, "Неверный логин или пароль", null, MessageBoxButtons.OK,
-                            MessageBoxIcon.Error);
+                        const string caption = "Подключение к серверу";
+                        var result = MessageBox.Show(e.Message, caption,
+                                                     MessageBoxButtons.OK,
+                                                     MessageBoxIcon.Error);
                     }
                 }, "Ошибка авторизации.");
             }

@@ -4,10 +4,13 @@ using Microsoft.SqlServer.Server;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.ServiceModel.Channels;
+using System.ServiceModel.Description;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace CloudyHoa_Client_.Authorization
 {
@@ -18,16 +21,10 @@ namespace CloudyHoa_Client_.Authorization
         public async Task<bool> Auth(string login, string password, bool remember)
         {
             User user = null;
-            try
-            {
-                user = await _dataService.SignInAsync(login, password);
-                //user = _dataService.SignIn(login, password);
-            }
-            catch (Exception ex)
-            {
 
-            }
-            
+            user = await _dataService.SignInAsync(login, password);
+            //user = _dataService.SignIn(login, password);
+
             bool result = user != null;
             if (result)
             {
@@ -66,14 +63,8 @@ namespace CloudyHoa_Client_.Authorization
 
         private void CreatingClient()
         {
-            try
-            {
-                _serviceClient = new ServiceReference1.ServiceHoaAccountClient();
-            }
-            catch (Exception ex)
-            {
-                //MessageBox.Show();
-            }
+            _serviceClient = new ServiceReference1.ServiceHoaAccountClient();
+            //_serviceClient.Open();
         }
         public User SignIn(string login, string password)
         {
@@ -85,7 +76,14 @@ namespace CloudyHoa_Client_.Authorization
             //var name = await CheckAndResult(login, password);
             //return new User(name);  
             var name = await CheckAndResultAsync(login, password);
-            return new User(name);
+            if(name == null)
+            {
+                return default;
+            }
+            else
+            {
+                return new User(name);
+            }
         }
         private string CheckAndResult(string login, string password)
         {
@@ -96,8 +94,22 @@ namespace CloudyHoa_Client_.Authorization
 
         private async Task<string> CheckAndResultAsync(string login, string password)
         {
-            var name = await Task.Run(() => _serviceClient.Authorization(login, password));
-            return name;
+            try
+            {
+                var name = await _serviceClient.AuthorizationAsync(login, password);
+                return name;
+            }
+            catch (System.ServiceModel.EndpointNotFoundException)
+            {
+                const string message =
+                "Сервер недоступен";
+                const string caption = "Подключение к серверу";
+                var serverResult = MessageBox.Show(message, caption,
+                                             MessageBoxButtons.OK,
+                                             MessageBoxIcon.Error);
+                return null;
+            }
+            
         }
     }
 }
