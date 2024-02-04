@@ -25,20 +25,39 @@ namespace CloudyHoa_Client_
         }
         static bool Auth()
         {
-            var authService = new AuthService();
+            AuthService authService = null;
+            //try
+            //{
+                authService = new AuthService();
+            //}
+            //catch (System.ServiceModel.EndpointNotFoundException)
+            //{
+            //    const string message =
+            //    "Сервер недоступен";
+            //    const string caption = "Подключение к серверу";
+            //    var serverResult = MessageBox.Show(message, caption,
+            //                                 MessageBoxButtons.OK,
+            //                                 MessageBoxIcon.Error);
+            //}
             string login = default;
             string password = default;
             bool remember = false;
             bool auto = false;
-
-            authService.LoadSecure(out login, out password);
-            if(!(string.IsNullOrEmpty(login) || string.IsNullOrEmpty(password)))
+            if(authService != null)
             {
-                auto = true;
+                authService.LoadSecure(out login, out password);
+                if (!(string.IsNullOrEmpty(login) || string.IsNullOrEmpty(password)))
+                {
+                    auto = true;
+                }
+                Form dialog = new LoginForm(authService, login, password, remember, auto);
+                dialog.ShowDialog();
+                return UserContext.Instance.IsAuthed;
             }
-            Form dialog = new LoginForm(authService, login,password,remember,auto);
-            dialog.ShowDialog();
-            return UserContext.Instance.IsAuthed;
+            else
+            {
+                return false;
+            }
         }
     }
 }
