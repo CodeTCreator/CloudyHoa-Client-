@@ -25,5 +25,10 @@ namespace CloudyHoa_Client_.MainForm
             _exitFlag = false;
             this.Close();
         }
+
+        private void objectButton_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

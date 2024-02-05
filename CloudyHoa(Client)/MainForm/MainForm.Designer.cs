@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.exitButton = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.objectButton = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -46,16 +46,17 @@
             this.exitButton.Text = "Выйти";
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
-            // simpleButton2
+            // objectButton
             // 
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
-            this.simpleButton2.Location = new System.Drawing.Point(5, 44);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(146, 74);
-            this.simpleButton2.TabIndex = 2;
-            this.simpleButton2.Text = "Объекты";
+            this.objectButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.objectButton.Appearance.Options.UseFont = true;
+            this.objectButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
+            this.objectButton.Location = new System.Drawing.Point(5, 44);
+            this.objectButton.Name = "objectButton";
+            this.objectButton.Size = new System.Drawing.Size(146, 74);
+            this.objectButton.TabIndex = 2;
+            this.objectButton.Text = "Объекты";
+            this.objectButton.Click += new System.EventHandler(this.objectButton_Click);
             // 
             // groupControl1
             // 
@@ -67,10 +68,10 @@
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.CaptionImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("groupControl1.CaptionImageOptions.SvgImage")));
             this.groupControl1.CaptionLocation = DevExpress.Utils.Locations.Top;
-            this.groupControl1.Controls.Add(this.simpleButton2);
+            this.groupControl1.Controls.Add(this.objectButton);
             this.groupControl1.Location = new System.Drawing.Point(22, 73);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(330, 180);
+            this.groupControl1.Size = new System.Drawing.Size(330, 233);
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "Какая-то группа";
             // 
@@ -107,7 +108,7 @@
         #endregion
 
         private DevExpress.XtraEditors.SimpleButton exitButton;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton objectButton;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
     }
