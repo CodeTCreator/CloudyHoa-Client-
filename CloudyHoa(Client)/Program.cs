@@ -1,9 +1,6 @@
 ﻿using CloudyHoa_Client_.Authorization;
 using CloudyHoa_Client_.General;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CloudyHoa_Client_
@@ -18,10 +15,23 @@ namespace CloudyHoa_Client_
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            if (Auth())
+
+            bool workFlag = true;
+
+            while (workFlag)
             {
-                Application.Run(new MainForm.MainForm());
+                if (Auth())
+                {
+                    MainForm.MainForm mainForm = new MainForm.MainForm();
+                    Application.Run(mainForm);
+                    workFlag = !mainForm.ExitFlag;
+                    //if(mainForm.ExitFlag) 
+                    //{ 
+                    //    Application.Exit();
+                    //}
+                }
             }
+            
         }
         static bool Auth()
         {
@@ -45,8 +55,8 @@ namespace CloudyHoa_Client_
             bool auto = false;
             if(authService != null)
             {
-                authService.LoadSecure(out login, out password);
-                if (!(string.IsNullOrEmpty(login) || string.IsNullOrEmpty(password)))
+                authService.LoadSecure(out login, out password, out auto);
+                if (!(string.IsNullOrEmpty(login) || string.IsNullOrEmpty(password)) & auto == true)
                 {
                     auto = true;
                 }

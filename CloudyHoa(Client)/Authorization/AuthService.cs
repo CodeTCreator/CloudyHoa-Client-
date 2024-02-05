@@ -1,16 +1,7 @@
 ﻿using CloudyHoa_Client_.General;
 using CloudyHoa_Client_.Properties;
-using Microsoft.SqlServer.Server;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.NetworkInformation;
-using System.ServiceModel.Channels;
-using System.ServiceModel.Description;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace CloudyHoa_Client_.Authorization
 {
@@ -33,21 +24,29 @@ namespace CloudyHoa_Client_.Authorization
                 {
                     Settings.Default.Login = login;
                     Settings.Default.Password = password;
+                    Settings.Default.AutoLogin = true;
+                    Settings.Default.Save();
+                }
+                else
+                {
+                    Settings.Default.AutoLogin = false;
                     Settings.Default.Save();
                 }
             }
             return result;
         }
 
-        public void LoadSecure(out string login,out string password)
+        public void LoadSecure(out string login,out string password,out bool autoLogin)
         {
             login = Settings.Default.Login;
             password = Settings.Default.Password;
+            autoLogin = Settings.Default.AutoLogin;
 
             if((string.IsNullOrEmpty(login) || string.IsNullOrEmpty(password)))
             {
                 login = null;
                 password = null;
+                autoLogin = false;
             }
         }
     }
