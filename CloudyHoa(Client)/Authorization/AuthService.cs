@@ -7,7 +7,7 @@ namespace CloudyHoa_Client_.Authorization
 {
     public class AuthService
     {
-        private readonly DataService _dataService = new DataService();
+        private readonly DataServiceAuth _dataService = new DataServiceAuth();
 
         public async Task<bool> Auth(string login, string password, bool remember)
         {
@@ -51,11 +51,11 @@ namespace CloudyHoa_Client_.Authorization
         }
     }
 
-    public class DataService
+    public class DataServiceAuth
     {
         private ServiceReference1.ServiceHoaAccountClient _serviceClient ;
 
-        public DataService()
+        public DataServiceAuth()
         {
             CreatingClient();
         }
