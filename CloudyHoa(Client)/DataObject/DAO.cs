@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CloudyHoa_Client_.General;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -11,14 +12,13 @@ namespace CloudyHoa_Client_.DataObject
     {
         //List<DataStructure> _data = new List<DataStructure>();
         IDataStructure _structure;
-        int _hoaId = -1;
+        int _hoaId = UserContext.Instance.CurrentUser.hoaId;
         public DAO() { }
-        public DAO(int hoa_Id,IDataStructure dataStructure) { hoaId = hoa_Id; structure = dataStructure; }
+        public DAO(IDataStructure dataStructure) {structure = dataStructure; }
 
         public int hoaId
         {
             get { return _hoaId; }
-            set { _hoaId = value; }
         }
 
         public IDataStructure structure

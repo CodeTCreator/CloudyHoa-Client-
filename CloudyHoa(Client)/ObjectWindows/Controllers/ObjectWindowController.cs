@@ -14,26 +14,26 @@ namespace CloudyHoa_Client_.ObjectWindow.Service_Controller
     {
         public ObjectWindowController() { }
 
-        public void LoadAllObjects(ObjectDataService objectDataService, DataObject.DAO dataObject)
+        public void LoadAllObjects(ObjectDataService objectDataService, DAO dataObject)
         {
             DataTable dataTable = objectDataService.GetAllObjects(dataObject.hoaId);
             dataTable.TableName = "AllObjects";
             SetDataTable(dataObject, dataTable);
         }
-        public async void LoadAllObjectsAsync(ObjectDataService objectDataService, DataObject.DAO dataObject)
+        public async void LoadAllObjectsAsync(ObjectDataService objectDataService, DAO dataObject)
         {
             DataTable dataTable = await objectDataService.GetAllObjectsAsync(dataObject.hoaId);
             dataTable.TableName = "AllObjects";
             SetDataTable(dataObject, dataTable);
         }
 
-        public void LoadObjectsStructure(ObjectDataService objectDataService, DataObject.DAO dataObject)
+        public void LoadObjectsStructure(ObjectDataService objectDataService, DAO dataObject)
         {
             DataTable dataTable = objectDataService.GetObjectsStructure(dataObject.hoaId);
             dataTable.TableName = "ObjectsStructure";
             SetDataTable(dataObject, dataTable);
         }
-        public async void LoadObjectsStructureAsync(ObjectDataService objectDataService, DataObject.DAO dataObject)
+        public async void LoadObjectsStructureAsync(ObjectDataService objectDataService, DAO dataObject)
         {
             DataTable dataTable = await objectDataService.GetObjectsStructureAsync(dataObject.hoaId);
             dataTable.TableName = "ObjectsStructure";

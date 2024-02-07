@@ -58,8 +58,10 @@
             this.treeListObject.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
             this.treeListColumn1,
             this.treeListColumn2});
+            this.treeListObject.KeyFieldName = "id";
             this.treeListObject.Location = new System.Drawing.Point(12, 16);
             this.treeListObject.Name = "treeListObject";
+            this.treeListObject.ParentFieldName = "parent_id";
             this.treeListObject.Size = new System.Drawing.Size(595, 400);
             this.treeListObject.TabIndex = 0;
             // 
@@ -84,7 +86,7 @@
             this.gridControl1.Location = new System.Drawing.Point(14, 14);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(601, 237);
+            this.gridControl1.Size = new System.Drawing.Size(659, 414);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -140,7 +142,7 @@
             // 
             // deleteButton
             // 
-            this.deleteButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("deleteButton3.ImageOptions.SvgImage")));
+            this.deleteButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("deleteButton.ImageOptions.SvgImage")));
             this.deleteButton.Location = new System.Drawing.Point(5, 129);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(45, 45);
@@ -163,13 +165,14 @@
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(45, 45);
             this.addButton.TabIndex = 0;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // tabNavigationPage2
             // 
             this.tabNavigationPage2.Caption = "Общая информация";
             this.tabNavigationPage2.Controls.Add(this.gridControl1);
             this.tabNavigationPage2.Name = "tabNavigationPage2";
-            this.tabNavigationPage2.Size = new System.Drawing.Size(628, 260);
+            this.tabNavigationPage2.Size = new System.Drawing.Size(678, 431);
             // 
             // ObjectWindow
             // 
