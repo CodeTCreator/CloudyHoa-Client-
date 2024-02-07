@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:7744/WcfServiceLibrary.ServiceHoaAccount.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="WcfServiceLibrary.xsd" MetadataType="Schema" ID="aa8841c3-cbc2-4bc1-8d75-bc08c2cabcc1" SourceId="1" SourceUrl="http://desktop-nd3ik90:7744/WcfServiceLibrary.ServiceHoaAccount.svc?xsd=xsd1" />
-    <MetadataFile FileName="WcfServiceLibrary1.xsd" MetadataType="Schema" ID="32bab49e-5914-4d00-8489-05b84fb57295" SourceId="1" SourceUrl="http://desktop-nd3ik90:7744/WcfServiceLibrary.ServiceHoaAccount.svc?xsd=xsd2" />
-    <MetadataFile FileName="WcfServiceLibrary2.xsd" MetadataType="Schema" ID="725d4c26-550a-45ff-8e16-e16adc11c80f" SourceId="1" SourceUrl="http://desktop-nd3ik90:7744/WcfServiceLibrary.ServiceHoaAccount.svc?xsd=xsd0" />
-    <MetadataFile FileName="WcfServiceLibrary.disco" MetadataType="Disco" ID="684b9929-9eda-49d9-bf4f-1cc46046f272" SourceId="1" SourceUrl="http://desktop-nd3ik90:7744/WcfServiceLibrary.ServiceHoaAccount.svc?disco" />
-    <MetadataFile FileName="ServiceHoaAccount.wsdl" MetadataType="Wsdl" ID="4c46b287-d27e-45a0-bca6-5d24dde7857c" SourceId="1" SourceUrl="http://desktop-nd3ik90:7744/WcfServiceLibrary.ServiceHoaAccount.svc?wsdl" />
+    <MetadataFile FileName="WcfServiceLibrary1.disco" MetadataType="Disco" ID="54d1a910-0fa2-4082-883c-ba9647fffd20" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.ServiceHoaAccount.svc?disco" />
+    <MetadataFile FileName="WcfServiceLibrary3.xsd" MetadataType="Schema" ID="8f92410d-13ed-4a76-bb01-4b491f71d40b" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.ServiceHoaAccount.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceHoaAccount1.wsdl" MetadataType="Wsdl" ID="db064d7d-59e4-4581-af66-00083739012a" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.ServiceHoaAccount.svc?wsdl" />
+    <MetadataFile FileName="WcfServiceLibrary31.xsd" MetadataType="Schema" ID="a17ed105-949d-4dea-aee6-3be446c23a93" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.ServiceHoaAccount.svc?xsd=xsd0" />
+    <MetadataFile FileName="WcfServiceLibrary32.xsd" MetadataType="Schema" ID="6f505ad8-8a30-49bf-afa4-2deb1e45bf36" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.ServiceHoaAccount.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
