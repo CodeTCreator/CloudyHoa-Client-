@@ -55,6 +55,7 @@
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.comboBoxService = new System.Windows.Forms.ComboBox();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.saveButton = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl)).BeginInit();
             this.xtraTabControl.SuspendLayout();
             this.xtraTabPageMainInfo.SuspendLayout();
@@ -78,10 +79,15 @@
             // 
             // xtraTabControl
             // 
-            this.xtraTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtraTabControl.AppearancePage.Header.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.xtraTabControl.AppearancePage.Header.Options.UseFont = true;
+            this.xtraTabControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.xtraTabControl.HeaderButtons = DevExpress.XtraTab.TabButtons.None;
+            this.xtraTabControl.HeaderLocation = DevExpress.XtraTab.TabHeaderLocation.Bottom;
             this.xtraTabControl.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl.Name = "xtraTabControl";
             this.xtraTabControl.SelectedTabPage = this.xtraTabPageMainInfo;
+            this.xtraTabControl.ShowTabHeader = DevExpress.Utils.DefaultBoolean.True;
             this.xtraTabControl.Size = new System.Drawing.Size(735, 438);
             this.xtraTabControl.TabIndex = 1;
             this.xtraTabControl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
@@ -93,7 +99,8 @@
             // 
             this.xtraTabPageMainInfo.Controls.Add(this.panelControl2);
             this.xtraTabPageMainInfo.Name = "xtraTabPageMainInfo";
-            this.xtraTabPageMainInfo.Size = new System.Drawing.Size(733, 408);
+            this.xtraTabPageMainInfo.ShowCloseButton = DevExpress.Utils.DefaultBoolean.False;
+            this.xtraTabPageMainInfo.Size = new System.Drawing.Size(733, 404);
             this.xtraTabPageMainInfo.Text = "Основная информация";
             // 
             // panelControl2
@@ -132,6 +139,7 @@
             this.comboBoxParents.Name = "comboBoxParents";
             this.comboBoxParents.Size = new System.Drawing.Size(224, 28);
             this.comboBoxParents.TabIndex = 18;
+            this.comboBoxParents.SelectedIndexChanged += new System.EventHandler(this.comboBoxParents_SelectedIndexChanged);
             // 
             // comboBoxTypesObjects
             // 
@@ -142,6 +150,7 @@
             this.comboBoxTypesObjects.Name = "comboBoxTypesObjects";
             this.comboBoxTypesObjects.Size = new System.Drawing.Size(224, 28);
             this.comboBoxTypesObjects.TabIndex = 17;
+            this.comboBoxTypesObjects.SelectedIndexChanged += new System.EventHandler(this.comboBoxTypesObjects_SelectedIndexChanged);
             // 
             // labelControl4
             // 
@@ -163,6 +172,7 @@
             this.textEditNumber.Properties.Appearance.Options.UseFont = true;
             this.textEditNumber.Size = new System.Drawing.Size(224, 26);
             this.textEditNumber.TabIndex = 13;
+            this.textEditNumber.EditValueChanged += new System.EventHandler(this.textEditNumber_EditValueChanged);
             // 
             // labelControl3
             // 
@@ -191,7 +201,7 @@
             this.xtraTabPageIndicators.Controls.Add(this.stackPanel1);
             this.xtraTabPageIndicators.Name = "xtraTabPageIndicators";
             this.xtraTabPageIndicators.PageEnabled = false;
-            this.xtraTabPageIndicators.Size = new System.Drawing.Size(733, 408);
+            this.xtraTabPageIndicators.Size = new System.Drawing.Size(733, 404);
             this.xtraTabPageIndicators.Text = "Статические параметры";
             // 
             // stackPanel1
@@ -205,7 +215,7 @@
             this.stackPanel1.Margin = new System.Windows.Forms.Padding(10, 4, 10, 4);
             this.stackPanel1.MinimumSize = new System.Drawing.Size(408, 135);
             this.stackPanel1.Name = "stackPanel1";
-            this.stackPanel1.Size = new System.Drawing.Size(697, 368);
+            this.stackPanel1.Size = new System.Drawing.Size(697, 363);
             this.stackPanel1.TabIndex = 11;
             // 
             // stackPanelProperties
@@ -214,12 +224,12 @@
             this.stackPanelProperties.AutoScroll = true;
             this.stackPanelProperties.AutoScrollMinSize = new System.Drawing.Size(5, 5);
             this.stackPanelProperties.LayoutDirection = DevExpress.Utils.Layout.StackPanelLayoutDirection.TopDown;
-            this.stackPanelProperties.Location = new System.Drawing.Point(15, 50);
+            this.stackPanelProperties.Location = new System.Drawing.Point(15, 24);
             this.stackPanelProperties.Margin = new System.Windows.Forms.Padding(15, 4, 4, 4);
             this.stackPanelProperties.MinimumSize = new System.Drawing.Size(408, 246);
             this.stackPanelProperties.Name = "stackPanelProperties";
             this.stackPanelProperties.Padding = new System.Windows.Forms.Padding(1);
-            this.stackPanelProperties.Size = new System.Drawing.Size(650, 268);
+            this.stackPanelProperties.Size = new System.Drawing.Size(650, 315);
             this.stackPanelProperties.TabIndex = 0;
             // 
             // xtraTabPageBenefits
@@ -228,7 +238,7 @@
             this.xtraTabPageBenefits.Controls.Add(this.stackPanelBenefits);
             this.xtraTabPageBenefits.Name = "xtraTabPageBenefits";
             this.xtraTabPageBenefits.PageVisible = false;
-            this.xtraTabPageBenefits.Size = new System.Drawing.Size(733, 408);
+            this.xtraTabPageBenefits.Size = new System.Drawing.Size(733, 404);
             this.xtraTabPageBenefits.Text = "Льготы";
             // 
             // panelControl1
@@ -346,14 +356,26 @@
             this.simpleButton1.Size = new System.Drawing.Size(22, 22);
             this.simpleButton1.TabIndex = 6;
             // 
+            // saveButton
+            // 
+            this.saveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.saveButton.Location = new System.Drawing.Point(629, 409);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(94, 29);
+            this.saveButton.TabIndex = 3;
+            this.saveButton.Text = "Сохранить";
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+            // 
             // ObjectMW
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(735, 438);
+            this.ClientSize = new System.Drawing.Size(735, 447);
+            this.Controls.Add(this.saveButton);
             this.Controls.Add(this.xtraTabControl);
             this.Name = "ObjectMW";
             this.Text = "Добавление объекта";
+            this.Load += new System.EventHandler(this.ObjectMW_Load);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl)).EndInit();
             this.xtraTabControl.ResumeLayout(false);
             this.xtraTabPageMainInfo.ResumeLayout(false);
@@ -407,5 +429,6 @@
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private System.Windows.Forms.ComboBox comboBoxService;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton saveButton;
     }
 }

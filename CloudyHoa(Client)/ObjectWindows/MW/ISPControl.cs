@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace CloudyHoa_Client_.ObjectWindows.MW
 {
-    internal class ObjectMWController
+    internal interface ISPControl
     {
+        void LoadData(string name, string type);
     }
 }
