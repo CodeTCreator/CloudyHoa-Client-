@@ -33,17 +33,23 @@ namespace CloudyHoa_Client_.ObjectServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IObjectsService/AddObject", ReplyAction="http://tempuri.org/IObjectsService/AddObjectResponse")]
         System.Threading.Tasks.Task<int> AddObjectAsync(int hoa_id, int type_object, string objectNumber, int parentId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IObjectsService/getAllObjects", ReplyAction="http://tempuri.org/IObjectsService/getAllObjectsResponse")]
-        System.Data.DataSet getAllObjects(int hoaId);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IObjectsService/GetAllObjects", ReplyAction="http://tempuri.org/IObjectsService/GetAllObjectsResponse")]
+        System.Data.DataSet GetAllObjects(int hoaId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IObjectsService/getAllObjects", ReplyAction="http://tempuri.org/IObjectsService/getAllObjectsResponse")]
-        System.Threading.Tasks.Task<System.Data.DataSet> getAllObjectsAsync(int hoaId);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IObjectsService/GetAllObjects", ReplyAction="http://tempuri.org/IObjectsService/GetAllObjectsResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetAllObjectsAsync(int hoaId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IObjectsService/getObjectsStructure", ReplyAction="http://tempuri.org/IObjectsService/getObjectsStructureResponse")]
-        System.Data.DataSet getObjectsStructure(int hoa_id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IObjectsService/GetObjectsStructure", ReplyAction="http://tempuri.org/IObjectsService/GetObjectsStructureResponse")]
+        System.Data.DataSet GetObjectsStructure(int hoa_id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IObjectsService/getObjectsStructure", ReplyAction="http://tempuri.org/IObjectsService/getObjectsStructureResponse")]
-        System.Threading.Tasks.Task<System.Data.DataSet> getObjectsStructureAsync(int hoa_id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IObjectsService/GetObjectsStructure", ReplyAction="http://tempuri.org/IObjectsService/GetObjectsStructureResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetObjectsStructureAsync(int hoa_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IObjectsService/GetObjectsParents", ReplyAction="http://tempuri.org/IObjectsService/GetObjectsParentsResponse")]
+        System.Data.DataSet GetObjectsParents(int hoa_id, int type_object);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IObjectsService/GetObjectsParents", ReplyAction="http://tempuri.org/IObjectsService/GetObjectsParentsResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetObjectsParentsAsync(int hoa_id, int type_object);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -97,20 +103,28 @@ namespace CloudyHoa_Client_.ObjectServiceReference {
             return base.Channel.AddObjectAsync(hoa_id, type_object, objectNumber, parentId);
         }
         
-        public System.Data.DataSet getAllObjects(int hoaId) {
-            return base.Channel.getAllObjects(hoaId);
+        public System.Data.DataSet GetAllObjects(int hoaId) {
+            return base.Channel.GetAllObjects(hoaId);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> getAllObjectsAsync(int hoaId) {
-            return base.Channel.getAllObjectsAsync(hoaId);
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetAllObjectsAsync(int hoaId) {
+            return base.Channel.GetAllObjectsAsync(hoaId);
         }
         
-        public System.Data.DataSet getObjectsStructure(int hoa_id) {
-            return base.Channel.getObjectsStructure(hoa_id);
+        public System.Data.DataSet GetObjectsStructure(int hoa_id) {
+            return base.Channel.GetObjectsStructure(hoa_id);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> getObjectsStructureAsync(int hoa_id) {
-            return base.Channel.getObjectsStructureAsync(hoa_id);
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetObjectsStructureAsync(int hoa_id) {
+            return base.Channel.GetObjectsStructureAsync(hoa_id);
+        }
+        
+        public System.Data.DataSet GetObjectsParents(int hoa_id, int type_object) {
+            return base.Channel.GetObjectsParents(hoa_id, type_object);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetObjectsParentsAsync(int hoa_id, int type_object) {
+            return base.Channel.GetObjectsParentsAsync(hoa_id, type_object);
         }
     }
 }

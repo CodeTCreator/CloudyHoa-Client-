@@ -1,5 +1,6 @@
 ﻿using CloudyHoa_Client_.DataObject;
 using CloudyHoa_Client_.DataObject.DataStructure;
+using DevExpress.Utils.Layout;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -26,19 +27,6 @@ namespace CloudyHoa_Client_.ObjectWindow.Service_Controller
             dataTable.TableName = "AllObjects";
             SetDataTable(dataObject, dataTable);
         }
-
-        public void LoadObjectsStructure(ObjectDataService objectDataService, DAO dataObject)
-        {
-            DataTable dataTable = objectDataService.GetObjectsStructure(dataObject.hoaId);
-            dataTable.TableName = "ObjectsStructure";
-            SetDataTable(dataObject, dataTable);
-        }
-        public async void LoadObjectsStructureAsync(ObjectDataService objectDataService, DAO dataObject)
-        {
-            DataTable dataTable = await objectDataService.GetObjectsStructureAsync(dataObject.hoaId);
-            dataTable.TableName = "ObjectsStructure";
-            SetDataTable(dataObject, dataTable);
-        }
         private void SetDataTable(DAO dataObject, DataTable dataTable)
         {
             if (dataObject.structure.GetType() == typeof(ObjectDataStructure))
@@ -50,7 +38,6 @@ namespace CloudyHoa_Client_.ObjectWindow.Service_Controller
                 dataObject.structure = null;
             }
         }
-
         public DataTable GetObjectsTable(DAO dataObject)
         {
             DataTable dataTable = null;
@@ -60,7 +47,6 @@ namespace CloudyHoa_Client_.ObjectWindow.Service_Controller
             }
             return dataTable;
         }
-
         public void DeleteObject(ObjectDataService objectDataService, int objectId) 
         {
             objectDataService.DeleteObject(objectId);

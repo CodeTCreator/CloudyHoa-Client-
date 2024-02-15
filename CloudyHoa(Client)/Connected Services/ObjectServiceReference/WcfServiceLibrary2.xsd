@@ -43,17 +43,17 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="getAllObjects">
+  <xs:element name="GetAllObjects">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="hoaId" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="getAllObjectsResponse">
+  <xs:element name="GetAllObjectsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="getAllObjectsResult" nillable="true">
+        <xs:element minOccurs="0" name="GetAllObjectsResult" nillable="true">
           <xs:complexType>
             <xs:annotation>
               <xs:appinfo>
@@ -69,17 +69,44 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="getObjectsStructure">
+  <xs:element name="GetObjectsStructure">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="hoa_id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="getObjectsStructureResponse">
+  <xs:element name="GetObjectsStructureResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="getObjectsStructureResult" nillable="true">
+        <xs:element minOccurs="0" name="GetObjectsStructureResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetObjectsParents">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="hoa_id" type="xs:int" />
+        <xs:element minOccurs="0" name="type_object" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetObjectsParentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetObjectsParentsResult" nillable="true">
           <xs:complexType>
             <xs:annotation>
               <xs:appinfo>

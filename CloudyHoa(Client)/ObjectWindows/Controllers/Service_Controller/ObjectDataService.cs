@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CloudyHoa_Client_.ObjectWindow.Service_Controller
 {
-    internal class ObjectDataService
+    public class ObjectDataService
     {
         ObjectServiceReference.ObjectsServiceClient _objectsServiceClient;
 
@@ -19,7 +19,7 @@ namespace CloudyHoa_Client_.ObjectWindow.Service_Controller
         public DataTable GetAllObjects(int hoaId)
         {
             DataSet dataSet = null;
-            dataSet = _objectsServiceClient.getAllObjects(hoaId);
+            dataSet = _objectsServiceClient.GetAllObjects(hoaId);
             if(dataSet != null) 
             {
                 return dataSet.Tables[0];
@@ -33,7 +33,7 @@ namespace CloudyHoa_Client_.ObjectWindow.Service_Controller
         public async Task<DataTable> GetAllObjectsAsync(int hoaId)
         {
             DataSet dataSet = null;
-            dataSet = await _objectsServiceClient.getAllObjectsAsync(hoaId);
+            dataSet = await _objectsServiceClient.GetAllObjectsAsync(hoaId);
             if (dataSet != null)
             {
                 return dataSet.Tables[0];
@@ -47,7 +47,7 @@ namespace CloudyHoa_Client_.ObjectWindow.Service_Controller
         public DataTable GetObjectsStructure(int hoaId)
         {
             DataSet dataSet = null;
-            dataSet = _objectsServiceClient.getObjectsStructure(hoaId);
+            dataSet = _objectsServiceClient.GetObjectsStructure(hoaId);
             if (dataSet != null)
             {
                 return dataSet.Tables[0];
@@ -61,7 +61,7 @@ namespace CloudyHoa_Client_.ObjectWindow.Service_Controller
         public async Task<DataTable> GetObjectsStructureAsync(int hoaId)
         {
             DataSet dataSet = null;
-            dataSet = await _objectsServiceClient.getObjectsStructureAsync(hoaId);
+            dataSet = await _objectsServiceClient.GetObjectsStructureAsync(hoaId);
             if (dataSet != null)
             {
                 return dataSet.Tables[0];
@@ -75,6 +75,20 @@ namespace CloudyHoa_Client_.ObjectWindow.Service_Controller
         public void DeleteObject(int objectId)
         {
             _objectsServiceClient.DeleteObject(objectId);
+        }
+
+        public DataTable GetParentsObjectsTable(int hoaId,int typeObject)
+        {
+            DataSet dataSet = null;
+            dataSet = _objectsServiceClient.GetObjectsParents(hoaId,typeObject);
+            if (dataSet != null)
+            {
+                return dataSet.Tables[0];
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }
