@@ -54,6 +54,7 @@
     <Reference Include="DevExpress.Drawing.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Sparkline.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.TreeMap.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -61,6 +62,8 @@
     <Reference Include="DevExpress.XtraLayout.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeMap.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v22.1.UI, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraWizard.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -103,8 +106,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\SPServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="DataObject\DAO.cs" />
     <Compile Include="DataObject\DataStructure\ObjectDataStructure.cs" />
+    <Compile Include="DataObject\DataStructure\ObjectMWDataStructure.cs" />
+    <Compile Include="DataObject\DataStructure\ObjectSPDataStructure.cs" />
     <Compile Include="DataObject\IDataStructure.cs" />
     <Compile Include="General\User.cs" />
     <Compile Include="General\UserContext.cs" />
@@ -114,13 +124,16 @@
     <Compile Include="MainForm\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ObjectWindows\MW\Controllers\Service_Controller\ObjectMWDataService.cs" />
+    <Compile Include="ObjectWindows\MW\Controllers\Service_Controller\SPDataService.cs" />
+    <Compile Include="ObjectWindows\MW\ISPControl.cs" />
     <Compile Include="ObjectWindows\MW\ObjectMW.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ObjectWindows\MW\ObjectMW.Designer.cs">
       <DependentUpon>ObjectMW.cs</DependentUpon>
     </Compile>
-    <Compile Include="ObjectWindows\MW\ObjectMWController.cs" />
+    <Compile Include="ObjectWindows\MW\Controllers\ObjectMWController.cs" />
     <Compile Include="ObjectWindows\MW\SPControl%28Date%29.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -206,6 +219,16 @@
     <None Include="Connected Services\ServiceReference1\WcfServiceLibrary32.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\SPServiceReference\StaticParamsService.wsdl" />
+    <None Include="Connected Services\SPServiceReference\WcfServiceLibrary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SPServiceReference\WcfServiceLibrary1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SPServiceReference\WcfServiceLibrary2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\DataSources\CloudyHoa_Client_.DataObject.DataStructure.ObjectDataStructure.datasource" />
     <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
     <None Include="Properties\Settings.settings">
@@ -242,6 +265,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ObjectServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
+    <WCFMetadataStorage Include="Connected Services\SPServiceReference\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
@@ -264,6 +288,13 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Connected Services\ServiceReference1\WcfServiceLibrary1.disco" />
+    <None Include="Connected Services\SPServiceReference\WcfServiceLibrary.disco" />
+    <None Include="Connected Services\SPServiceReference\configuration91.svcinfo" />
+    <None Include="Connected Services\SPServiceReference\configuration.svcinfo" />
+    <None Include="Connected Services\SPServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="images\Loading Gif.gif" />
   </ItemGroup>
   <ItemGroup>
