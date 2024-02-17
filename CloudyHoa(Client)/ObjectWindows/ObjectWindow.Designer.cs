@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ObjectWindow));
             this.treeListObject = new DevExpress.XtraTreeList.TreeList();
             this.treeListColumn1 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.treeListColumn2 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.nameColumn = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.objectCountColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.tabPane1 = new DevExpress.XtraBars.Navigation.TabPane();
             this.tabNavigationPage1 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
@@ -45,14 +42,6 @@
             this.editButton = new DevExpress.XtraEditors.SimpleButton();
             this.addButton = new DevExpress.XtraEditors.SimpleButton();
             this.tabNavigationPage2 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
-            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
-            this.bar2 = new DevExpress.XtraBars.Bar();
-            this.backButton = new DevExpress.XtraBars.BarButtonItem();
-            this.bar3 = new DevExpress.XtraBars.Bar();
-            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             ((System.ComponentModel.ISupportInitialize)(this.treeListObject)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -62,7 +51,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.tabNavigationPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // treeListObject
@@ -80,10 +68,6 @@
             // 
             // treeListColumn1
             // 
-            this.treeListColumn1.AppearanceCell.Options.UseTextOptions = true;
-            this.treeListColumn1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.treeListColumn1.AppearanceHeader.Options.UseTextOptions = true;
-            this.treeListColumn1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.treeListColumn1.Caption = "Название";
             this.treeListColumn1.FieldName = "name";
             this.treeListColumn1.Name = "treeListColumn1";
@@ -93,10 +77,6 @@
             // 
             // treeListColumn2
             // 
-            this.treeListColumn2.AppearanceCell.Options.UseTextOptions = true;
-            this.treeListColumn2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.treeListColumn2.AppearanceHeader.Options.UseTextOptions = true;
-            this.treeListColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.treeListColumn2.Caption = "Идентификатор";
             this.treeListColumn2.FieldName = "identificator";
             this.treeListColumn2.Name = "treeListColumn2";
@@ -116,39 +96,8 @@
             // 
             // gridView1
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.nameColumn,
-            this.objectCountColumn});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
-            // 
-            // nameColumn
-            // 
-            this.nameColumn.AppearanceCell.Options.UseTextOptions = true;
-            this.nameColumn.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.nameColumn.AppearanceHeader.Options.UseTextOptions = true;
-            this.nameColumn.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.nameColumn.Caption = "Название объекта";
-            this.nameColumn.FieldName = "name";
-            this.nameColumn.MinWidth = 25;
-            this.nameColumn.Name = "nameColumn";
-            this.nameColumn.Visible = true;
-            this.nameColumn.VisibleIndex = 0;
-            this.nameColumn.Width = 94;
-            // 
-            // objectCountColumn
-            // 
-            this.objectCountColumn.AppearanceCell.Options.UseTextOptions = true;
-            this.objectCountColumn.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.objectCountColumn.AppearanceHeader.Options.UseTextOptions = true;
-            this.objectCountColumn.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.objectCountColumn.Caption = "Количество";
-            this.objectCountColumn.FieldName = "count";
-            this.objectCountColumn.MinWidth = 25;
-            this.objectCountColumn.Name = "objectCountColumn";
-            this.objectCountColumn.Visible = true;
-            this.objectCountColumn.VisibleIndex = 1;
-            this.objectCountColumn.Width = 94;
             // 
             // labelControl1
             // 
@@ -196,10 +145,7 @@
             // 
             // deleteButton
             // 
-            this.deleteButton.Appearance.Options.UseTextOptions = true;
-            this.deleteButton.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.deleteButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("deleteButton.ImageOptions.Image")));
-            this.deleteButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.deleteButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("deleteButton.ImageOptions.SvgImage")));
             this.deleteButton.Location = new System.Drawing.Point(5, 129);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(50, 45);
@@ -208,8 +154,7 @@
             // 
             // editButton
             // 
-            this.editButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("editButton.ImageOptions.Image")));
-            this.editButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.editButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editButton.ImageOptions.SvgImage")));
             this.editButton.Location = new System.Drawing.Point(6, 68);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(50, 45);
@@ -218,8 +163,8 @@
             // 
             // addButton
             // 
-            this.addButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("addButton.ImageOptions.Image")));
-            this.addButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.addButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.addButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("addButton.ImageOptions.SvgImage")));
             this.addButton.Location = new System.Drawing.Point(6, 6);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(50, 45);
@@ -233,88 +178,6 @@
             this.tabNavigationPage2.Name = "tabNavigationPage2";
             this.tabNavigationPage2.Size = new System.Drawing.Size(688, 431);
             // 
-            // barManager1
-            // 
-            this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
-            this.bar2,
-            this.bar3});
-            this.barManager1.DockControls.Add(this.barDockControlTop);
-            this.barManager1.DockControls.Add(this.barDockControlBottom);
-            this.barManager1.DockControls.Add(this.barDockControlLeft);
-            this.barManager1.DockControls.Add(this.barDockControlRight);
-            this.barManager1.Form = this;
-            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.backButton});
-            this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 1;
-            this.barManager1.StatusBar = this.bar3;
-            // 
-            // bar2
-            // 
-            this.bar2.BarName = "Main menu";
-            this.bar2.DockCol = 0;
-            this.bar2.DockRow = 0;
-            this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.backButton)});
-            this.bar2.OptionsBar.MultiLine = true;
-            this.bar2.OptionsBar.UseWholeRow = true;
-            this.bar2.Text = "Main menu";
-            // 
-            // backButton
-            // 
-            this.backButton.Caption = "Назад";
-            this.backButton.Id = 0;
-            this.backButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("backButton.ImageOptions.Image")));
-            this.backButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("backButton.ImageOptions.LargeImage")));
-            this.backButton.Name = "backButton";
-            this.backButton.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.backButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.backButton_ItemClick);
-            // 
-            // bar3
-            // 
-            this.bar3.BarName = "Status bar";
-            this.bar3.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom;
-            this.bar3.DockCol = 0;
-            this.bar3.DockRow = 0;
-            this.bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
-            this.bar3.OptionsBar.AllowQuickCustomization = false;
-            this.bar3.OptionsBar.DrawDragBorder = false;
-            this.bar3.OptionsBar.UseWholeRow = true;
-            this.bar3.Text = "Status bar";
-            // 
-            // barDockControlTop
-            // 
-            this.barDockControlTop.CausesValidation = false;
-            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(712, 30);
-            // 
-            // barDockControlBottom
-            // 
-            this.barDockControlBottom.CausesValidation = false;
-            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 519);
-            this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(712, 20);
-            // 
-            // barDockControlLeft
-            // 
-            this.barDockControlLeft.CausesValidation = false;
-            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
-            this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 489);
-            // 
-            // barDockControlRight
-            // 
-            this.barDockControlRight.CausesValidation = false;
-            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(712, 30);
-            this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 489);
-            // 
             // ObjectWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -322,10 +185,6 @@
             this.ClientSize = new System.Drawing.Size(712, 539);
             this.Controls.Add(this.tabPane1);
             this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.barDockControlLeft);
-            this.Controls.Add(this.barDockControlRight);
-            this.Controls.Add(this.barDockControlBottom);
-            this.Controls.Add(this.barDockControlTop);
             this.Name = "ObjectWindow";
             this.Text = "Объекты организации";
             this.Load += new System.EventHandler(this.ObjectWindow_Load);
@@ -338,7 +197,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.tabNavigationPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -359,15 +217,5 @@
         private DevExpress.XtraEditors.SimpleButton addButton;
         private DevExpress.XtraTreeList.Columns.TreeListColumn treeListColumn1;
         private DevExpress.XtraTreeList.Columns.TreeListColumn treeListColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn nameColumn;
-        private DevExpress.XtraGrid.Columns.GridColumn objectCountColumn;
-        private DevExpress.XtraBars.BarManager barManager1;
-        private DevExpress.XtraBars.Bar bar2;
-        private DevExpress.XtraBars.BarButtonItem backButton;
-        private DevExpress.XtraBars.Bar bar3;
-        private DevExpress.XtraBars.BarDockControl barDockControlTop;
-        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
-        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
-        private DevExpress.XtraBars.BarDockControl barDockControlRight;
     }
 }

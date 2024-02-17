@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CloudyHoa_Client_.ObjectWindows.MW
 {
-    public partial class SPControl : UserControl, ISPControl
+    public partial class SPControl_Date : UserControl, ISPControl
     {
-        public SPControl()
+        public SPControl_Date()
         {
             InitializeComponent();
         }
@@ -24,8 +24,8 @@ namespace CloudyHoa_Client_.ObjectWindows.MW
 
         public void LoadData(string name, string type)
         {
-            textEditName.Text = name;
-            textEditDataType.Text = type;
+            textEditName.Text = name; 
+            textEditDataType.Text = type; 
         }
     }
 }
