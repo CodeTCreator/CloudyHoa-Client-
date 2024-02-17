@@ -30,5 +30,9 @@ namespace CloudyHoa_Client_.ObjectWindows.MW.Controllers.Service_Controller
                 return null;
             }
         }
+        public void AddSP(string value, int typeParams, int propertyId, int objectId)
+        {
+            _staticParamsServiceClient.AddStaticParam(value, typeParams, propertyId, objectId);
+        }
     }
 }

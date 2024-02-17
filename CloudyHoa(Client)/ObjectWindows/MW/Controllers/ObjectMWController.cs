@@ -1,13 +1,16 @@
 ﻿using CloudyHoa_Client_.DataObject;
 using CloudyHoa_Client_.DataObject.DataStructure;
+using CloudyHoa_Client_.General;
 using CloudyHoa_Client_.ObjectWindow.Service_Controller;
 using CloudyHoa_Client_.ObjectWindows.MW.Controllers.Service_Controller;
+using DevExpress.Utils.Extensions;
 using DevExpress.Utils.Layout;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Linq.Mapping;
 using System.Linq;
+using System.ServiceModel.Channels;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -163,8 +166,101 @@ namespace CloudyHoa_Client_.ObjectWindows.MW
 
         public void AddObject(DAO dataObject, StackPanel stackPanel)
         {
-
+            if (dataObject.structure.GetType() == typeof(ObjectMWDataStructure))
+            {
+                var dataObjectMW = ((ObjectMWDataStructure)dataObject.structure);
+                try
+                {
+                    // Добавление объекта, получение id
+                    int objectId = _dataServiceMW.AddObject(dataObject.hoaId, dataObjectMW.typeObject, dataObjectMW.identificator,
+                    dataObjectMW.parentObject);
+                    string value = string.Empty;
+                    // Добавление статических параметров
+                    for(int i = 0; i < stackPanel.Controls.Count; i++)
+                    {
+                        _SPDataService.AddSP(
+                            ((ISPControl)stackPanel.Controls[i]).GetData(),(int)dataObjectMW.SPTable.Rows[i]["type_property"], 
+                            (int)dataObjectMW.SPTable.Rows[i]["id"],objectId);
+                    }
+                }
+                catch (TimeoutException timeProblem)
+                {
+                    const string message =
+                    "Сервер недоступен. Попробуйте позже.";
+                    const string caption = "Подключение к серверу";
+                    var serverResult = MessageBox.Show(message, caption,
+                                                 MessageBoxButtons.OK,
+                                                 MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                const string message =
+                "Не удалось явно преобразовать объект к указанному типу";
+                const string caption = "Преобразование типов";
+                var serverResult = MessageBox.Show(message, caption,
+                                             MessageBoxButtons.OK,
+                                             MessageBoxIcon.Error);
+            }
+            
         }
 
+        public void EditObject(DAO dataObject)
+        {
+            if (dataObject.structure.GetType() == typeof(ObjectMWDataStructure))
+            {
+                var dataObjectMW = ((ObjectMWDataStructure)dataObject.structure);
+                _dataServiceMW.EditObject(dataObjectMW.focusedObject.objectId,
+                    dataObjectMW.identificator, dataObjectMW.parentObject) ;
+            }
+        }
+
+        public void LoadFO(FocusedObject focusedObject, DAO dataObject)
+        {
+            if (dataObject.structure.GetType() == typeof(ObjectMWDataStructure))
+            {
+                var dataObjectMW = ((ObjectMWDataStructure)dataObject.structure);
+                dataObjectMW.focusedObject = focusedObject;
+            }
+        }
+        public int GetTypeObject(DAO dataObject)
+        {
+            return dataObject.structure.GetType() == typeof(ObjectMWDataStructure) ?
+                ((ObjectMWDataStructure)dataObject.structure).typeObject : -1;
+        }
+        public string GetIdentificator(DAO dataObject)
+        {
+            return dataObject.structure.GetType() == typeof(ObjectMWDataStructure) ?
+                ((ObjectMWDataStructure)dataObject.structure).identificator : null;
+        }
+        public int? GetParentObject(DAO dataObject)
+        {
+            return dataObject.structure.GetType() == typeof(ObjectMWDataStructure) ?
+                ((ObjectMWDataStructure)dataObject.structure).parentObject : null;
+        }
+
+        public void SettingFocusingObject(DAO dataObject)
+        {
+            if (dataObject.structure.GetType() == typeof(ObjectMWDataStructure))
+            {
+                ((ObjectMWDataStructure)dataObject.structure).SettingFocusedObject();
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="comboBox"></param>
+        /// <param name="dataObject"></param>
+        /// <param name="value"></param>
+        /// <param name="nameField"></param>
+        public void SelectValueComboBox(ComboBox comboBox, DataTable dataTable, int? value,string nameField)
+        {
+            int index = -1;
+            var rows = dataTable.Select(nameField + " =" + value);
+            index = rows.Length > 0 ? index = dataTable.Rows.IndexOf(rows[0]) : -1;
+            comboBox.SelectedIndex = index;
+            comboBox.SelectedValue = value;
+        }
     }
 }

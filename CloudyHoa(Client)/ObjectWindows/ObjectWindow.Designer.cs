@@ -64,6 +64,7 @@
             this.treeListObject.ParentFieldName = "parent_id";
             this.treeListObject.Size = new System.Drawing.Size(595, 400);
             this.treeListObject.TabIndex = 0;
+            this.treeListObject.SelectionChanged += new System.EventHandler(this.treeListObject_SelectionChanged);
             // 
             // treeListColumn1
             // 
@@ -72,6 +73,7 @@
             this.treeListColumn1.Name = "treeListColumn1";
             this.treeListColumn1.Visible = true;
             this.treeListColumn1.VisibleIndex = 0;
+            this.treeListColumn1.Width = 339;
             // 
             // treeListColumn2
             // 
@@ -80,6 +82,7 @@
             this.treeListColumn2.Name = "treeListColumn2";
             this.treeListColumn2.Visible = true;
             this.treeListColumn2.VisibleIndex = 1;
+            this.treeListColumn2.Width = 226;
             // 
             // gridControl1
             // 
@@ -98,11 +101,11 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(225, 12);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(207, 28);
+            this.labelControl1.Size = new System.Drawing.Size(234, 31);
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "Объекты организации";
             // 
@@ -115,10 +118,10 @@
             this.tabPane1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.tabNavigationPage1,
             this.tabNavigationPage2});
-            this.tabPane1.RegularSize = new System.Drawing.Size(678, 472);
+            this.tabPane1.RegularSize = new System.Drawing.Size(688, 472);
             this.tabPane1.SelectedPage = this.tabNavigationPage1;
             this.tabPane1.ShowToolTips = DevExpress.Utils.DefaultBoolean.True;
-            this.tabPane1.Size = new System.Drawing.Size(678, 472);
+            this.tabPane1.Size = new System.Drawing.Size(688, 472);
             this.tabPane1.TabIndex = 3;
             this.tabPane1.Text = "tabPane1";
             // 
@@ -128,16 +131,16 @@
             this.tabNavigationPage1.Controls.Add(this.panelControl1);
             this.tabNavigationPage1.Controls.Add(this.treeListObject);
             this.tabNavigationPage1.Name = "tabNavigationPage1";
-            this.tabNavigationPage1.Size = new System.Drawing.Size(678, 431);
+            this.tabNavigationPage1.Size = new System.Drawing.Size(688, 431);
             // 
             // panelControl1
             // 
             this.panelControl1.Controls.Add(this.deleteButton);
             this.panelControl1.Controls.Add(this.editButton);
             this.panelControl1.Controls.Add(this.addButton);
-            this.panelControl1.Location = new System.Drawing.Point(613, 106);
+            this.panelControl1.Location = new System.Drawing.Point(613, 100);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(56, 181);
+            this.panelControl1.Size = new System.Drawing.Size(60, 181);
             this.panelControl1.TabIndex = 1;
             // 
             // deleteButton
@@ -145,7 +148,7 @@
             this.deleteButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("deleteButton.ImageOptions.SvgImage")));
             this.deleteButton.Location = new System.Drawing.Point(5, 129);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(45, 45);
+            this.deleteButton.Size = new System.Drawing.Size(50, 45);
             this.deleteButton.TabIndex = 2;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
@@ -154,8 +157,9 @@
             this.editButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editButton.ImageOptions.SvgImage")));
             this.editButton.Location = new System.Drawing.Point(6, 68);
             this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(45, 45);
+            this.editButton.Size = new System.Drawing.Size(50, 45);
             this.editButton.TabIndex = 1;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // addButton
             // 
@@ -163,7 +167,7 @@
             this.addButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("addButton.ImageOptions.SvgImage")));
             this.addButton.Location = new System.Drawing.Point(6, 6);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(45, 45);
+            this.addButton.Size = new System.Drawing.Size(50, 45);
             this.addButton.TabIndex = 0;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
@@ -172,13 +176,13 @@
             this.tabNavigationPage2.Caption = "Общая информация";
             this.tabNavigationPage2.Controls.Add(this.gridControl1);
             this.tabNavigationPage2.Name = "tabNavigationPage2";
-            this.tabNavigationPage2.Size = new System.Drawing.Size(678, 431);
+            this.tabNavigationPage2.Size = new System.Drawing.Size(688, 431);
             // 
             // ObjectWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(697, 539);
+            this.ClientSize = new System.Drawing.Size(712, 539);
             this.Controls.Add(this.tabPane1);
             this.Controls.Add(this.labelControl1);
             this.Name = "ObjectWindow";

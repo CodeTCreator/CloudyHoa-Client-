@@ -1,45 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="addStaticParam">
+  <xs:element name="AddStaticParam">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="typeParams" type="xs:int" />
         <xs:element minOccurs="0" name="propertyId" type="xs:int" />
-        <xs:element minOccurs="0" name="startPeriod" type="xs:dateTime" />
-        <xs:element minOccurs="0" name="changingDate" type="xs:dateTime" />
         <xs:element minOccurs="0" name="objectId" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="addStaticParamResponse">
+  <xs:element name="AddStaticParamResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="deleteStaticParam">
+  <xs:element name="DeleteStaticParam">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="paramId" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="deleteStaticParamResponse">
+  <xs:element name="DeleteStaticParamResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="getStaticParam">
+  <xs:element name="GetStaticParam">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="paramId" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="getStaticParamResponse">
+  <xs:element name="GetStaticParamResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="getStaticParamResult" nillable="true">
+        <xs:element minOccurs="0" name="GetStaticParamResult" nillable="true">
           <xs:complexType>
             <xs:annotation>
               <xs:appinfo>
@@ -55,17 +53,17 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="getCurrentStaticParam">
+  <xs:element name="GetCurrentStaticParam">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="propId" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="getCurrentStaticParamResponse">
+  <xs:element name="GetCurrentStaticParamResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="getCurrentStaticParamResult" nillable="true">
+        <xs:element minOccurs="0" name="GetCurrentStaticParamResult" nillable="true">
           <xs:complexType>
             <xs:annotation>
               <xs:appinfo>
@@ -81,17 +79,17 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="getCurrentStaticParams">
+  <xs:element name="GetCurrentStaticParams">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="objectId" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="getCurrentStaticParamsResponse">
+  <xs:element name="GetCurrentStaticParamsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="getCurrentStaticParamsResult" nillable="true">
+        <xs:element minOccurs="0" name="GetCurrentStaticParamsResult" nillable="true">
           <xs:complexType>
             <xs:annotation>
               <xs:appinfo>
@@ -107,17 +105,17 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="getOldStaticParams">
+  <xs:element name="GetOldStaticParams">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="objectId" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="getOldStaticParamsResponse">
+  <xs:element name="GetOldStaticParamsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="getOldStaticParamsResult" nillable="true">
+        <xs:element minOccurs="0" name="GetOldStaticParamsResult" nillable="true">
           <xs:complexType>
             <xs:annotation>
               <xs:appinfo>

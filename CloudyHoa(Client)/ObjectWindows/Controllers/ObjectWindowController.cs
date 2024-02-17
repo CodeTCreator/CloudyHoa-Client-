@@ -51,6 +51,5 @@ namespace CloudyHoa_Client_.ObjectWindow.Service_Controller
         {
             objectDataService.DeleteObject(objectId);
         }
-
     }
 }
