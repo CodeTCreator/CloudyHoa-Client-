@@ -55,7 +55,7 @@
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.comboBoxService = new System.Windows.Forms.ComboBox();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.saveButton = new DevExpress.XtraEditors.SimpleButton();
+            this.universalButton = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl)).BeginInit();
             this.xtraTabControl.SuspendLayout();
             this.xtraTabPageMainInfo.SuspendLayout();
@@ -151,6 +151,7 @@
             this.comboBoxTypesObjects.Size = new System.Drawing.Size(224, 28);
             this.comboBoxTypesObjects.TabIndex = 17;
             this.comboBoxTypesObjects.SelectedIndexChanged += new System.EventHandler(this.comboBoxTypesObjects_SelectedIndexChanged);
+            this.comboBoxTypesObjects.SelectionChangeCommitted += new System.EventHandler(this.comboBoxTypesObjects_SelectionChangeCommitted);
             // 
             // labelControl4
             // 
@@ -200,7 +201,6 @@
             // 
             this.xtraTabPageIndicators.Controls.Add(this.stackPanel1);
             this.xtraTabPageIndicators.Name = "xtraTabPageIndicators";
-            this.xtraTabPageIndicators.PageEnabled = false;
             this.xtraTabPageIndicators.Size = new System.Drawing.Size(733, 404);
             this.xtraTabPageIndicators.Text = "Статические параметры";
             // 
@@ -356,22 +356,21 @@
             this.simpleButton1.Size = new System.Drawing.Size(22, 22);
             this.simpleButton1.TabIndex = 6;
             // 
-            // saveButton
+            // universalButton
             // 
-            this.saveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.saveButton.Location = new System.Drawing.Point(629, 409);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(94, 29);
-            this.saveButton.TabIndex = 3;
-            this.saveButton.Text = "Сохранить";
-            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+            this.universalButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.universalButton.Location = new System.Drawing.Point(629, 409);
+            this.universalButton.Name = "universalButton";
+            this.universalButton.Size = new System.Drawing.Size(94, 29);
+            this.universalButton.TabIndex = 3;
+            this.universalButton.Text = "Сохранить";
             // 
             // ObjectMW
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(735, 447);
-            this.Controls.Add(this.saveButton);
+            this.Controls.Add(this.universalButton);
             this.Controls.Add(this.xtraTabControl);
             this.Name = "ObjectMW";
             this.Text = "Добавление объекта";
@@ -429,6 +428,6 @@
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private System.Windows.Forms.ComboBox comboBoxService;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton saveButton;
+        private DevExpress.XtraEditors.SimpleButton universalButton;
     }
 }

@@ -15,12 +15,14 @@ namespace CloudyHoa_Client_.ObjectWindows.MW.Controllers.Service_Controller
             _objectsServiceClient = new ObjectServiceReference.ObjectsServiceClient();
         }
 
-        public void AddObject(int hoaId,int typeObject,string identificator,int parentId)
+        public int AddObject(int hoaId,int typeObject,string identificator,int? parentId)
         {
-            _objectsServiceClient.AddObject(hoaId, typeObject, identificator, parentId);
+            int objectId = -1;
+            objectId = _objectsServiceClient.AddObject(hoaId, typeObject, identificator, parentId);
+            return objectId;
         }
 
-        public void EditObject(int objectId, string identificator, int parentId)
+        public void EditObject(int objectId, string identificator, int? parentId)
         {
             _objectsServiceClient.EditObject(objectId, identificator, parentId);
         }

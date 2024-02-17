@@ -15,41 +15,41 @@ namespace CloudyHoa_Client_.SPServiceReference {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SPServiceReference.IStaticParamsService")]
     public interface IStaticParamsService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticParamsService/addStaticParam", ReplyAction="http://tempuri.org/IStaticParamsService/addStaticParamResponse")]
-        void addStaticParam(string value, int typeParams, int propertyId, System.DateTime startPeriod, System.DateTime changingDate, int objectId);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticParamsService/AddStaticParam", ReplyAction="http://tempuri.org/IStaticParamsService/AddStaticParamResponse")]
+        void AddStaticParam(string value, int typeParams, int propertyId, int objectId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticParamsService/addStaticParam", ReplyAction="http://tempuri.org/IStaticParamsService/addStaticParamResponse")]
-        System.Threading.Tasks.Task addStaticParamAsync(string value, int typeParams, int propertyId, System.DateTime startPeriod, System.DateTime changingDate, int objectId);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticParamsService/AddStaticParam", ReplyAction="http://tempuri.org/IStaticParamsService/AddStaticParamResponse")]
+        System.Threading.Tasks.Task AddStaticParamAsync(string value, int typeParams, int propertyId, int objectId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticParamsService/deleteStaticParam", ReplyAction="http://tempuri.org/IStaticParamsService/deleteStaticParamResponse")]
-        void deleteStaticParam(int paramId);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticParamsService/DeleteStaticParam", ReplyAction="http://tempuri.org/IStaticParamsService/DeleteStaticParamResponse")]
+        void DeleteStaticParam(int paramId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticParamsService/deleteStaticParam", ReplyAction="http://tempuri.org/IStaticParamsService/deleteStaticParamResponse")]
-        System.Threading.Tasks.Task deleteStaticParamAsync(int paramId);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticParamsService/DeleteStaticParam", ReplyAction="http://tempuri.org/IStaticParamsService/DeleteStaticParamResponse")]
+        System.Threading.Tasks.Task DeleteStaticParamAsync(int paramId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticParamsService/getStaticParam", ReplyAction="http://tempuri.org/IStaticParamsService/getStaticParamResponse")]
-        System.Data.DataSet getStaticParam(int paramId);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticParamsService/GetStaticParam", ReplyAction="http://tempuri.org/IStaticParamsService/GetStaticParamResponse")]
+        System.Data.DataSet GetStaticParam(int paramId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticParamsService/getStaticParam", ReplyAction="http://tempuri.org/IStaticParamsService/getStaticParamResponse")]
-        System.Threading.Tasks.Task<System.Data.DataSet> getStaticParamAsync(int paramId);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticParamsService/GetStaticParam", ReplyAction="http://tempuri.org/IStaticParamsService/GetStaticParamResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetStaticParamAsync(int paramId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticParamsService/getCurrentStaticParam", ReplyAction="http://tempuri.org/IStaticParamsService/getCurrentStaticParamResponse")]
-        System.Data.DataSet getCurrentStaticParam(int propId);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticParamsService/GetCurrentStaticParam", ReplyAction="http://tempuri.org/IStaticParamsService/GetCurrentStaticParamResponse")]
+        System.Data.DataSet GetCurrentStaticParam(int propId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticParamsService/getCurrentStaticParam", ReplyAction="http://tempuri.org/IStaticParamsService/getCurrentStaticParamResponse")]
-        System.Threading.Tasks.Task<System.Data.DataSet> getCurrentStaticParamAsync(int propId);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticParamsService/GetCurrentStaticParam", ReplyAction="http://tempuri.org/IStaticParamsService/GetCurrentStaticParamResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetCurrentStaticParamAsync(int propId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticParamsService/getCurrentStaticParams", ReplyAction="http://tempuri.org/IStaticParamsService/getCurrentStaticParamsResponse")]
-        System.Data.DataSet getCurrentStaticParams(int objectId);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticParamsService/GetCurrentStaticParams", ReplyAction="http://tempuri.org/IStaticParamsService/GetCurrentStaticParamsResponse")]
+        System.Data.DataSet GetCurrentStaticParams(int objectId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticParamsService/getCurrentStaticParams", ReplyAction="http://tempuri.org/IStaticParamsService/getCurrentStaticParamsResponse")]
-        System.Threading.Tasks.Task<System.Data.DataSet> getCurrentStaticParamsAsync(int objectId);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticParamsService/GetCurrentStaticParams", ReplyAction="http://tempuri.org/IStaticParamsService/GetCurrentStaticParamsResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetCurrentStaticParamsAsync(int objectId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticParamsService/getOldStaticParams", ReplyAction="http://tempuri.org/IStaticParamsService/getOldStaticParamsResponse")]
-        System.Data.DataSet getOldStaticParams(int objectId);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticParamsService/GetOldStaticParams", ReplyAction="http://tempuri.org/IStaticParamsService/GetOldStaticParamsResponse")]
+        System.Data.DataSet GetOldStaticParams(int objectId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticParamsService/getOldStaticParams", ReplyAction="http://tempuri.org/IStaticParamsService/getOldStaticParamsResponse")]
-        System.Threading.Tasks.Task<System.Data.DataSet> getOldStaticParamsAsync(int objectId);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticParamsService/GetOldStaticParams", ReplyAction="http://tempuri.org/IStaticParamsService/GetOldStaticParamsResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetOldStaticParamsAsync(int objectId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticParamsService/GetSchemeStaticParams", ReplyAction="http://tempuri.org/IStaticParamsService/GetSchemeStaticParamsResponse")]
         System.Data.DataSet GetSchemeStaticParams(int hoaId, int typeObject);
@@ -85,52 +85,52 @@ namespace CloudyHoa_Client_.SPServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public void addStaticParam(string value, int typeParams, int propertyId, System.DateTime startPeriod, System.DateTime changingDate, int objectId) {
-            base.Channel.addStaticParam(value, typeParams, propertyId, startPeriod, changingDate, objectId);
+        public void AddStaticParam(string value, int typeParams, int propertyId, int objectId) {
+            base.Channel.AddStaticParam(value, typeParams, propertyId, objectId);
         }
         
-        public System.Threading.Tasks.Task addStaticParamAsync(string value, int typeParams, int propertyId, System.DateTime startPeriod, System.DateTime changingDate, int objectId) {
-            return base.Channel.addStaticParamAsync(value, typeParams, propertyId, startPeriod, changingDate, objectId);
+        public System.Threading.Tasks.Task AddStaticParamAsync(string value, int typeParams, int propertyId, int objectId) {
+            return base.Channel.AddStaticParamAsync(value, typeParams, propertyId, objectId);
         }
         
-        public void deleteStaticParam(int paramId) {
-            base.Channel.deleteStaticParam(paramId);
+        public void DeleteStaticParam(int paramId) {
+            base.Channel.DeleteStaticParam(paramId);
         }
         
-        public System.Threading.Tasks.Task deleteStaticParamAsync(int paramId) {
-            return base.Channel.deleteStaticParamAsync(paramId);
+        public System.Threading.Tasks.Task DeleteStaticParamAsync(int paramId) {
+            return base.Channel.DeleteStaticParamAsync(paramId);
         }
         
-        public System.Data.DataSet getStaticParam(int paramId) {
-            return base.Channel.getStaticParam(paramId);
+        public System.Data.DataSet GetStaticParam(int paramId) {
+            return base.Channel.GetStaticParam(paramId);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> getStaticParamAsync(int paramId) {
-            return base.Channel.getStaticParamAsync(paramId);
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetStaticParamAsync(int paramId) {
+            return base.Channel.GetStaticParamAsync(paramId);
         }
         
-        public System.Data.DataSet getCurrentStaticParam(int propId) {
-            return base.Channel.getCurrentStaticParam(propId);
+        public System.Data.DataSet GetCurrentStaticParam(int propId) {
+            return base.Channel.GetCurrentStaticParam(propId);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> getCurrentStaticParamAsync(int propId) {
-            return base.Channel.getCurrentStaticParamAsync(propId);
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetCurrentStaticParamAsync(int propId) {
+            return base.Channel.GetCurrentStaticParamAsync(propId);
         }
         
-        public System.Data.DataSet getCurrentStaticParams(int objectId) {
-            return base.Channel.getCurrentStaticParams(objectId);
+        public System.Data.DataSet GetCurrentStaticParams(int objectId) {
+            return base.Channel.GetCurrentStaticParams(objectId);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> getCurrentStaticParamsAsync(int objectId) {
-            return base.Channel.getCurrentStaticParamsAsync(objectId);
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetCurrentStaticParamsAsync(int objectId) {
+            return base.Channel.GetCurrentStaticParamsAsync(objectId);
         }
         
-        public System.Data.DataSet getOldStaticParams(int objectId) {
-            return base.Channel.getOldStaticParams(objectId);
+        public System.Data.DataSet GetOldStaticParams(int objectId) {
+            return base.Channel.GetOldStaticParams(objectId);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> getOldStaticParamsAsync(int objectId) {
-            return base.Channel.getOldStaticParamsAsync(objectId);
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetOldStaticParamsAsync(int objectId) {
+            return base.Channel.GetOldStaticParamsAsync(objectId);
         }
         
         public System.Data.DataSet GetSchemeStaticParams(int hoaId, int typeObject) {

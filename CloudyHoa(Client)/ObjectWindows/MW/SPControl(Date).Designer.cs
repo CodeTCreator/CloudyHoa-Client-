@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            this.valueControl = new DevExpress.XtraEditors.DateEdit();
             this.textEditDataType = new DevExpress.XtraEditors.TextEdit();
             this.textEditName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -37,15 +37,15 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.valueControl.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.valueControl.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditDataType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditName.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.dateEdit1);
+            this.panelControl1.Controls.Add(this.valueControl);
             this.panelControl1.Controls.Add(this.textEditDataType);
             this.panelControl1.Controls.Add(this.textEditName);
             this.panelControl1.Controls.Add(this.labelControl3);
@@ -56,41 +56,41 @@
             this.panelControl1.Size = new System.Drawing.Size(460, 185);
             this.panelControl1.TabIndex = 0;
             // 
-            // dateEdit1
+            // valueControl
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(230, 137);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dateEdit1.Properties.Appearance.Options.UseFont = true;
-            this.dateEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.valueControl.EditValue = null;
+            this.valueControl.Location = new System.Drawing.Point(225, 137);
+            this.valueControl.Name = "valueControl";
+            this.valueControl.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.valueControl.Properties.Appearance.Options.UseFont = true;
+            this.valueControl.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.valueControl.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.valueControl.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(200, 30);
-            this.dateEdit1.TabIndex = 17;
+            this.valueControl.Size = new System.Drawing.Size(210, 30);
+            this.valueControl.TabIndex = 17;
             // 
             // textEditDataType
             // 
             this.textEditDataType.Enabled = false;
-            this.textEditDataType.Location = new System.Drawing.Point(230, 78);
+            this.textEditDataType.Location = new System.Drawing.Point(225, 78);
             this.textEditDataType.Name = "textEditDataType";
             this.textEditDataType.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textEditDataType.Properties.Appearance.Options.UseFont = true;
             this.textEditDataType.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.textEditDataType.Size = new System.Drawing.Size(200, 30);
+            this.textEditDataType.Size = new System.Drawing.Size(210, 30);
             this.textEditDataType.TabIndex = 16;
             // 
             // textEditName
             // 
             this.textEditName.Enabled = false;
-            this.textEditName.Location = new System.Drawing.Point(230, 19);
+            this.textEditName.Location = new System.Drawing.Point(225, 19);
             this.textEditName.Name = "textEditName";
             this.textEditName.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textEditName.Properties.Appearance.Options.UseFont = true;
             this.textEditName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.textEditName.Size = new System.Drawing.Size(200, 30);
+            this.textEditName.Size = new System.Drawing.Size(210, 30);
             this.textEditName.TabIndex = 15;
             // 
             // labelControl3
@@ -133,8 +133,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.valueControl.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.valueControl.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditDataType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditName.Properties)).EndInit();
             this.ResumeLayout(false);
@@ -144,7 +144,7 @@
         #endregion
 
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private DevExpress.XtraEditors.DateEdit valueControl;
         private DevExpress.XtraEditors.TextEdit textEditDataType;
         private DevExpress.XtraEditors.TextEdit textEditName;
         private DevExpress.XtraEditors.LabelControl labelControl3;

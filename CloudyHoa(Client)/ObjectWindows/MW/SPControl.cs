@@ -17,6 +17,11 @@ namespace CloudyHoa_Client_.ObjectWindows.MW
             InitializeComponent();
         }
 
+        public string GetData()
+        {
+            return valueControl.Text;
+        }
+
         public void LoadData(string name, string type)
         {
             textEditName.Text = name;

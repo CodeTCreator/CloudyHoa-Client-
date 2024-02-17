@@ -9,5 +9,7 @@ namespace CloudyHoa_Client_.ObjectWindows.MW
     internal interface ISPControl
     {
         void LoadData(string name, string type);
+
+        string GetData();
     }
 }

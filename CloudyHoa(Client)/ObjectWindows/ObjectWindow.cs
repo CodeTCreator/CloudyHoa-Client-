@@ -21,8 +21,7 @@ namespace CloudyHoa_Client_.ObjectWindow
         DataObject.DAO _dataAccessObject;
         ObjectWindowController _objectWindowController;
         ObjectDataService _objectDataService;
-        int _hoaId = UserContext.Instance.CurrentUser.hoaId;
-
+        FocusedObject _focusedObject;
         public Control ContainerForLoading => this;
 
         public Control LockControl => tabPane1;
@@ -37,9 +36,9 @@ namespace CloudyHoa_Client_.ObjectWindow
             _dataAccessObject = new DataObject.DAO(new ObjectDataStructure());
             _objectWindowController = new ObjectWindowController();
             _objectDataService = new ObjectDataService();
+            _focusedObject = new FocusedObject();
             await LoadData();
         }
-
         private async Task LoadData()
         {
             await this.SafeUIExecuteAsync(async () =>
@@ -64,7 +63,6 @@ namespace CloudyHoa_Client_.ObjectWindow
            
             //_objectWindowController.LoadObjectsStructureAsync(_objectDataService, _dataAccessObject);
         }
-
         private void BindingData()
         {
             treeListObject.DataSource = _objectWindowController.GetObjectsTable(_dataAccessObject);
@@ -72,21 +70,52 @@ namespace CloudyHoa_Client_.ObjectWindow
                 from objectC in _objectWindowController.GetObjectsTable(_dataAccessObject).AsEnumerable()
                 group objectC by objectC["name"] into ob
                 select new {name = ob.Key, count =  ob.Count()};
-        }
 
+        }
         private void deleteButton_Click(object sender, EventArgs e)
         {
             if (treeListObject.GetFocusedRowCellValue("id") != null)
             {
                 int objectId = (int)treeListObject.GetFocusedRowCellValue("id");
                 _objectWindowController.DeleteObject(_objectDataService, objectId);
+                _objectWindowController.LoadAllObjects(_objectDataService,_dataAccessObject);
+                BindingData();
             }
         }
-
         private void addButton_Click(object sender, EventArgs e)
         {
             ObjectMW objectMW = new ObjectMW(0);
             objectMW.ShowDialog();
+            UpdateBindings();
+        }
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            if (treeListObject.GetFocusedRowCellValue("id") != null)
+            {
+                ObjectMW objectMW = new ObjectMW(1);
+                objectMW.LoadDataInForm(_focusedObject);
+                objectMW.ShowDialog();
+                UpdateBindings();
+            }
+        }
+        private void UpdateBindings()
+        {
+            _objectWindowController.LoadAllObjects(_objectDataService, _dataAccessObject);
+            BindingData();
+        }
+
+        private void treeListObject_SelectionChanged(object sender, EventArgs e)
+        {
+            if (treeListObject.GetFocusedRowCellValue("id") != null)
+            {
+                _focusedObject.objectId = (int)treeListObject.GetFocusedRowCellValue("id");
+                _focusedObject.typeObject = (int)treeListObject.GetFocusedRowCellValue("id1");
+                _focusedObject.identificator = treeListObject.GetFocusedRowCellValue("identificator").ToString();
+
+                _focusedObject.parentId = treeListObject.GetFocusedRowCellValue("parent_id") != DBNull.Value ?
+                    (int)treeListObject.GetFocusedRowCellValue("parent_id") : (int?)null;
+                _focusedObject.nameType = treeListObject.GetFocusedRowCellValue("name").ToString();
+            }
         }
     }
 }

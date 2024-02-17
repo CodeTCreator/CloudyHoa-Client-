@@ -14,11 +14,10 @@ namespace CloudyHoa_Client_.ObjectWindows
     public partial class ObjectMW : Form, ISafeExecuteControl
     {
 
-        DAO _dataAccessObject;
-        
-        ObjectMWController _controller;
+        DAO _dataAccessObject = new DAO(new ObjectMWDataStructure());
 
-        int _hoaId = UserContext.Instance.CurrentUser.hoaId;
+        ObjectMWController _controller = new ObjectMWController();
+
         int _formMode = -1;
 
         public Control ContainerForLoading => this;
@@ -37,25 +36,60 @@ namespace CloudyHoa_Client_.ObjectWindows
         {
             InitializeComponent();
             _formMode = mode;
-            PrepareForm();
+
         }
-        private void PrepareForm()
+        private void PrepareForms()
         {
             if(_formMode == 1)
             {
                 this.Text = "Редактирование объекта";
+                if(_controller.GetTypeObject(_dataAccessObject) == -1)
+                {
+                    const string body = "Не удалось загрузить данные объекта";
+                    const string caption = "Загрузка данных";
+                    var result = MessageBox.Show(body, caption,
+                                                 MessageBoxButtons.OK,
+                                                 MessageBoxIcon.Error);
+                    this.Close();
+                }
+                else
+                {
+                    // Загрузка данных из объекта FocusedObject
+                    _controller.SettingFocusingObject(_dataAccessObject);
+                    // Установить индекс в двух comboBox
+                    int type_object = _controller.GetTypeObject(_dataAccessObject);
+                    _controller.SelectValueComboBox(comboBoxTypesObjects, _controller.GetTypeObjectsTable(_dataAccessObject),
+                        type_object, "id");
+                    _controller.SettingFocusingObject(_dataAccessObject);
+                    //comboBoxTypesObjects.SelectedValue = _controller.GetTypeObject(_dataAccessObject);
+                    _controller.SelectValueComboBox(comboBoxParents, _controller.GetParentsTable(_dataAccessObject, type_object),
+                        _controller.GetParentObject(_dataAccessObject) != null ?
+                        _controller.GetParentObject(_dataAccessObject).Value : -1, "id1");
+                    //comboBoxParents.SelectedIndex = _controller.GetParentObject(_dataAccessObject) != null ?
+                    //    _controller.GetParentObject(_dataAccessObject).Value : -1;
+
+                    textEditNumber.Text = _controller.GetIdentificator(_dataAccessObject);
+                }
+                xtraTabPageBenefits.PageEnabled = false;
+                xtraTabPageIndicators.PageEnabled = false;
+                comboBoxTypesObjects.Enabled = false;
+                checkEditBenefits.Enabled = false;
+                universalButton.Click += editButton_Click;
             }
             else
             {
-
+                universalButton.Click += saveButton_Click;
             }
         }
+
+        public void LoadDataInForm(FocusedObject focusedObject)
+        {
+            _controller.LoadFO(focusedObject,_dataAccessObject);
+        } 
         private async void ObjectMW_Load(object sender, EventArgs e)
         {
-            _dataAccessObject = new DAO(new ObjectMWDataStructure());
-            _controller = new ObjectMWController();
-            
             await LoadData();
+            PrepareForms();
         }
         private async Task LoadData()
         {
@@ -94,7 +128,7 @@ namespace CloudyHoa_Client_.ObjectWindows
             int typeObject = (int)comboBoxTypesObjects.SelectedValue;
             stackPanelProperties.Controls.Clear();
             _controller.SetTypeObject(_dataAccessObject, typeObject);
-            xtraTabPageIndicators.PageEnabled = true;
+
             comboBoxParents.DataSource = _controller.GetParentsTable(_dataAccessObject, typeObject);
             comboBoxParents.DisplayMember = "name";
             comboBoxParents.ValueMember = "id1";
@@ -109,8 +143,11 @@ namespace CloudyHoa_Client_.ObjectWindows
 
         private void comboBoxParents_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int parentObject = (int)comboBoxParents.SelectedValue;
-            _controller.SetParentObject(_dataAccessObject, parentObject);
+            if(comboBoxParents.SelectedValue != null)
+            {
+                int parentObject = (int)comboBoxParents.SelectedValue;
+                _controller.SetParentObject(_dataAccessObject, parentObject);
+            }
         }
         private void LoadProperty(int typeObject)
         {
@@ -120,8 +157,25 @@ namespace CloudyHoa_Client_.ObjectWindows
         private void saveButton_Click(object sender, EventArgs e)
         {
             _controller.AddObject(_dataAccessObject, stackPanelProperties);
+            this.Close();
+        }
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            _controller.EditObject(_dataAccessObject);
+            this.Close();
         }
 
+        private void comboBoxTypesObjects_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            int typeObject = (int)comboBoxTypesObjects.SelectedValue;
+            stackPanelProperties.Controls.Clear();
+            _controller.SetTypeObject(_dataAccessObject, typeObject);
 
+            comboBoxParents.DataSource = _controller.GetParentsTable(_dataAccessObject, typeObject);
+            comboBoxParents.DisplayMember = "name";
+            comboBoxParents.ValueMember = "id1";
+            comboBoxParents.SelectedIndex = -1;
+            LoadProperty(typeObject);
+        }
     }
 }

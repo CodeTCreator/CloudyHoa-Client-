@@ -22,16 +22,16 @@ namespace CloudyHoa_Client_.ObjectServiceReference {
         System.Threading.Tasks.Task DeleteObjectAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IObjectsService/EditObject", ReplyAction="http://tempuri.org/IObjectsService/EditObjectResponse")]
-        void EditObject(int id, string objectNumber, int parentId);
+        void EditObject(int id, string objectNumber, System.Nullable<int> parentId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IObjectsService/EditObject", ReplyAction="http://tempuri.org/IObjectsService/EditObjectResponse")]
-        System.Threading.Tasks.Task EditObjectAsync(int id, string objectNumber, int parentId);
+        System.Threading.Tasks.Task EditObjectAsync(int id, string objectNumber, System.Nullable<int> parentId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IObjectsService/AddObject", ReplyAction="http://tempuri.org/IObjectsService/AddObjectResponse")]
-        int AddObject(int hoa_id, int type_object, string objectNumber, int parentId);
+        int AddObject(int hoa_id, int type_object, string objectNumber, System.Nullable<int> parentId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IObjectsService/AddObject", ReplyAction="http://tempuri.org/IObjectsService/AddObjectResponse")]
-        System.Threading.Tasks.Task<int> AddObjectAsync(int hoa_id, int type_object, string objectNumber, int parentId);
+        System.Threading.Tasks.Task<int> AddObjectAsync(int hoa_id, int type_object, string objectNumber, System.Nullable<int> parentId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IObjectsService/GetAllObjects", ReplyAction="http://tempuri.org/IObjectsService/GetAllObjectsResponse")]
         System.Data.DataSet GetAllObjects(int hoaId);
@@ -87,19 +87,19 @@ namespace CloudyHoa_Client_.ObjectServiceReference {
             return base.Channel.DeleteObjectAsync(id);
         }
         
-        public void EditObject(int id, string objectNumber, int parentId) {
+        public void EditObject(int id, string objectNumber, System.Nullable<int> parentId) {
             base.Channel.EditObject(id, objectNumber, parentId);
         }
         
-        public System.Threading.Tasks.Task EditObjectAsync(int id, string objectNumber, int parentId) {
+        public System.Threading.Tasks.Task EditObjectAsync(int id, string objectNumber, System.Nullable<int> parentId) {
             return base.Channel.EditObjectAsync(id, objectNumber, parentId);
         }
         
-        public int AddObject(int hoa_id, int type_object, string objectNumber, int parentId) {
+        public int AddObject(int hoa_id, int type_object, string objectNumber, System.Nullable<int> parentId) {
             return base.Channel.AddObject(hoa_id, type_object, objectNumber, parentId);
         }
         
-        public System.Threading.Tasks.Task<int> AddObjectAsync(int hoa_id, int type_object, string objectNumber, int parentId) {
+        public System.Threading.Tasks.Task<int> AddObjectAsync(int hoa_id, int type_object, string objectNumber, System.Nullable<int> parentId) {
             return base.Channel.AddObjectAsync(hoa_id, type_object, objectNumber, parentId);
         }
         

@@ -100,7 +100,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="SPService_addStaticParam_Input_policy">
+  <wsp:Policy wsu:Id="SPService_AddStaticParam_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
@@ -119,7 +119,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="SPService_addStaticParam_output_policy">
+  <wsp:Policy wsu:Id="SPService_AddStaticParam_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
@@ -138,7 +138,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="SPService_deleteStaticParam_Input_policy">
+  <wsp:Policy wsu:Id="SPService_DeleteStaticParam_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
@@ -157,7 +157,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="SPService_deleteStaticParam_output_policy">
+  <wsp:Policy wsu:Id="SPService_DeleteStaticParam_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
@@ -176,7 +176,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="SPService_getStaticParam_Input_policy">
+  <wsp:Policy wsu:Id="SPService_GetStaticParam_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
@@ -195,7 +195,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="SPService_getStaticParam_output_policy">
+  <wsp:Policy wsu:Id="SPService_GetStaticParam_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
@@ -214,7 +214,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="SPService_getCurrentStaticParam_Input_policy">
+  <wsp:Policy wsu:Id="SPService_GetCurrentStaticParam_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
@@ -233,7 +233,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="SPService_getCurrentStaticParam_output_policy">
+  <wsp:Policy wsu:Id="SPService_GetCurrentStaticParam_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
@@ -252,7 +252,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="SPService_getCurrentStaticParams_Input_policy">
+  <wsp:Policy wsu:Id="SPService_GetCurrentStaticParams_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
@@ -271,7 +271,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="SPService_getCurrentStaticParams_output_policy">
+  <wsp:Policy wsu:Id="SPService_GetCurrentStaticParams_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
@@ -290,7 +290,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="SPService_getOldStaticParams_Input_policy">
+  <wsp:Policy wsu:Id="SPService_GetOldStaticParams_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
@@ -309,7 +309,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="SPService_getOldStaticParams_output_policy">
+  <wsp:Policy wsu:Id="SPService_GetOldStaticParams_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
@@ -373,41 +373,41 @@
       <xsd:import schemaLocation="http://localhost:7744/WcfServiceLibrary.StaticParamsService.svc?xsd=xsd2" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IStaticParamsService_addStaticParam_InputMessage">
-    <wsdl:part name="parameters" element="tns:addStaticParam" />
+  <wsdl:message name="IStaticParamsService_AddStaticParam_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddStaticParam" />
   </wsdl:message>
-  <wsdl:message name="IStaticParamsService_addStaticParam_OutputMessage">
-    <wsdl:part name="parameters" element="tns:addStaticParamResponse" />
+  <wsdl:message name="IStaticParamsService_AddStaticParam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddStaticParamResponse" />
   </wsdl:message>
-  <wsdl:message name="IStaticParamsService_deleteStaticParam_InputMessage">
-    <wsdl:part name="parameters" element="tns:deleteStaticParam" />
+  <wsdl:message name="IStaticParamsService_DeleteStaticParam_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteStaticParam" />
   </wsdl:message>
-  <wsdl:message name="IStaticParamsService_deleteStaticParam_OutputMessage">
-    <wsdl:part name="parameters" element="tns:deleteStaticParamResponse" />
+  <wsdl:message name="IStaticParamsService_DeleteStaticParam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteStaticParamResponse" />
   </wsdl:message>
-  <wsdl:message name="IStaticParamsService_getStaticParam_InputMessage">
-    <wsdl:part name="parameters" element="tns:getStaticParam" />
+  <wsdl:message name="IStaticParamsService_GetStaticParam_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStaticParam" />
   </wsdl:message>
-  <wsdl:message name="IStaticParamsService_getStaticParam_OutputMessage">
-    <wsdl:part name="parameters" element="tns:getStaticParamResponse" />
+  <wsdl:message name="IStaticParamsService_GetStaticParam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStaticParamResponse" />
   </wsdl:message>
-  <wsdl:message name="IStaticParamsService_getCurrentStaticParam_InputMessage">
-    <wsdl:part name="parameters" element="tns:getCurrentStaticParam" />
+  <wsdl:message name="IStaticParamsService_GetCurrentStaticParam_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentStaticParam" />
   </wsdl:message>
-  <wsdl:message name="IStaticParamsService_getCurrentStaticParam_OutputMessage">
-    <wsdl:part name="parameters" element="tns:getCurrentStaticParamResponse" />
+  <wsdl:message name="IStaticParamsService_GetCurrentStaticParam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentStaticParamResponse" />
   </wsdl:message>
-  <wsdl:message name="IStaticParamsService_getCurrentStaticParams_InputMessage">
-    <wsdl:part name="parameters" element="tns:getCurrentStaticParams" />
+  <wsdl:message name="IStaticParamsService_GetCurrentStaticParams_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentStaticParams" />
   </wsdl:message>
-  <wsdl:message name="IStaticParamsService_getCurrentStaticParams_OutputMessage">
-    <wsdl:part name="parameters" element="tns:getCurrentStaticParamsResponse" />
+  <wsdl:message name="IStaticParamsService_GetCurrentStaticParams_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentStaticParamsResponse" />
   </wsdl:message>
-  <wsdl:message name="IStaticParamsService_getOldStaticParams_InputMessage">
-    <wsdl:part name="parameters" element="tns:getOldStaticParams" />
+  <wsdl:message name="IStaticParamsService_GetOldStaticParams_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOldStaticParams" />
   </wsdl:message>
-  <wsdl:message name="IStaticParamsService_getOldStaticParams_OutputMessage">
-    <wsdl:part name="parameters" element="tns:getOldStaticParamsResponse" />
+  <wsdl:message name="IStaticParamsService_GetOldStaticParams_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOldStaticParamsResponse" />
   </wsdl:message>
   <wsdl:message name="IStaticParamsService_GetSchemeStaticParams_InputMessage">
     <wsdl:part name="parameters" element="tns:GetSchemeStaticParams" />
@@ -416,29 +416,29 @@
     <wsdl:part name="parameters" element="tns:GetSchemeStaticParamsResponse" />
   </wsdl:message>
   <wsdl:portType name="IStaticParamsService">
-    <wsdl:operation name="addStaticParam">
-      <wsdl:input wsaw:Action="http://tempuri.org/IStaticParamsService/addStaticParam" message="tns:IStaticParamsService_addStaticParam_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IStaticParamsService/addStaticParamResponse" message="tns:IStaticParamsService_addStaticParam_OutputMessage" />
+    <wsdl:operation name="AddStaticParam">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStaticParamsService/AddStaticParam" message="tns:IStaticParamsService_AddStaticParam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStaticParamsService/AddStaticParamResponse" message="tns:IStaticParamsService_AddStaticParam_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="deleteStaticParam">
-      <wsdl:input wsaw:Action="http://tempuri.org/IStaticParamsService/deleteStaticParam" message="tns:IStaticParamsService_deleteStaticParam_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IStaticParamsService/deleteStaticParamResponse" message="tns:IStaticParamsService_deleteStaticParam_OutputMessage" />
+    <wsdl:operation name="DeleteStaticParam">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStaticParamsService/DeleteStaticParam" message="tns:IStaticParamsService_DeleteStaticParam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStaticParamsService/DeleteStaticParamResponse" message="tns:IStaticParamsService_DeleteStaticParam_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="getStaticParam">
-      <wsdl:input wsaw:Action="http://tempuri.org/IStaticParamsService/getStaticParam" message="tns:IStaticParamsService_getStaticParam_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IStaticParamsService/getStaticParamResponse" message="tns:IStaticParamsService_getStaticParam_OutputMessage" />
+    <wsdl:operation name="GetStaticParam">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStaticParamsService/GetStaticParam" message="tns:IStaticParamsService_GetStaticParam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStaticParamsService/GetStaticParamResponse" message="tns:IStaticParamsService_GetStaticParam_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="getCurrentStaticParam">
-      <wsdl:input wsaw:Action="http://tempuri.org/IStaticParamsService/getCurrentStaticParam" message="tns:IStaticParamsService_getCurrentStaticParam_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IStaticParamsService/getCurrentStaticParamResponse" message="tns:IStaticParamsService_getCurrentStaticParam_OutputMessage" />
+    <wsdl:operation name="GetCurrentStaticParam">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStaticParamsService/GetCurrentStaticParam" message="tns:IStaticParamsService_GetCurrentStaticParam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStaticParamsService/GetCurrentStaticParamResponse" message="tns:IStaticParamsService_GetCurrentStaticParam_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="getCurrentStaticParams">
-      <wsdl:input wsaw:Action="http://tempuri.org/IStaticParamsService/getCurrentStaticParams" message="tns:IStaticParamsService_getCurrentStaticParams_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IStaticParamsService/getCurrentStaticParamsResponse" message="tns:IStaticParamsService_getCurrentStaticParams_OutputMessage" />
+    <wsdl:operation name="GetCurrentStaticParams">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStaticParamsService/GetCurrentStaticParams" message="tns:IStaticParamsService_GetCurrentStaticParams_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStaticParamsService/GetCurrentStaticParamsResponse" message="tns:IStaticParamsService_GetCurrentStaticParams_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="getOldStaticParams">
-      <wsdl:input wsaw:Action="http://tempuri.org/IStaticParamsService/getOldStaticParams" message="tns:IStaticParamsService_getOldStaticParams_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IStaticParamsService/getOldStaticParamsResponse" message="tns:IStaticParamsService_getOldStaticParams_OutputMessage" />
+    <wsdl:operation name="GetOldStaticParams">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStaticParamsService/GetOldStaticParams" message="tns:IStaticParamsService_GetOldStaticParams_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStaticParamsService/GetOldStaticParamsResponse" message="tns:IStaticParamsService_GetOldStaticParams_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetSchemeStaticParams">
       <wsdl:input wsaw:Action="http://tempuri.org/IStaticParamsService/GetSchemeStaticParams" message="tns:IStaticParamsService_GetSchemeStaticParams_InputMessage" />
@@ -448,69 +448,69 @@
   <wsdl:binding name="SPService" type="tns:IStaticParamsService">
     <wsp:PolicyReference URI="#SPService_policy" />
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="addStaticParam">
-      <soap12:operation soapAction="http://tempuri.org/IStaticParamsService/addStaticParam" style="document" />
+    <wsdl:operation name="AddStaticParam">
+      <soap12:operation soapAction="http://tempuri.org/IStaticParamsService/AddStaticParam" style="document" />
       <wsdl:input>
-        <wsp:PolicyReference URI="#SPService_addStaticParam_Input_policy" />
+        <wsp:PolicyReference URI="#SPService_AddStaticParam_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <wsp:PolicyReference URI="#SPService_addStaticParam_output_policy" />
+        <wsp:PolicyReference URI="#SPService_AddStaticParam_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="deleteStaticParam">
-      <soap12:operation soapAction="http://tempuri.org/IStaticParamsService/deleteStaticParam" style="document" />
+    <wsdl:operation name="DeleteStaticParam">
+      <soap12:operation soapAction="http://tempuri.org/IStaticParamsService/DeleteStaticParam" style="document" />
       <wsdl:input>
-        <wsp:PolicyReference URI="#SPService_deleteStaticParam_Input_policy" />
+        <wsp:PolicyReference URI="#SPService_DeleteStaticParam_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <wsp:PolicyReference URI="#SPService_deleteStaticParam_output_policy" />
+        <wsp:PolicyReference URI="#SPService_DeleteStaticParam_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="getStaticParam">
-      <soap12:operation soapAction="http://tempuri.org/IStaticParamsService/getStaticParam" style="document" />
+    <wsdl:operation name="GetStaticParam">
+      <soap12:operation soapAction="http://tempuri.org/IStaticParamsService/GetStaticParam" style="document" />
       <wsdl:input>
-        <wsp:PolicyReference URI="#SPService_getStaticParam_Input_policy" />
+        <wsp:PolicyReference URI="#SPService_GetStaticParam_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <wsp:PolicyReference URI="#SPService_getStaticParam_output_policy" />
+        <wsp:PolicyReference URI="#SPService_GetStaticParam_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="getCurrentStaticParam">
-      <soap12:operation soapAction="http://tempuri.org/IStaticParamsService/getCurrentStaticParam" style="document" />
+    <wsdl:operation name="GetCurrentStaticParam">
+      <soap12:operation soapAction="http://tempuri.org/IStaticParamsService/GetCurrentStaticParam" style="document" />
       <wsdl:input>
-        <wsp:PolicyReference URI="#SPService_getCurrentStaticParam_Input_policy" />
+        <wsp:PolicyReference URI="#SPService_GetCurrentStaticParam_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <wsp:PolicyReference URI="#SPService_getCurrentStaticParam_output_policy" />
+        <wsp:PolicyReference URI="#SPService_GetCurrentStaticParam_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="getCurrentStaticParams">
-      <soap12:operation soapAction="http://tempuri.org/IStaticParamsService/getCurrentStaticParams" style="document" />
+    <wsdl:operation name="GetCurrentStaticParams">
+      <soap12:operation soapAction="http://tempuri.org/IStaticParamsService/GetCurrentStaticParams" style="document" />
       <wsdl:input>
-        <wsp:PolicyReference URI="#SPService_getCurrentStaticParams_Input_policy" />
+        <wsp:PolicyReference URI="#SPService_GetCurrentStaticParams_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <wsp:PolicyReference URI="#SPService_getCurrentStaticParams_output_policy" />
+        <wsp:PolicyReference URI="#SPService_GetCurrentStaticParams_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="getOldStaticParams">
-      <soap12:operation soapAction="http://tempuri.org/IStaticParamsService/getOldStaticParams" style="document" />
+    <wsdl:operation name="GetOldStaticParams">
+      <soap12:operation soapAction="http://tempuri.org/IStaticParamsService/GetOldStaticParams" style="document" />
       <wsdl:input>
-        <wsp:PolicyReference URI="#SPService_getOldStaticParams_Input_policy" />
+        <wsp:PolicyReference URI="#SPService_GetOldStaticParams_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <wsp:PolicyReference URI="#SPService_getOldStaticParams_output_policy" />
+        <wsp:PolicyReference URI="#SPService_GetOldStaticParams_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
