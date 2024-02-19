@@ -30,5 +30,10 @@ namespace CloudyHoa_Client_.MainForm
         {
             
         }
+
+        private void propButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
