@@ -7,7 +7,7 @@ namespace CloudyHoa_Client_.Authorization
 {
     public class AuthService
     {
-        private readonly DataService _dataService = new DataService();
+        private readonly DataServiceAuth _dataService = new DataServiceAuth();
 
         public async Task<bool> Auth(string login, string password, bool remember)
         {
@@ -51,11 +51,11 @@ namespace CloudyHoa_Client_.Authorization
         }
     }
 
-    public class DataService
+    public class DataServiceAuth
     {
         private ServiceReference1.ServiceHoaAccountClient _serviceClient ;
 
-        public DataService()
+        public DataServiceAuth()
         {
             CreatingClient();
         }
@@ -67,35 +67,59 @@ namespace CloudyHoa_Client_.Authorization
         }
         public User SignIn(string login, string password)
         {
-            return new User(CheckAndResult(login, password));
+            var hoaId = CheckAndResult(login, password);
+            var name = GetAccountName(hoaId);
+            return new User(name, hoaId);
         }
 
         public async Task<User> SignInAsync(string login, string password)
         {
             //var name = await CheckAndResult(login, password);
             //return new User(name);  
-            var name = await CheckAndResultAsync(login, password);
-            if(name == null)
+            var hoaId = await CheckAndResultAsync(login, password);
+            
+            
+            if(hoaId == -1)
             {
                 return default;
             }
             else
             {
-                return new User(name);
+                var name = GetAccountName(hoaId);
+                User user = new User(name, hoaId);
+                return user;
             }
         }
-        private string CheckAndResult(string login, string password)
+        private int CheckAndResult(string login, string password)
         {
-            var name = _serviceClient.Authorization(login, password);
-            return name;
+            var hoaId = _serviceClient.Authorization(login, password);
+            return hoaId;
         }
 
 
-        private async Task<string> CheckAndResultAsync(string login, string password)
+        private async Task<int> CheckAndResultAsync(string login, string password)
         {
             try
             {
-                var name = await _serviceClient.AuthorizationAsync(login, password);
+                var hoaId = await _serviceClient.AuthorizationAsync(login, password);
+                return hoaId;
+            }
+            catch (System.ServiceModel.EndpointNotFoundException)
+            {
+                const string message =
+                "Сервер недоступен";
+                const string caption = "Подключение к серверу";
+                var serverResult = MessageBox.Show(message, caption,
+                                             MessageBoxButtons.OK,
+                                             MessageBoxIcon.Error);
+                return -1;
+            }
+        }
+        private string GetAccountName(int hoaId)
+        {
+            try
+            {
+                var name =  _serviceClient.GetAccountName(hoaId);
                 return name;
             }
             catch (System.ServiceModel.EndpointNotFoundException)
@@ -108,7 +132,6 @@ namespace CloudyHoa_Client_.Authorization
                                              MessageBoxIcon.Error);
                 return null;
             }
-            
         }
     }
 }

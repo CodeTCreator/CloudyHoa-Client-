@@ -46,10 +46,16 @@ namespace CloudyHoa_Client_.ServiceReference1 {
         System.Threading.Tasks.Task EditAccountAsync(int Id, string Name, string Login, string Password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceHoaAccount/Authorization", ReplyAction="http://tempuri.org/IServiceHoaAccount/AuthorizationResponse")]
-        string Authorization(string login, string password);
+        int Authorization(string login, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceHoaAccount/Authorization", ReplyAction="http://tempuri.org/IServiceHoaAccount/AuthorizationResponse")]
-        System.Threading.Tasks.Task<string> AuthorizationAsync(string login, string password);
+        System.Threading.Tasks.Task<int> AuthorizationAsync(string login, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceHoaAccount/GetAccountName", ReplyAction="http://tempuri.org/IServiceHoaAccount/GetAccountNameResponse")]
+        string GetAccountName(int hoaId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceHoaAccount/GetAccountName", ReplyAction="http://tempuri.org/IServiceHoaAccount/GetAccountNameResponse")]
+        System.Threading.Tasks.Task<string> GetAccountNameAsync(int hoaId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -119,12 +125,20 @@ namespace CloudyHoa_Client_.ServiceReference1 {
             return base.Channel.EditAccountAsync(Id, Name, Login, Password);
         }
         
-        public string Authorization(string login, string password) {
+        public int Authorization(string login, string password) {
             return base.Channel.Authorization(login, password);
         }
         
-        public System.Threading.Tasks.Task<string> AuthorizationAsync(string login, string password) {
+        public System.Threading.Tasks.Task<int> AuthorizationAsync(string login, string password) {
             return base.Channel.AuthorizationAsync(login, password);
+        }
+        
+        public string GetAccountName(int hoaId) {
+            return base.Channel.GetAccountName(hoaId);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetAccountNameAsync(int hoaId) {
+            return base.Channel.GetAccountNameAsync(hoaId);
         }
     }
 }
