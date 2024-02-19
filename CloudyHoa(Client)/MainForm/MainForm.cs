@@ -1,4 +1,5 @@
 ﻿using CloudyHoa_Client_.Properties;
+using CloudyHoa_Client_.PropertiesWindows;
 using System;
 using System.Windows.Forms;
 
@@ -33,7 +34,8 @@ namespace CloudyHoa_Client_.MainForm
 
         private void propButton_Click(object sender, EventArgs e)
         {
-
+            PropertiesWindow propertiesWindow = new PropertiesWindow(); 
+            propertiesWindow.ShowDialog();
         }
     }
 }

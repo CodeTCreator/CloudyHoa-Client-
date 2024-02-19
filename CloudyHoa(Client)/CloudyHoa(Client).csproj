@@ -57,7 +57,9 @@
     <Reference Include="DevExpress.Utils.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraWizard.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -104,6 +106,14 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="PropertiesWindows\Controllers\ServiceControllers\PropertiesSC.cs" />
+    <Compile Include="PropertiesWindows\PropertiesWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PropertiesWindows\PropertiesWindow.Designer.cs">
+      <DependentUpon>PropertiesWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertiesWindows\Controllers\PropWindowController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SaveExecuteControl\Helper.cs" />
     <Compile Include="SaveExecuteControl\ISafeExecuteControl.cs" />
@@ -121,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertiesWindows\PropertiesWindow.resx">
+      <DependentUpon>PropertiesWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
