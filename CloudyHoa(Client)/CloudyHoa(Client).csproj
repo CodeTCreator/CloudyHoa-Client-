@@ -270,6 +270,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Menu\" />
+    <Folder Include="ObjectWindows\Controllers\Service_Controller\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
