@@ -8,5 +8,7 @@ namespace CloudyHoa_Client_.PropertiesWindows
 {
     internal class PropWindowController
     {
+        public PropWindowController() { }
+
     }
 }
