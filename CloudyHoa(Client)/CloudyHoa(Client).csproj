@@ -133,7 +133,28 @@
     <Compile Include="PropertiesWindows\PropertiesWindow.Designer.cs">
       <DependentUpon>PropertiesWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="PropertiesWindows\Controllers\PropWindowController.cs" />
+    <Compile Include="ObjectWindows\MW\Controllers\ObjectMWController.cs" />
+    <Compile Include="ObjectWindows\MW\SPControl%28Date%29.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ObjectWindows\MW\SPControl%28Date%29.Designer.cs">
+      <DependentUpon>SPControl%28Date%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectWindows\MW\SPControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ObjectWindows\MW\SPControl.Designer.cs">
+      <DependentUpon>SPControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectWindows\ObjectWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ObjectWindows\ObjectWindow.Designer.cs">
+      <DependentUpon>ObjectWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\ObjectDataService.cs" />
+    <Compile Include="ObjectWindows\Controllers\ObjectWindowController.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SaveExecuteControl\Helper.cs" />
     <Compile Include="SaveExecuteControl\ISafeExecuteControl.cs" />
