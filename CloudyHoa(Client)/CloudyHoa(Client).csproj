@@ -154,7 +154,7 @@
     <Compile Include="ObjectWindows\ObjectWindow.Designer.cs">
       <DependentUpon>ObjectWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="ObjectWindows\Controllers\Service_Controller\ObjectDataService.cs" />
+    <Compile Include="General\ObjectDataService.cs" />
     <Compile Include="ObjectWindows\Controllers\ObjectWindowController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -302,6 +302,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Menu\" />
+    <Folder Include="ObjectWindows\Controllers\Service_Controller\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
