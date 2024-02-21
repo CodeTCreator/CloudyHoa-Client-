@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
@@ -50,8 +48,11 @@
             this.colstart_period1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.labelControlNameObject = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.treeListObjects = new DevExpress.XtraTreeList.TreeList();
+            this.name = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.identificator = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.type_object = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.id = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -61,22 +62,8 @@
             this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treeListObjects)).BeginInit();
             this.SuspendLayout();
-            // 
-            // gridControl1
-            // 
-            this.gridControl1.Location = new System.Drawing.Point(12, 126);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(338, 515);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
             // 
             // groupBox2
             // 
@@ -284,18 +271,57 @@
             this.labelControl1.TabIndex = 10;
             this.labelControl1.Text = "Характеристики объектов";
             // 
-            // PropertiesWindowcs
+            // treeListObjects
+            // 
+            this.treeListObjects.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
+            this.name,
+            this.identificator,
+            this.type_object,
+            this.id});
+            this.treeListObjects.Location = new System.Drawing.Point(12, 126);
+            this.treeListObjects.Name = "treeListObjects";
+            this.treeListObjects.Size = new System.Drawing.Size(334, 515);
+            this.treeListObjects.TabIndex = 11;
+            // 
+            // name
+            // 
+            this.name.Caption = "Тип объекта";
+            this.name.FieldName = "Тип объекта";
+            this.name.Name = "name";
+            this.name.Visible = true;
+            this.name.VisibleIndex = 0;
+            // 
+            // identificator
+            // 
+            this.identificator.Caption = "Номер";
+            this.identificator.FieldName = "Номер";
+            this.identificator.Name = "identificator";
+            this.identificator.Visible = true;
+            this.identificator.VisibleIndex = 1;
+            // 
+            // type_object
+            // 
+            this.type_object.Caption = "treeListColumn3";
+            this.type_object.FieldName = "type_object";
+            this.type_object.Name = "type_object";
+            // 
+            // id
+            // 
+            this.id.Caption = "treeListColumn4";
+            this.id.FieldName = "id";
+            this.id.Name = "id";
+            // 
+            // PropertiesWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(998, 653);
+            this.Controls.Add(this.treeListObjects);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.gridControl1);
-            this.Name = "PropertiesWindowcs";
+            this.Name = "PropertiesWindow";
             this.Text = "Характеристики объектов";
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            this.Load += new System.EventHandler(this.PropertiesWindow_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
@@ -306,15 +332,13 @@
             this.xtraTabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treeListObjects)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.GroupBox groupBox2;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
@@ -335,5 +359,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn colstart_period1;
         private DevExpress.XtraEditors.LabelControl labelControlNameObject;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraTreeList.TreeList treeListObjects;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn name;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn identificator;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn type_object;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn id;
     }
 }
