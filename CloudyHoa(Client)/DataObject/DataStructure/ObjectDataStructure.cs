@@ -13,6 +13,6 @@ namespace CloudyHoa_Client_.DataObject.DataStructure
         
         public ObjectDataStructure() { }
 
-        public DataTable DataTable { get { return _dataObjectTable; } set { _dataObjectTable = value; } }
+        public DataTable DataObjectTable { get { return _dataObjectTable; } set { _dataObjectTable = value; } }
     }
 }

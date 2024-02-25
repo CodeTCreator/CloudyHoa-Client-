@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace CloudyHoa_Client_.DataObject.DataStructure
 {
-    internal class SPDataStructure : ObjectDataStructure, IDataStructure, IFocusedObject
+    internal class SPDataStructure : ObjectDataStructure, IFocusedObject
     {
         DataTable _oldSPTable = new DataTable();
         DataTable _currentSPTable = new DataTable();    
-        FocusedObject _focusedObject = null;
+        FocusedObject _focusedObject = new FocusedObject();
 
        public FocusedObject focusedObject
         {
@@ -20,12 +20,12 @@ namespace CloudyHoa_Client_.DataObject.DataStructure
             set { _focusedObject = value; }
         }
 
-        public DataTable oldSPTable
+        public DataTable OldSPTable
         {
             get { return _oldSPTable; }
             set { _oldSPTable = value; }
         }
-        public DataTable currentSPTable
+        public DataTable CurrentSPTable
         {
             get { return _currentSPTable; }
             set { _currentSPTable = value; }
