@@ -1,4 +1,6 @@
-﻿namespace CloudyHoa_Client_.PropertiesWindows
+﻿using System.Threading.Tasks;
+
+namespace CloudyHoa_Client_.PropertiesWindows
 {
     partial class PropertiesWindow
     {
@@ -26,12 +28,14 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        private async Task InitializeComponentAsync()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PropertiesWindow));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.editButton = new DevExpress.XtraEditors.SimpleButton();
+            this.gridControlCurrSP = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colproperty_name = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colchanging_date = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -40,7 +44,7 @@
             this.deleteButton = new DevExpress.XtraEditors.SimpleButton();
             this.changeButton = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.gridControl3 = new DevExpress.XtraGrid.GridControl();
+            this.gridControlOldSP = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colproperty_name1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colcase1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -53,14 +57,15 @@
             this.identificator = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.type_object = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.id = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.parentId = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlCurrSP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.xtraTabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlOldSP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeListObjects)).BeginInit();
             this.SuspendLayout();
@@ -84,7 +89,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(8, 54);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage2;
-            this.xtraTabControl1.Size = new System.Drawing.Size(619, 459);
+            this.xtraTabControl1.Size = new System.Drawing.Size(619, 465);
             this.xtraTabControl1.TabIndex = 9;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -92,24 +97,37 @@
             // 
             // xtraTabPage2
             // 
-            this.xtraTabPage2.Controls.Add(this.gridControl2);
+            this.xtraTabPage2.Controls.Add(this.editButton);
+            this.xtraTabPage2.Controls.Add(this.gridControlCurrSP);
             this.xtraTabPage2.Controls.Add(this.deleteButton);
             this.xtraTabPage2.Controls.Add(this.changeButton);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(617, 429);
+            this.xtraTabPage2.Size = new System.Drawing.Size(617, 435);
             this.xtraTabPage2.Text = "Текущие характеристики";
             // 
-            // gridControl2
+            // editButton
             // 
-            this.gridControl2.DataMember = "Query";
-            this.gridControl2.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.gridControl2.Location = new System.Drawing.Point(10, 15);
-            this.gridControl2.MainView = this.gridView2;
-            this.gridControl2.Margin = new System.Windows.Forms.Padding(4);
-            this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(600, 400);
-            this.gridControl2.TabIndex = 7;
-            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.editButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.editButton.Appearance.Options.UseFont = true;
+            this.editButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("editButton.ImageOptions.Image")));
+            this.editButton.Location = new System.Drawing.Point(482, 393);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(128, 35);
+            this.editButton.TabIndex = 8;
+            this.editButton.Text = "Изменить";
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
+            // 
+            // gridControlCurrSP
+            // 
+            this.gridControlCurrSP.DataMember = "Query";
+            this.gridControlCurrSP.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.gridControlCurrSP.Location = new System.Drawing.Point(10, 15);
+            this.gridControlCurrSP.MainView = this.gridView2;
+            this.gridControlCurrSP.Margin = new System.Windows.Forms.Padding(4);
+            this.gridControlCurrSP.Name = "gridControlCurrSP";
+            this.gridControlCurrSP.Size = new System.Drawing.Size(600, 371);
+            this.gridControlCurrSP.TabIndex = 7;
+            this.gridControlCurrSP.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
             // gridView2
@@ -121,7 +139,7 @@
             this.colcase});
             this.gridView2.CustomizationFormBounds = new System.Drawing.Rectangle(929, 267, 308, 335);
             this.gridView2.DetailHeight = 431;
-            this.gridView2.GridControl = this.gridControl2;
+            this.gridView2.GridControl = this.gridControlCurrSP;
             this.gridView2.Name = "gridView2";
             // 
             // colproperty_name
@@ -184,20 +202,20 @@
             // 
             // xtraTabPage1
             // 
-            this.xtraTabPage1.Controls.Add(this.gridControl3);
+            this.xtraTabPage1.Controls.Add(this.gridControlOldSP);
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(617, 429);
             this.xtraTabPage1.Text = "Старые характеристики";
             // 
-            // gridControl3
+            // gridControlOldSP
             // 
-            this.gridControl3.DataMember = "Query_1";
-            this.gridControl3.Location = new System.Drawing.Point(10, 15);
-            this.gridControl3.MainView = this.gridView3;
-            this.gridControl3.Name = "gridControl3";
-            this.gridControl3.Size = new System.Drawing.Size(600, 400);
-            this.gridControl3.TabIndex = 0;
-            this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridControlOldSP.DataMember = "Query_1";
+            this.gridControlOldSP.Location = new System.Drawing.Point(10, 15);
+            this.gridControlOldSP.MainView = this.gridView3;
+            this.gridControlOldSP.Name = "gridControlOldSP";
+            this.gridControlOldSP.Size = new System.Drawing.Size(600, 400);
+            this.gridControlOldSP.TabIndex = 0;
+            this.gridControlOldSP.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
             // 
             // gridView3
@@ -207,7 +225,7 @@
             this.colcase1,
             this.colchanging_date1,
             this.colstart_period1});
-            this.gridView3.GridControl = this.gridControl3;
+            this.gridView3.GridControl = this.gridControlOldSP;
             this.gridView3.Name = "gridView3";
             // 
             // colproperty_name1
@@ -277,16 +295,20 @@
             this.name,
             this.identificator,
             this.type_object,
-            this.id});
+            this.id,
+            this.parentId});
+            this.treeListObjects.KeyFieldName = "id";
             this.treeListObjects.Location = new System.Drawing.Point(12, 126);
             this.treeListObjects.Name = "treeListObjects";
+            this.treeListObjects.ParentFieldName = "parent_id";
             this.treeListObjects.Size = new System.Drawing.Size(334, 515);
             this.treeListObjects.TabIndex = 11;
+            this.treeListObjects.FocusedNodeChanged += new DevExpress.XtraTreeList.FocusedNodeChangedEventHandler(this.treeListObjects_FocusedNodeChanged);
             // 
             // name
             // 
             this.name.Caption = "Тип объекта";
-            this.name.FieldName = "Тип объекта";
+            this.name.FieldName = "name";
             this.name.Name = "name";
             this.name.Visible = true;
             this.name.VisibleIndex = 0;
@@ -294,7 +316,7 @@
             // identificator
             // 
             this.identificator.Caption = "Номер";
-            this.identificator.FieldName = "Номер";
+            this.identificator.FieldName = "identificator";
             this.identificator.Name = "identificator";
             this.identificator.Visible = true;
             this.identificator.VisibleIndex = 1;
@@ -302,7 +324,7 @@
             // type_object
             // 
             this.type_object.Caption = "treeListColumn3";
-            this.type_object.FieldName = "type_object";
+            this.type_object.FieldName = "id1";
             this.type_object.Name = "type_object";
             // 
             // id
@@ -310,6 +332,12 @@
             this.id.Caption = "treeListColumn4";
             this.id.FieldName = "id";
             this.id.Name = "id";
+            // 
+            // parentId
+            // 
+            this.parentId.Caption = "treeListColumn1";
+            this.parentId.FieldName = "parent_id";
+            this.parentId.Name = "parentId";
             // 
             // PropertiesWindow
             // 
@@ -327,10 +355,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlCurrSP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.xtraTabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlOldSP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeListObjects)).EndInit();
             this.ResumeLayout(false);
@@ -342,7 +370,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
-        private DevExpress.XtraGrid.GridControl gridControl2;
+        private DevExpress.XtraGrid.GridControl gridControlCurrSP;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraGrid.Columns.GridColumn colproperty_name;
         private DevExpress.XtraGrid.Columns.GridColumn colchanging_date;
@@ -351,7 +379,7 @@
         private DevExpress.XtraEditors.SimpleButton deleteButton;
         private DevExpress.XtraEditors.SimpleButton changeButton;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
-        private DevExpress.XtraGrid.GridControl gridControl3;
+        private DevExpress.XtraGrid.GridControl gridControlOldSP;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
         private DevExpress.XtraGrid.Columns.GridColumn colproperty_name1;
         private DevExpress.XtraGrid.Columns.GridColumn colcase1;
@@ -364,5 +392,7 @@
         private DevExpress.XtraTreeList.Columns.TreeListColumn identificator;
         private DevExpress.XtraTreeList.Columns.TreeListColumn type_object;
         private DevExpress.XtraTreeList.Columns.TreeListColumn id;
+        private DevExpress.XtraEditors.SimpleButton editButton;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn parentId;
     }
 }

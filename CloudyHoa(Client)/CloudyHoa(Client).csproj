@@ -114,6 +114,7 @@
     <Compile Include="DataObject\DataStructure\ObjectMWDataStructure.cs" />
     <Compile Include="DataObject\DataStructure\ObjectSPDataStructure.cs" />
     <Compile Include="DataObject\DataStructure\SPDataStructure.cs" />
+    <Compile Include="DataObject\DataStructure\SPMWDataStructure.cs" />
     <Compile Include="DataObject\IDataStructure.cs" />
     <Compile Include="General\FocusedObject.cs" />
     <Compile Include="General\IFocusedObject.cs" />
@@ -125,35 +126,36 @@
     <Compile Include="MainForm\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PropertiesWindows\MW\UserControls\ISPControl.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="PropertiesWindows\Controllers\PropWindowController.cs" />
     <Compile Include="PropertiesWindows\Controllers\ServiceControllers\PropertiesSC.cs" />
+    <Compile Include="PropertiesWindows\MW\Controller\PropMWController.cs" />
+    <Compile Include="PropertiesWindows\MW\PropertiesMW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PropertiesWindows\MW\PropertiesMW.Designer.cs">
+      <DependentUpon>PropertiesMW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertiesWindows\MW\UserControls\SPControl%28Date%29.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertiesWindows\MW\UserControls\SPControl%28Date%29.Designer.cs">
+      <DependentUpon>SPControl%28Date%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertiesWindows\MW\UserControls\SPControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertiesWindows\MW\UserControls\SPControl.Designer.cs">
+      <DependentUpon>SPControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="PropertiesWindows\PropertiesWindow.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PropertiesWindows\PropertiesWindow.Designer.cs">
       <DependentUpon>PropertiesWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="ObjectWindows\MW\Controllers\ObjectMWController.cs" />
-    <Compile Include="ObjectWindows\MW\SPControl%28Date%29.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ObjectWindows\MW\SPControl%28Date%29.Designer.cs">
-      <DependentUpon>SPControl%28Date%29.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ObjectWindows\MW\SPControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ObjectWindows\MW\SPControl.Designer.cs">
-      <DependentUpon>SPControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ObjectWindows\ObjectWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ObjectWindows\ObjectWindow.Designer.cs">
-      <DependentUpon>ObjectWindow.cs</DependentUpon>
-    </Compile>
     <Compile Include="General\ObjectDataService.cs" />
-    <Compile Include="ObjectWindows\Controllers\ObjectWindowController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SaveExecuteControl\Helper.cs" />
@@ -173,6 +175,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertiesWindows\MW\PropertiesMW.resx">
+      <DependentUpon>PropertiesMW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertiesWindows\MW\UserControls\SPControl%28Date%29.resx">
+      <DependentUpon>SPControl%28Date%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertiesWindows\MW\UserControls\SPControl.resx">
+      <DependentUpon>SPControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PropertiesWindows\PropertiesWindow.resx">
       <DependentUpon>PropertiesWindow.cs</DependentUpon>
@@ -291,7 +302,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Menu\" />
-    <Folder Include="ObjectWindows\Controllers\Service_Controller\" />
+    <Folder Include="ObjectWindows\MW\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
