@@ -252,7 +252,7 @@
             // 
             // addBenefitButton
             // 
-            this.addBenefitButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("addBenefitButton.ImageOptions.Image")));
+            this.addBenefitButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("addBenefitButton.ImageOptions.SvgImage")));
             this.addBenefitButton.Location = new System.Drawing.Point(4, 5);
             this.addBenefitButton.Name = "addBenefitButton";
             this.addBenefitButton.Size = new System.Drawing.Size(38, 37);
@@ -260,7 +260,7 @@
             // 
             // benefitsButton
             // 
-            this.benefitsButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("benefitsButton.ImageOptions.Image")));
+            this.benefitsButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("benefitsButton.ImageOptions.SvgImage")));
             this.benefitsButton.Location = new System.Drawing.Point(5, 49);
             this.benefitsButton.Name = "benefitsButton";
             this.benefitsButton.Size = new System.Drawing.Size(38, 37);
@@ -350,7 +350,6 @@
             // 
             // simpleButton1
             // 
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
             this.simpleButton1.Location = new System.Drawing.Point(371, 5);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(22, 22);
