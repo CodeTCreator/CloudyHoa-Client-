@@ -140,7 +140,7 @@ namespace CloudyHoa_Client_.ObjectWindows.MW
                 }
                 else if(dataRow["name"].ToString() == "число")
                 {
-                    SPControl spControl = new SPControl();
+                    SPControl_Num spControl = new SPControl_Num();
                     spControl.LoadData(dataRow["property_name"].ToString(), dataRow["name"].ToString());
                     stackPanel.Controls.Add(spControl);
                 }
