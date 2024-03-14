@@ -48,7 +48,7 @@ namespace CloudyHoa_Client_.ObjectWindow
                     await Task.Run(() =>
                     {
                         _objectWindowController.LoadAllObjects(_objectDataService, _dataAccessObject);
-                        BindingData();
+                        
                     });
                    
                 }
@@ -60,7 +60,7 @@ namespace CloudyHoa_Client_.ObjectWindow
                                                  MessageBoxIcon.Error);
                 }
             }, "Ошибка подключения к северу.");
-           
+            BindingData();
             //_objectWindowController.LoadObjectsStructureAsync(_objectDataService, _dataAccessObject);
         }
         private void BindingData()
@@ -72,14 +72,13 @@ namespace CloudyHoa_Client_.ObjectWindow
                 select new {name = ob.Key, count =  ob.Count()};
 
         }
-        private void deleteButton_Click(object sender, EventArgs e)
+        private async void deleteButton_Click(object sender, EventArgs e)
         {
             if (treeListObject.GetFocusedRowCellValue("id") != null)
             {
                 int objectId = (int)treeListObject.GetFocusedRowCellValue("id");
                 _objectWindowController.DeleteObject(_objectDataService, objectId);
-                _objectWindowController.LoadAllObjects(_objectDataService,_dataAccessObject);
-                BindingData();
+                await LoadData();
             }
         }
         private void addButton_Click(object sender, EventArgs e)
@@ -98,10 +97,9 @@ namespace CloudyHoa_Client_.ObjectWindow
                 UpdateBindings();
             }
         }
-        private void UpdateBindings()
+        private async void UpdateBindings()
         {
-            _objectWindowController.LoadAllObjects(_objectDataService, _dataAccessObject);
-            BindingData();
+            await LoadData();
         }
 
         private void treeListObject_SelectionChanged(object sender, EventArgs e)
@@ -116,6 +114,11 @@ namespace CloudyHoa_Client_.ObjectWindow
                     (int)treeListObject.GetFocusedRowCellValue("parent_id") : (int?)null;
                 _focusedObject.nameType = treeListObject.GetFocusedRowCellValue("name").ToString();
             }
+        }
+
+        private void backButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Close();
         }
     }
 }
