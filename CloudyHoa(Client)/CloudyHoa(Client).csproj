@@ -126,36 +126,6 @@
     <Compile Include="MainForm\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ObjectWindows\MW\Controllers\Service_Controller\ObjectMWDataService.cs" />
-    <Compile Include="ObjectWindows\MW\Controllers\Service_Controller\SPDataService.cs" />
-    <Compile Include="ObjectWindows\MW\ISPControl.cs" />
-    <Compile Include="ObjectWindows\MW\ObjectMW.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ObjectWindows\MW\ObjectMW.Designer.cs">
-      <DependentUpon>ObjectMW.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ObjectWindows\MW\Controllers\ObjectMWController.cs" />
-    <Compile Include="ObjectWindows\MW\SPControl%28Date%29.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ObjectWindows\MW\SPControl%28Date%29.Designer.cs">
-      <DependentUpon>SPControl%28Date%29.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ObjectWindows\MW\SPControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ObjectWindows\MW\SPControl.Designer.cs">
-      <DependentUpon>SPControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ObjectWindows\ObjectWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ObjectWindows\ObjectWindow.Designer.cs">
-      <DependentUpon>ObjectWindow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ObjectWindows\Controllers\Service_Controller\ObjectDataService.cs" />
-    <Compile Include="ObjectWindows\Controllers\ObjectWindowController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SaveExecuteControl\Helper.cs" />
@@ -175,18 +145,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ObjectWindows\MW\ObjectMW.resx">
-      <DependentUpon>ObjectMW.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ObjectWindows\MW\SPControl%28Date%29.resx">
-      <DependentUpon>SPControl%28Date%29.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ObjectWindows\MW\SPControl.resx">
-      <DependentUpon>SPControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ObjectWindows\ObjectWindow.resx">
-      <DependentUpon>ObjectWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
