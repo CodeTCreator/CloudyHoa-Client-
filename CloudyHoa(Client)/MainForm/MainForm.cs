@@ -1,4 +1,5 @@
 ﻿using CloudyHoa_Client_.Properties;
+using CloudyHoa_Client_.TariffWindows;
 using System;
 using System.Windows.Forms;
 
@@ -28,15 +29,21 @@ namespace CloudyHoa_Client_.MainForm
 
         private void objectButton_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            ObjectWindow.ObjectWindow objectWindow = new ObjectWindow.ObjectWindow(); 
-            objectWindow.ShowDialog();
-            this.Visible = true;
+            //this.Visible = false;
+            //ObjectWindow.ObjectWindow objectWindow = new ObjectWindow.ObjectWindow(); 
+            //objectWindow.ShowDialog();
+            //this.Visible = true;
         }
 
         private void propButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tariffButton_Click(object sender, EventArgs e)
+        {
+            TariffWindow tariffWindow = new TariffWindow();
+            tariffWindow.Show();
         }
     }
 }
