@@ -145,9 +145,7 @@
     </Compile>
     <Compile Include="TariffWindows\Controllers\TariffDataService.cs" />
     <Compile Include="TariffWindows\MW\Controllers\TariffMWController.cs" />
-    <Compile Include="TariffWindows\MW\TariffMW.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="TariffWindows\MW\TariffMW.cs" />
     <Compile Include="TariffWindows\MW\TariffMW.Designer.cs">
       <DependentUpon>TariffMW.cs</DependentUpon>
     </Compile>
