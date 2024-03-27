@@ -32,10 +32,10 @@
             this.exitButton = new DevExpress.XtraEditors.SimpleButton();
             this.objectButton = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.paButton = new DevExpress.XtraEditors.SimpleButton();
             this.tariffButton = new DevExpress.XtraEditors.SimpleButton();
             this.propButton = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.paButton = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.SuspendLayout();
@@ -81,6 +81,18 @@
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "Какая-то группа";
             // 
+            // paButton
+            // 
+            this.paButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.paButton.Appearance.Options.UseFont = true;
+            this.paButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("paButton.ImageOptions.SvgImage")));
+            this.paButton.Location = new System.Drawing.Point(226, 44);
+            this.paButton.Name = "paButton";
+            this.paButton.Size = new System.Drawing.Size(206, 74);
+            this.paButton.TabIndex = 5;
+            this.paButton.Text = "Лицевые счета";
+            this.paButton.Click += new System.EventHandler(this.paButton_Click);
+            // 
             // tariffButton
             // 
             this.tariffButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -116,17 +128,6 @@
             this.labelControl1.Size = new System.Drawing.Size(179, 37);
             this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Главное меню";
-            // 
-            // paButton
-            // 
-            this.paButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.paButton.Appearance.Options.UseFont = true;
-            this.paButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("paButton.ImageOptions.SvgImage")));
-            this.paButton.Location = new System.Drawing.Point(226, 44);
-            this.paButton.Name = "paButton";
-            this.paButton.Size = new System.Drawing.Size(206, 74);
-            this.paButton.TabIndex = 5;
-            this.paButton.Text = "Лицевые счета";
             // 
             // MainForm
             // 
