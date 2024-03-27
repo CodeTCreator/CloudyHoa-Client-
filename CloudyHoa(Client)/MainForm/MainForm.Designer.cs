@@ -180,6 +180,7 @@
             this.simpleButton2.Size = new System.Drawing.Size(205, 73);
             this.simpleButton2.TabIndex = 9;
             this.simpleButton2.Text = "Расчитать";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // MainForm
             // 
