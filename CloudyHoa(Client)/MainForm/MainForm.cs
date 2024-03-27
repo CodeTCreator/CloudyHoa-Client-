@@ -49,5 +49,11 @@ namespace CloudyHoa_Client_.MainForm
         {
 
         }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            CalculationWindows.CalculationWindow calculationWindow = new CalculationWindows.CalculationWindow();
+            calculationWindow.Show();
+        }
     }
 }
