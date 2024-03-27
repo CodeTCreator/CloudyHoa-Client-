@@ -1,4 +1,5 @@
-﻿using CloudyHoa_Client_.Properties;
+﻿using CloudyHoa_Client_.PersonalAccountsWindows;
+using CloudyHoa_Client_.Properties;
 using System;
 using System.Windows.Forms;
 
@@ -43,6 +44,12 @@ namespace CloudyHoa_Client_.MainForm
         {
             //TariffWindow tariffWindow = new TariffWindow();
             //tariffWindow.Show();
+        }
+
+        private void paButton_Click(object sender, EventArgs e)
+        {
+            PAWindow pAWindow = new PAWindow();
+            pAWindow.Show();
         }
     }
 }
