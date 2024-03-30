@@ -32,10 +32,11 @@
             this.exitButton = new DevExpress.XtraEditors.SimpleButton();
             this.objectButton = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.paButton = new DevExpress.XtraEditors.SimpleButton();
             this.tariffButton = new DevExpress.XtraEditors.SimpleButton();
             this.propButton = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.paButton = new DevExpress.XtraEditors.SimpleButton();
+            this.residentsButton = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.SuspendLayout();
@@ -71,15 +72,27 @@
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.CaptionImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("groupControl1.CaptionImageOptions.SvgImage")));
             this.groupControl1.CaptionLocation = DevExpress.Utils.Locations.Top;
+            this.groupControl1.Controls.Add(this.residentsButton);
             this.groupControl1.Controls.Add(this.paButton);
             this.groupControl1.Controls.Add(this.tariffButton);
             this.groupControl1.Controls.Add(this.propButton);
             this.groupControl1.Controls.Add(this.objectButton);
             this.groupControl1.Location = new System.Drawing.Point(22, 73);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(612, 284);
+            this.groupControl1.Size = new System.Drawing.Size(602, 284);
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "Какая-то группа";
+            // 
+            // paButton
+            // 
+            this.paButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.paButton.Appearance.Options.UseFont = true;
+            this.paButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("paButton.ImageOptions.SvgImage")));
+            this.paButton.Location = new System.Drawing.Point(226, 44);
+            this.paButton.Name = "paButton";
+            this.paButton.Size = new System.Drawing.Size(206, 74);
+            this.paButton.TabIndex = 5;
+            this.paButton.Text = "Лицевые счета";
             // 
             // tariffButton
             // 
@@ -117,16 +130,17 @@
             this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Главное меню";
             // 
-            // paButton
+            // residentsButton
             // 
-            this.paButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.paButton.Appearance.Options.UseFont = true;
-            this.paButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("paButton.ImageOptions.SvgImage")));
-            this.paButton.Location = new System.Drawing.Point(226, 44);
-            this.paButton.Name = "paButton";
-            this.paButton.Size = new System.Drawing.Size(206, 74);
-            this.paButton.TabIndex = 5;
-            this.paButton.Text = "Лицевые счета";
+            this.residentsButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.residentsButton.Appearance.Options.UseFont = true;
+            this.residentsButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.residentsButton.Location = new System.Drawing.Point(226, 125);
+            this.residentsButton.Name = "residentsButton";
+            this.residentsButton.Size = new System.Drawing.Size(206, 73);
+            this.residentsButton.TabIndex = 6;
+            this.residentsButton.Text = "Учет жильцов";
+            this.residentsButton.Click += new System.EventHandler(this.residentsButton_Click);
             // 
             // MainForm
             // 
@@ -155,5 +169,6 @@
         private DevExpress.XtraEditors.SimpleButton propButton;
         private DevExpress.XtraEditors.SimpleButton tariffButton;
         private DevExpress.XtraEditors.SimpleButton paButton;
+        private DevExpress.XtraEditors.SimpleButton residentsButton;
     }
 }
