@@ -44,5 +44,10 @@ namespace CloudyHoa_Client_.MainForm
             //TariffWindow tariffWindow = new TariffWindow();
             //tariffWindow.Show();
         }
+
+        private void residentsButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
