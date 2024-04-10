@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="AddResident">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fullName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="objectId" type="xs:int" />
+        <xs:element minOccurs="0" name="registered" type="xs:boolean" />
+        <xs:element minOccurs="0" name="registration_date" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="residence" type="xs:boolean" />
+        <xs:element minOccurs="0" name="checkInDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="owner" type="xs:boolean" />
+        <xs:element minOccurs="0" name="numenator" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="denominator" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddResidentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditResident">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+        <xs:element minOccurs="0" name="fullName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="objectId" type="xs:int" />
+        <xs:element minOccurs="0" name="registered" type="xs:boolean" />
+        <xs:element minOccurs="0" name="registration_date" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="residence" type="xs:boolean" />
+        <xs:element minOccurs="0" name="checkInDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="owner" type="xs:boolean" />
+        <xs:element minOccurs="0" name="numenator" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="denominator" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditResidentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteResident">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteResidentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResidents">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="objectId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResidentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetResidentsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
