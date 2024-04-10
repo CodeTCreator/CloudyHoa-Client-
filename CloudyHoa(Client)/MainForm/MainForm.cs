@@ -1,4 +1,5 @@
 ﻿using CloudyHoa_Client_.Properties;
+using CloudyHoa_Client_.ResidentsWindows;
 using System;
 using System.Windows.Forms;
 
@@ -47,7 +48,8 @@ namespace CloudyHoa_Client_.MainForm
 
         private void residentsButton_Click(object sender, EventArgs e)
         {
-
+            ResidentsWindow residentsWindow = new ResidentsWindow();
+            residentsWindow.Show();
         }
     }
 }
