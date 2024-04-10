@@ -96,6 +96,11 @@
       <DependentUpon>Login.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Connected Services\MDService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ObjectServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -112,13 +117,22 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="DataObject\DAO.cs" />
+    <Compile Include="DataObject\DataStructure\MDDataStructure.cs" />
     <Compile Include="DataObject\DataStructure\ObjectDataStructure.cs" />
     <Compile Include="DataObject\DataStructure\ObjectMWDataStructure.cs" />
     <Compile Include="DataObject\DataStructure\ObjectSPDataStructure.cs" />
     <Compile Include="DataObject\IDataStructure.cs" />
     <Compile Include="General\FocusedObject.cs" />
+    <Compile Include="General\GeneralLoadData.cs" />
+    <Compile Include="General\IDataService.cs" />
     <Compile Include="General\IFocusedObject.cs" />
     <Compile Include="General\ObjectDataService.cs" />
+    <Compile Include="General\TreeListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="General\TreeListControl.Designer.cs">
+      <DependentUpon>TreeListControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="General\User.cs" />
     <Compile Include="General\UserContext.cs" />
     <Compile Include="MainForm\MainForm.cs">
@@ -126,6 +140,14 @@
     </Compile>
     <Compile Include="MainForm\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDWindows\Controllers\MDDataService.cs" />
+    <Compile Include="MDWindows\Controllers\MDWindowController.cs" />
+    <Compile Include="MDWindows\MDWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDWindows\MDWindow.Designer.cs">
+      <DependentUpon>MDWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -144,8 +166,14 @@
     <EmbeddedResource Include="Authorization\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="General\TreeListControl.resx">
+      <DependentUpon>TreeListControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDWindows\MDWindow.resx">
+      <DependentUpon>MDWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -161,6 +189,16 @@
     <EmbeddedResource Include="SaveExecuteControl\LoadingControl.resx">
       <DependentUpon>LoadingControl.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Connected Services\MDService\MDService.wsdl" />
+    <None Include="Connected Services\MDService\WcfServiceLibrary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MDService\WcfServiceLibrary1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MDService\WcfServiceLibrary2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\ObjectServiceReference\ObjectsService.wsdl" />
     <None Include="Connected Services\ObjectServiceReference\WcfServiceLibrary.xsd">
       <SubType>Designer</SubType>
@@ -225,6 +263,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\MDService\" />
     <WCFMetadataStorage Include="Connected Services\ObjectServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
     <WCFMetadataStorage Include="Connected Services\SPServiceReference\" />
@@ -254,6 +293,13 @@
     <None Include="Connected Services\SPServiceReference\configuration91.svcinfo" />
     <None Include="Connected Services\SPServiceReference\configuration.svcinfo" />
     <None Include="Connected Services\SPServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\MDService\WcfServiceLibrary.disco" />
+    <None Include="Connected Services\MDService\configuration91.svcinfo" />
+    <None Include="Connected Services\MDService\configuration.svcinfo" />
+    <None Include="Connected Services\MDService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
