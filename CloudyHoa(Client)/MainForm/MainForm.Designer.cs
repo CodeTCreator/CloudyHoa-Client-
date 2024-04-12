@@ -93,6 +93,7 @@
             this.paButton.Size = new System.Drawing.Size(206, 74);
             this.paButton.TabIndex = 5;
             this.paButton.Text = "Лицевые счета";
+            this.paButton.Click += new System.EventHandler(this.paButton_Click);
             // 
             // tariffButton
             // 
