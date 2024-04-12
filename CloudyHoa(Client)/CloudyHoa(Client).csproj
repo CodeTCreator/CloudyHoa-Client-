@@ -137,7 +137,9 @@
     <Compile Include="General\ResidentForm.Designer.cs">
       <DependentUpon>ResidentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="General\ResidentsGridControl.cs" />
+    <Compile Include="General\ResidentsGridControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="General\ResidentsGridControl.Designer.cs">
       <DependentUpon>ResidentsGridControl.cs</DependentUpon>
     </Compile>
