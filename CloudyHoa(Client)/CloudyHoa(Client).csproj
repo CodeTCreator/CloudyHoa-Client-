@@ -127,6 +127,7 @@
     <Compile Include="DataObject\DataStructure\ResidentsDataStructure.cs" />
     <Compile Include="DataObject\IDataStructure.cs" />
     <Compile Include="General\FocusedObject.cs" />
+    <Compile Include="General\FocusedResident.cs" />
     <Compile Include="General\GeneralMethods.cs" />
     <Compile Include="General\IFocusedObject.cs" />
     <Compile Include="General\ObjectDataService.cs" />
@@ -135,6 +136,12 @@
     </Compile>
     <Compile Include="General\ResidentForm.Designer.cs">
       <DependentUpon>ResidentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\ResidentsGridControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="General\ResidentsGridControl.Designer.cs">
+      <DependentUpon>ResidentsGridControl.cs</DependentUpon>
     </Compile>
     <Compile Include="General\TreeListControl.cs">
       <SubType>UserControl</SubType>
@@ -195,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="General\ResidentForm.resx">
       <DependentUpon>ResidentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\ResidentsGridControl.resx">
+      <DependentUpon>ResidentsGridControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="General\TreeListControl.resx">
       <DependentUpon>TreeListControl.cs</DependentUpon>
