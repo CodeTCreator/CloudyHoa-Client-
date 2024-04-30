@@ -29,8 +29,6 @@ namespace CloudyHoa_Client_.General
         {
             labelObjectName.Text = "Объект: " + _objectName + " " + _objectNumber;
             textEditFIO.Text = _focusedResident.fullName;
-            checkReg.Checked = _focusedResident.registered;
-            checkLives.Checked = _focusedResident.residence;
             if (_focusedResident.registrationData.HasValue)
             {
                 dateEditRegistration.DateTime = (DateTime)_focusedResident.registrationData;
@@ -46,6 +44,8 @@ namespace CloudyHoa_Client_.General
                 textEditDenominator.Value = (decimal)_focusedResident.ownerShareDenominator;
             }
             checkOwner.Checked = _focusedResident.owner;
+            checkReg.Checked = _focusedResident.registered;
+            checkLives.Checked = _focusedResident.residence;
         }
 
         public FocusedResident GetResident()
