@@ -4,12 +4,7 @@ using CloudyHoa_Client_.ResidentsWindows.Controllers;
 using CloudyHoa_Client_.ResidentsWindows.MW;
 using CloudyHoa_Client_.SaveExecuteControl;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,31 +12,39 @@ namespace CloudyHoa_Client_.PersonalAccountsWindows
 {
     public partial class PAControl : UserControl, ISafeExecuteControl
     {
+
         ResidentsDataService _residentsDataService;
         PAMWStructure _structure = new PAMWStructure();
         ResidentsWindowController _residentWC;
 
         public FocusedObject FocusedObject { get { return _structure.FocusedObject; } set { _structure.FocusedObject = value; } }
 
-        public ResidentsDataService ResidentsDataService { get {return _residentsDataService; } set { _residentsDataService = value; } }
-
         public Control ContainerForLoading => this;
 
         public Control LockControl => tabPane1;
+
         public PAControl()
         {
             InitializeComponent();
         }
 
+        public PAControl(FocusedObject focusedObject)
+        {
+            InitializeComponent();
+        }
+
+        private void addTenantButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private async void PAControl_Load(object sender, EventArgs e)
         {
+            _residentsDataService = new ResidentsDataService();
             _residentWC = new ResidentsWindowController();
 
             residentsGridControl1.ResidentGridClick += residentsControl_Click;
-            if (!this.DesignMode)
-            {
-                await UpdateResidentsTable();
-            }
+            await UpdateResidentsTable();
         }
 
         private async void addResidentButton_Click(object sender, EventArgs e)
@@ -93,7 +96,7 @@ namespace CloudyHoa_Client_.PersonalAccountsWindows
                 }
                 catch (Exception e)
                 {
-                    const string caption = "PaControl";
+                    const string caption = "Подключение к серверу";
                     var result = MessageBox.Show(e.InnerException.Message, caption,
                                                  MessageBoxButtons.OK,
                                                  MessageBoxIcon.Error);
@@ -156,25 +159,27 @@ namespace CloudyHoa_Client_.PersonalAccountsWindows
             dataTable.TableName = "Residents";
             _structure.ResidentsTable = dataTable;
         }
-        private void checkEditCalculations_CheckedChanged(object sender, EventArgs e)
+
+        private void checkEditCalculation_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkEditCalculations.Checked == true)
-            {
-                RegLivCalculation();
-                textEditRegistered.Enabled = false;
-                textEditLives.Enabled = false;
-            }
-            else
-            {
-                textEditRegistered.Enabled = true;
-                textEditLives.Enabled = true;
-            }
+            //if(checkEditCalculations.Checked == true)
+            //{
+            //    RegLivCalculation();
+            //    textEditRegistered.Enabled = false;
+            //    textEditLives.Enabled = false;
+            //}
+            //else
+            //{
+            //    textEditRegistered.Enabled = true;
+            //    textEditLives.Enabled = true;
+            //}
         }
+
         private void RegLivCalculation()
         {
             int registered = 0;
             int lives = 0;
-            foreach (DataRow row in _structure.ResidentsTable.Rows)
+            foreach(DataRow row in _structure.ResidentsTable.Rows)
             {
                 if (row["residence"].ToString() == "True")
                 {
@@ -185,15 +190,9 @@ namespace CloudyHoa_Client_.PersonalAccountsWindows
                     registered++;
                 }
             }
-            textEditLives.Text = lives.ToString();
-            textEditRegistered.Text = registered.ToString();
-        }
+            //textEditLives.Text = lives.ToString();
+            //textEditRegistered.Text = registered.ToString();
 
-        public void BindingComboBoxData(DataTable dataTable)
-        {
-            comboBoxResponPerson.DisplayMember = "full_name";
-            comboBoxResponPerson.ValueMember = "id";
-            comboBoxResponPerson.DataSource = dataTable;
         }
     }
 }
