@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="e8b7920e-a119-4a94-a63e-c2d481fcb98b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:7744/WcfServiceLibrary.PersonalAccountService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WcfServiceLibrary.xsd" MetadataType="Schema" ID="8b65263d-7634-4d21-8dde-de7c68021b9f" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.PersonalAccountService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PersonalAccountService.wsdl" MetadataType="Wsdl" ID="de80c091-5d29-45ed-87a5-47913ca6e327" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.PersonalAccountService.svc?wsdl" />
+    <MetadataFile FileName="WcfServiceLibrary.disco" MetadataType="Disco" ID="99f6d11f-13d2-4942-9335-0c0af23116ac" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.PersonalAccountService.svc?disco" />
+    <MetadataFile FileName="WcfServiceLibrary1.xsd" MetadataType="Schema" ID="be729ffd-6000-41a3-a5b7-51947ac814a2" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.PersonalAccountService.svc?xsd=xsd2" />
+    <MetadataFile FileName="WcfServiceLibrary2.xsd" MetadataType="Schema" ID="db073364-7896-4817-affd-f4983cad5f26" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.PersonalAccountService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
