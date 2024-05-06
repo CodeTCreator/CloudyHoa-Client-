@@ -101,6 +101,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\MetadataService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ObjectServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -126,7 +131,10 @@
     <Compile Include="DataObject\DataStructure\ObjectDataStructure.cs" />
     <Compile Include="DataObject\DataStructure\ObjectMWDataStructure.cs" />
     <Compile Include="DataObject\DataStructure\ObjectSPDataStructure.cs" />
+    <Compile Include="DataObject\DataStructure\PADataStructure.cs" />
+    <Compile Include="DataObject\DataStructure\PAMWStructure.cs" />
     <Compile Include="DataObject\IDataStructure.cs" />
+    <Compile Include="General\FocusedMD.cs" />
     <Compile Include="General\FocusedObject.cs" />
     <Compile Include="General\FocusedPA.cs" />
     <Compile Include="General\GeneralLoadData.cs" />
@@ -154,6 +162,12 @@
     </Compile>
     <Compile Include="MDWindows\MDWindow.Designer.cs">
       <DependentUpon>MDWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDWindows\MW\MDMW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDWindows\MW\MDMW.Designer.cs">
+      <DependentUpon>MDMW.cs</DependentUpon>
     </Compile>
     <Compile Include="PersonalAccountsWindows\Controllers\PADataService.cs" />
     <Compile Include="PersonalAccountsWindows\Controllers\PAWindowController.cs" />
@@ -183,6 +197,9 @@
     <EmbeddedResource Include="MDWindows\MDWindow.resx">
       <DependentUpon>MDWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MDWindows\MW\MDMW.resx">
+      <DependentUpon>MDMW.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -205,6 +222,16 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\MDService\WcfServiceLibrary2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MetadataService\MetadataService.wsdl" />
+    <None Include="Connected Services\MetadataService\WcfServiceLibrary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MetadataService\WcfServiceLibrary1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MetadataService\WcfServiceLibrary2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ObjectServiceReference\ObjectsService.wsdl" />
@@ -282,6 +309,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\MDService\" />
+    <WCFMetadataStorage Include="Connected Services\MetadataService\" />
     <WCFMetadataStorage Include="Connected Services\ObjectServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\PAService\" />
     <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
@@ -326,6 +354,13 @@
     <None Include="Connected Services\PAService\configuration91.svcinfo" />
     <None Include="Connected Services\PAService\configuration.svcinfo" />
     <None Include="Connected Services\PAService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\MetadataService\WcfServiceLibrary.disco" />
+    <None Include="Connected Services\MetadataService\configuration91.svcinfo" />
+    <None Include="Connected Services\MetadataService\configuration.svcinfo" />
+    <None Include="Connected Services\MetadataService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
