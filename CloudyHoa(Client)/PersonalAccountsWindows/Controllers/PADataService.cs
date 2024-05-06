@@ -1,13 +1,12 @@
 ﻿using CloudyHoa_Client_.General;
 using CloudyHoa_Client_.PAService;
-using CloudyHoa_Client_.ResidentsService;
 using System.Data;
 using System.Threading.Tasks;
 
 
 namespace CloudyHoa_Client_.PersonalAccountsWindows.Controllers
 {
-    public class PADataService
+    public class PADataService:IDataService
     {
         PersonalAccountServiceClient _personalAccountServiceClient;
        
