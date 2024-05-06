@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CloudyHoa_Client_.General;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -9,15 +10,9 @@ namespace CloudyHoa_Client_.DataObject.DataStructure
 {
     internal class MDDataStructure:IDataStructure
     {
-
-        DataTable _personalAccountsTable = new DataTable();
-
-        DataTable _meteringdevicesTable = new DataTable();
+        public DataTable MeteringDevicesTable { get; set; }  = new DataTable();
+        public FocusedMD FocusedMD { get; set; } = new FocusedMD();
 
         public MDDataStructure() { }
-
-        public DataTable PersonalAccountsTable { get { return _personalAccountsTable; } set { _personalAccountsTable = value; } }
-        public DataTable MeteringDevicesTable { get { return _meteringdevicesTable; } set { _meteringdevicesTable = value; } }
-
     }
 }
