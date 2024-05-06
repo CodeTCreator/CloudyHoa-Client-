@@ -14,7 +14,7 @@ namespace CloudyHoa_Client_.PersonalAccountsWindows.Controllers
         public async Task LoadPAsTableAsync(PADataService pADataService, PADataStructure pADataStructure, FocusedObject focusedObject)
         {
             DataTable dataTable = await pADataService.GetPAs(focusedObject.objectId);
-            dataTable.TableName = "Residents";
+            dataTable.TableName = "personalAccountTable";
             pADataStructure.PersonalAccountTable = dataTable;
         }
 
