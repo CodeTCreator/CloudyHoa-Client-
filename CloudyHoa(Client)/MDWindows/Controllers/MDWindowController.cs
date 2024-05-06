@@ -19,11 +19,7 @@ namespace CloudyHoa_Client_.MDWindows.Controllers
 
         public DataTable GetMDTable(MDDataStructure mdDataStructure) { return mdDataStructure.MeteringDevicesTable; }
 
-        public DataTable GetPATable(MDDataStructure mdDataStructure) { return mdDataStructure.PersonalAccountsTable; }
-
         public void SetMDTable(DataTable meteringDeviceTable, MDDataStructure mdDataStructure) { mdDataStructure.MeteringDevicesTable = meteringDeviceTable; }
-
-        public void SetPATable(DataTable personalAccountTable, MDDataStructure mdDataStructure) { mdDataStructure.PersonalAccountsTable = personalAccountTable; }
 
         public DataTable GetObjectsTable(ObjectDataStructure objectDataStructure) { return objectDataStructure.DataTable; }
         public void SetObjectsTable (DataTable objectsDataTable, ObjectDataStructure objectDataStructure) { objectDataStructure.DataTable = objectsDataTable; }
@@ -44,7 +40,7 @@ namespace CloudyHoa_Client_.MDWindows.Controllers
         {
             DataTable dataTable = dataService.GetType() == typeof(ObjectDataService) ?
                 await ((ObjectDataService)dataService).GetAllObjectsAsync(UserContext.Instance.CurrentUser.hoaId) : null;
-            dataTable.TableName = "AllObjects";
+            dataTable.TableName = "PATable";
             if (dataStructure.GetType() == typeof(ObjectDataStructure))
             {
                 ((ObjectDataStructure)dataStructure).DataTable = dataTable;
@@ -54,7 +50,7 @@ namespace CloudyHoa_Client_.MDWindows.Controllers
         {
             DataTable dataTable = dataService.GetType() == typeof(MDDataService) ?
                 await ((MDDataService)dataService).GetMeteringDevicesAsyncO(objectId) : null;
-            dataTable.TableName = "AllObjects";
+            dataTable.TableName = "MDTable";
             if (dataStructure.GetType() == typeof(MDDataStructure))
             {
                 ((MDDataStructure)dataStructure).MeteringDevicesTable = dataTable;
@@ -64,7 +60,7 @@ namespace CloudyHoa_Client_.MDWindows.Controllers
         {
             DataTable dataTable = dataService.GetType() == typeof(MDDataService) ?
                 await ((MDDataService)dataService).GetMeteringDevicesAsyncP(paId) : null;
-            dataTable.TableName = "AllObjects";
+            dataTable.TableName = "MDTable";
             if (dataStructure.GetType() == typeof(MDDataStructure))
             {
                 ((MDDataStructure)dataStructure).MeteringDevicesTable = dataTable;
