@@ -13,7 +13,6 @@ namespace CloudyHoa_Client_.DataObject.DataStructure
         DataTable _personalAccountsTable = new DataTable();
         DataTable _residentsTable = new DataTable();
         FocusedObject _focusedObject = new FocusedObject();
-        FocusedResident _focusedResident = new FocusedResident();
         FocusedPA _focusedPA = new FocusedPA();
         public PAMWStructure() { }
 
@@ -22,7 +21,6 @@ namespace CloudyHoa_Client_.DataObject.DataStructure
 
         public FocusedObject FocusedObject { get { return _focusedObject; } set { _focusedObject = value; } }
 
-        public FocusedResident FocusedResident { get { return _focusedResident; } set { _focusedResident = value; } }
 
         public FocusedPA FocusedPA { get { return _focusedPA; } set { _focusedPA = value; } }
     }
