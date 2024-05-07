@@ -32,6 +32,7 @@
             this.exitButton = new DevExpress.XtraEditors.SimpleButton();
             this.objectButton = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.enteringReadingButton = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.residentsButton = new DevExpress.XtraEditors.SimpleButton();
             this.paButton = new DevExpress.XtraEditors.SimpleButton();
@@ -73,6 +74,7 @@
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.CaptionImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("groupControl1.CaptionImageOptions.SvgImage")));
             this.groupControl1.CaptionLocation = DevExpress.Utils.Locations.Top;
+            this.groupControl1.Controls.Add(this.enteringReadingButton);
             this.groupControl1.Controls.Add(this.simpleButton1);
             this.groupControl1.Controls.Add(this.residentsButton);
             this.groupControl1.Controls.Add(this.paButton);
@@ -81,9 +83,20 @@
             this.groupControl1.Controls.Add(this.objectButton);
             this.groupControl1.Location = new System.Drawing.Point(22, 73);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(602, 284);
+            this.groupControl1.Size = new System.Drawing.Size(694, 284);
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "Какая-то группа";
+            // 
+            // enteringReadingButton
+            // 
+            this.enteringReadingButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.enteringReadingButton.Appearance.Options.UseFont = true;
+            this.enteringReadingButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
+            this.enteringReadingButton.Location = new System.Drawing.Point(438, 44);
+            this.enteringReadingButton.Name = "enteringReadingButton";
+            this.enteringReadingButton.Size = new System.Drawing.Size(206, 74);
+            this.enteringReadingButton.TabIndex = 8;
+            this.enteringReadingButton.Text = "Ввод \r\nпоказаний";
             // 
             // simpleButton1
             // 
@@ -184,5 +197,6 @@
         private DevExpress.XtraEditors.SimpleButton paButton;
         private DevExpress.XtraEditors.SimpleButton residentsButton;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton enteringReadingButton;
     }
 }
