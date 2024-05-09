@@ -31,9 +31,9 @@ namespace CloudyHoa_Client_.MDWindows
         PAWindowController _paWindowController;
 
 
-        public Control ContainerForLoading => panelControlMain;
+        public Control ContainerForLoading => this;
 
-        public Control LockControl => this;
+        public Control LockControl => panelControlMain;
 
         public MDWindow()
         {
