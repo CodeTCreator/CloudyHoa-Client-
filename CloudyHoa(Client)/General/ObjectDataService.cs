@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CloudyHoa_Client_.General;
+using CloudyHoa_Client_.ObjectsService;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -7,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace CloudyHoa_Client_.ObjectWindow.Service_Controller
 {
-    public class ObjectDataService
+    public class ObjectDataService:IDataService
     {
-        ObjectServiceReference.ObjectsServiceClient _objectsServiceClient;
+        ObjectsServiceClient _objectsServiceClient;
 
         public ObjectDataService()
         {
-            _objectsServiceClient = new ObjectServiceReference.ObjectsServiceClient();
+            _objectsServiceClient = new ObjectsServiceClient();
         }
 
         public DataTable GetAllObjects(int hoaId)
@@ -90,5 +92,45 @@ namespace CloudyHoa_Client_.ObjectWindow.Service_Controller
                 return null;
             }
         }
+        public async Task<DataTable> GetAllChilds(int objectId, int typeObject)
+        {
+            DataSet dataSet = null;
+            dataSet = await _objectsServiceClient.GetAllChildsAsync(objectId,typeObject);
+            if (dataSet != null)
+            {
+                return dataSet.Tables[0];
+            }
+            else
+            {
+                return null;
+            }
+        }
+        public DataTable GetPathObject(int objectId)
+        {
+            DataSet dataSet = null;
+            dataSet = _objectsServiceClient.GetPathObject(objectId);
+            if (dataSet != null)
+            {
+                return dataSet.Tables[0];
+            }
+            else
+            {
+                return null;
+            }
+        }
+        public async Task<DataTable> GetTypesOfChildsAsync(int typeObject)
+        {
+            DataSet dataSet = null;
+            dataSet = await _objectsServiceClient.GetTypesOfChildsAsync(typeObject);
+            if (dataSet != null)
+            {
+                return dataSet.Tables[0];
+            }
+            else
+            {
+                return null;
+            }
+        }
+
     }
 }
