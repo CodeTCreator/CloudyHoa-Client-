@@ -39,7 +39,6 @@ namespace CloudyHoa_Client_.EnteringReadingsWindows
 
             ReloadDPTable();
             BindingDPsTable(_structure.TemporaryDPTable);
-            _objectDataStructure.FocusedObject.objectId = GetFocusedObjectId();
             //SetObjectFilter();
             // Применить фильтр к таблице
 
@@ -64,9 +63,10 @@ namespace CloudyHoa_Client_.EnteringReadingsWindows
 
         private async void comboBoxParentObject_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            _structure.FocusedMainObject = (int)comboBoxParentObject.SelectedValue;
+
+            _objectDataStructure.FocusedObject.objectId = (int)comboBoxParentObject.SelectedValue;
             await GeneralLoadData.LoadData(this, _controller.LoadChildsTypesAsync, _structure, _objectDataService,
-                _controller.GetTypeObject(_structure));
+                _controller.GetTypeObject(_structure,_objectDataStructure));
             BindingChildsTypes();
 
             ResetDPData();
@@ -115,10 +115,6 @@ namespace CloudyHoa_Client_.EnteringReadingsWindows
                 saveButton.Enabled = true;
             }
         }
-        private void SaveButtonDisable()
-        {
-
-        }
 
         private async Task LoadData()
         {
@@ -145,17 +141,15 @@ namespace CloudyHoa_Client_.EnteringReadingsWindows
 
             // Загрузка объектов и сервисов
             await GeneralLoadData.LoadData(this, _controller.LoadChildsObjectsAsync, _objectDataStructure, _objectDataService,
-                _structure.FocusedMainObject, _objectDataStructure.FocusedObject.typeObject);
+                _objectDataStructure.FocusedObject.objectId, _objectDataStructure.FocusedObject.typeObject);
 
 
             await GeneralLoadData.LoadData(this, _controller.LoadServicesAsync, _structure, _metadataDataService,
              _objectDataStructure.FocusedObject.typeObject);
 
-            await GeneralLoadData.LoadData(this, _controller.LoadOldDynamicParams, _dynamicParamsDataStructure, _dynamicParamsDataService,
-             _objectDataStructure.FocusedObject.typeObject);
+            await UpdateDPData();
 
 
-            BindingChildsTable();
             BindingServicesComboBox();
 
 
@@ -171,11 +165,6 @@ namespace CloudyHoa_Client_.EnteringReadingsWindows
             _structure.EnteringTable.RowChanged += SaveButtonEnable;
             //SetObjectFilter();
             //SetServiceFilter();
-        }
-        private void BindingChildsTable()
-        {
-            //treeListControlObjects.BindingData(_objectDataStructure.DataTable);
-            gridControlObjects.DataSource = _objectDataStructure.DataTable;
         }
         private void BindingServicesComboBox()
         {
@@ -193,47 +182,8 @@ namespace CloudyHoa_Client_.EnteringReadingsWindows
         {
             _structure.FocusedService = (int)comboBoxServices.SelectedValue;
             ReloadDPTable();
-            SetObjectFilter();
             SetServiceFilter();
             ResetAllWarnings();
-        }
-
-        private async void objectControl_Click()
-        {
-            //FocusedObject focusedObject = treeListControlObjects.GetFocusedObject();
-            //_objectDataStructure.FocusedObject = focusedObject;
-
-            //await LoadPATable();
-            //BindingPATable();
-            //await LoadMDTableO();
-            //BindingMDTable();
-
-            //addMDButton.Enabled = false;
-            //editMDButton.Enabled = false;
-            //deleteMDButton.Enabled = false;
-        }
-
-        private void gridControlObjects_Click(object sender, EventArgs e)
-        {
-
-        }
-        private int GetFocusedObjectId()
-        {
-            return gridViewObjects.GetFocusedRowCellValue("id") != null ? (int)gridViewObjects.GetFocusedRowCellValue("id") : -1;
-        }
-        private void SetObjectFilter()
-        {
-            //DataRow[] results = _structure.TemporaryDPTable.Select("object_id =" + _objectDataStructure.FocusedObject.objectId);
-            //if (results.Length > 0)
-            //{
-            //    _structure.TemporaryDPTable = results.CopyToDataTable();
-            //}
-            //else
-            //{
-            //    _structure.TemporaryDPTable.Clear();
-            //}
-            ////_structure.TemporaryDPTable = results.Length > 0 ? results.CopyToDataTable() :  _structure.TemporaryDPTable.Clear();
-            //BindingDPsTable(_structure.TemporaryDPTable);
         }
         private void SetServiceFilter()
         {
@@ -253,15 +203,7 @@ namespace CloudyHoa_Client_.EnteringReadingsWindows
             }
         }
 
-        private void gridViewObjects_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
-        {
-            //_objectDataStructure.FocusedObject.objectId = GetFocusedObjectId();
-            //ReloadDPTable();
-            //SetObjectFilter();
-            //SetServiceFilter();
-        }
-
-        private void saveButton_Click(object sender, EventArgs e)
+        private async void saveButton_Click(object sender, EventArgs e)
         {
             bool flag = true;
             if (!_controller.CheckEnteringDataValue(_structure.TemporaryDPTable))
@@ -297,6 +239,9 @@ namespace CloudyHoa_Client_.EnteringReadingsWindows
             if (flag)
             {
                 _controller.AddERs(_structure.EnteringTable, _dynamicParamsDataService);
+                await UpdateDPData();
+                ReloadDPTable();
+                BindingDPsTable(_structure.TemporaryDPTable);
             }
         }
 
@@ -344,30 +289,6 @@ namespace CloudyHoa_Client_.EnteringReadingsWindows
             {
                 svgImageBoxWarningData.Visible = true;
             }
-
-            //// Работа с датами (проверка и вывод предупреждения)
-            //if (focusedRow["curr_period"].GetType() != typeof(System.DBNull))
-            //{
-            //    _controller.AddOrUpdateDP(focusedRow, _structure.EnteringTable);
-            //}
-            //else
-            //{
-            //    _controller.CheckAndDeleteEnteringRow(focusedRow, _structure.EnteringTable);
-            //    if (!_controller.CheckTableRows(_structure.EnteringTable))
-            //    {
-            //        saveButton.Enabled = false;
-            //    }
-            //}
-
-            //// Проверка ячеек
-            //if (_controller.CheckEnteringDataValue(_structure.TemporaryDPTable))
-            //{
-            //    svgImageBoxWarningValue.Visible = false;
-            //}
-            //else
-            //{
-            //    svgImageBoxWarningValue.Visible = true;
-            //}
         }
 
         /// <summary>
@@ -406,11 +327,17 @@ namespace CloudyHoa_Client_.EnteringReadingsWindows
                 }
             }
         }
-
         private void ResetAllWarnings()
         {
             svgImageBoxWarningData.Visible = false;
             svgImageBoxWarningValue.Visible = false;
         }
+
+        private async Task UpdateDPData()
+        {
+            await GeneralLoadData.LoadData(this, _controller.LoadOldDynamicParams, _dynamicParamsDataStructure, _dynamicParamsDataService,
+             _objectDataStructure.FocusedObject.objectId, _objectDataStructure.FocusedObject.typeObject);
+        }
+
     }
 }
