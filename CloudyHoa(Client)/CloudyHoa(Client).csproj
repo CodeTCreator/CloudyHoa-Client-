@@ -96,7 +96,17 @@
       <DependentUpon>Login.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Connected Services\ObjectServiceReference\Reference.cs">
+    <Compile Include="Connected Services\DynamicParamsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\MetadataService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ObjectsService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -112,13 +122,32 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="DataObject\DAO.cs" />
+    <Compile Include="DataObject\DataStructure\DPsDataStructure.cs" />
+    <Compile Include="DataObject\DataStructure\ERDataStructure.cs" />
     <Compile Include="DataObject\DataStructure\ObjectDataStructure.cs" />
     <Compile Include="DataObject\DataStructure\ObjectMWDataStructure.cs" />
     <Compile Include="DataObject\DataStructure\ObjectSPDataStructure.cs" />
     <Compile Include="DataObject\IDataStructure.cs" />
+    <Compile Include="EnteringReadingsWindows\Controllers\ERWindowController.cs" />
+    <Compile Include="EnteringReadingsWindows\EnteringReadingWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnteringReadingsWindows\EnteringReadingWindow.Designer.cs">
+      <DependentUpon>EnteringReadingWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\DynamicParamsDataService.cs" />
     <Compile Include="General\FocusedObject.cs" />
+    <Compile Include="General\GeneralLoadData.cs" />
+    <Compile Include="General\IDataService.cs" />
     <Compile Include="General\IFocusedObject.cs" />
+    <Compile Include="General\MetadataDataService.cs" />
     <Compile Include="General\ObjectDataService.cs" />
+    <Compile Include="General\TreeListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="General\TreeListControl.Designer.cs">
+      <DependentUpon>TreeListControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="General\User.cs" />
     <Compile Include="General\UserContext.cs" />
     <Compile Include="MainForm\MainForm.cs">
@@ -144,6 +173,12 @@
     <EmbeddedResource Include="Authorization\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EnteringReadingsWindows\EnteringReadingWindow.resx">
+      <DependentUpon>EnteringReadingWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\TreeListControl.resx">
+      <DependentUpon>TreeListControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,14 +196,34 @@
     <EmbeddedResource Include="SaveExecuteControl\LoadingControl.resx">
       <DependentUpon>LoadingControl.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Connected Services\ObjectServiceReference\ObjectsService.wsdl" />
-    <None Include="Connected Services\ObjectServiceReference\WcfServiceLibrary.xsd">
+    <None Include="Connected Services\DynamicParamsService\DynamicParamsService.wsdl" />
+    <None Include="Connected Services\DynamicParamsService\WcfServiceLibrary.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ObjectServiceReference\WcfServiceLibrary1.xsd">
+    <None Include="Connected Services\DynamicParamsService\WcfServiceLibrary1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ObjectServiceReference\WcfServiceLibrary2.xsd">
+    <None Include="Connected Services\DynamicParamsService\WcfServiceLibrary2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MetadataService\MetadataService.wsdl" />
+    <None Include="Connected Services\MetadataService\WcfServiceLibrary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MetadataService\WcfServiceLibrary1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MetadataService\WcfServiceLibrary2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ObjectsService\ObjectsService.wsdl" />
+    <None Include="Connected Services\ObjectsService\WcfServiceLibrary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ObjectsService\WcfServiceLibrary1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ObjectsService\WcfServiceLibrary2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ServiceReference1\ServiceHoaAccount1.wsdl" />
@@ -225,7 +280,9 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\ObjectServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\DynamicParamsService\" />
+    <WCFMetadataStorage Include="Connected Services\MetadataService\" />
+    <WCFMetadataStorage Include="Connected Services\ObjectsService\" />
     <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
     <WCFMetadataStorage Include="Connected Services\SPServiceReference\" />
   </ItemGroup>
@@ -242,18 +299,35 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ObjectServiceReference\WcfServiceLibrary.disco" />
-    <None Include="Connected Services\ObjectServiceReference\configuration91.svcinfo" />
-    <None Include="Connected Services\ObjectServiceReference\configuration.svcinfo" />
-    <None Include="Connected Services\ObjectServiceReference\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
+    <None Include="Resources\clear_32x32.png" />
+    <None Include="Resources\clear_16x16.png" />
+    <None Include="Resources\warning_16x16.png" />
     <None Include="Connected Services\ServiceReference1\WcfServiceLibrary1.disco" />
     <None Include="Connected Services\SPServiceReference\WcfServiceLibrary.disco" />
     <None Include="Connected Services\SPServiceReference\configuration91.svcinfo" />
     <None Include="Connected Services\SPServiceReference\configuration.svcinfo" />
     <None Include="Connected Services\SPServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\MetadataService\WcfServiceLibrary.disco" />
+    <None Include="Connected Services\MetadataService\configuration91.svcinfo" />
+    <None Include="Connected Services\MetadataService\configuration.svcinfo" />
+    <None Include="Connected Services\MetadataService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ObjectsService\WcfServiceLibrary.disco" />
+    <None Include="Connected Services\ObjectsService\configuration91.svcinfo" />
+    <None Include="Connected Services\ObjectsService\configuration.svcinfo" />
+    <None Include="Connected Services\ObjectsService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\DynamicParamsService\WcfServiceLibrary.disco" />
+    <None Include="Connected Services\DynamicParamsService\configuration91.svcinfo" />
+    <None Include="Connected Services\DynamicParamsService\configuration.svcinfo" />
+    <None Include="Connected Services\DynamicParamsService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
