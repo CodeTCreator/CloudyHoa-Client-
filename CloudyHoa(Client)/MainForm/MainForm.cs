@@ -1,4 +1,5 @@
-﻿using CloudyHoa_Client_.Properties;
+﻿using CloudyHoa_Client_.EnteringReadingsWindows;
+using CloudyHoa_Client_.Properties;
 using System;
 using System.Windows.Forms;
 
@@ -48,6 +49,12 @@ namespace CloudyHoa_Client_.MainForm
         private void residentsButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void enteringReadingButton_Click(object sender, EventArgs e)
+        {
+            EnteringReadingWindow enteringReadingWindow = new EnteringReadingWindow();
+            enteringReadingWindow.ShowDialog();
         }
     }
 }
