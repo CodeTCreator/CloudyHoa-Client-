@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="9.1" CheckSum="JQ62F2jCDyCbOnuengrJxuS9IlH8Va5WGW863p6aFGA=">
+<SavedWcfConfigurationInformation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="9.1" CheckSum="o/9HaQMp3WYTOjnXTMVdXLhmd+03gzjvw/iBYe4ebBQ=">
   <bindingConfigurations>
-    <bindingConfiguration bindingType="wsHttpBinding" name="HoaAdmin">
+    <bindingConfiguration bindingType="wsHttpBinding" name="MetadataService">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>HoaAdmin</serializedValue>
+          <serializedValue>MetadataService</serializedValue>
         </property>
         <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -127,10 +127,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="HoaAdmin" contract="ServiceReference1.IServiceHoaAccount" bindingType="wsHttpBinding" address="http://localhost:7744/WcfServiceLibrary.ServiceHoaAccount.svc" bindingConfiguration="HoaAdmin">
+    <endpoint name="MetadataService" contract="MetadataService.IMetadataService" bindingType="wsHttpBinding" address="http://localhost:7744/WcfServiceLibrary.MetadataService.MetadataService.svc" bindingConfiguration="MetadataService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:7744/WcfServiceLibrary.ServiceHoaAccount.svc</serializedValue>
+          <serializedValue>http://localhost:7744/WcfServiceLibrary.MetadataService.MetadataService.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -139,10 +139,10 @@
           <serializedValue>wsHttpBinding</serializedValue>
         </property>
         <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>HoaAdmin</serializedValue>
+          <serializedValue>MetadataService</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>ServiceReference1.IServiceHoaAccount</serializedValue>
+          <serializedValue>MetadataService.IMetadataService</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>
@@ -168,8 +168,8 @@
         <property path="/identity/dns" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.DnsElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.DnsElement</serializedValue>
         </property>
-        <property path="/identity/dns/value" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue />
+        <property path="/identity/dns/value" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>localhost</serializedValue>
         </property>
         <property path="/identity/rsa" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.RsaElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.RsaElement</serializedValue>
@@ -202,7 +202,7 @@
           <serializedValue>False</serializedValue>
         </property>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>HoaAdmin</serializedValue>
+          <serializedValue>MetadataService</serializedValue>
         </property>
         <property path="/kind" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
