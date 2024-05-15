@@ -76,7 +76,7 @@
             this.labelControl1.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(301, 12);
+            this.labelControl1.Location = new System.Drawing.Point(462, 12);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(333, 37);
             this.labelControl1.TabIndex = 5;

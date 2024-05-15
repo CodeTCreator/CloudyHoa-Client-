@@ -338,6 +338,5 @@ namespace CloudyHoa_Client_.EnteringReadingsWindows
             await GeneralLoadData.LoadData(this, _controller.LoadOldDynamicParams, _dynamicParamsDataStructure, _dynamicParamsDataService,
              _objectDataStructure.FocusedObject.objectId, _objectDataStructure.FocusedObject.typeObject);
         }
-
     }
 }
