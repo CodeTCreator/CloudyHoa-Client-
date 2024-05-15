@@ -46,13 +46,13 @@
             this.addButton = new DevExpress.XtraEditors.SimpleButton();
             this.tabNavigationPage2 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.bar2 = new DevExpress.XtraBars.Bar();
+            this.backButton = new DevExpress.XtraBars.BarButtonItem();
+            this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.bar2 = new DevExpress.XtraBars.Bar();
-            this.bar3 = new DevExpress.XtraBars.Bar();
-            this.backButton = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.treeListObject)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -80,6 +80,10 @@
             // 
             // treeListColumn1
             // 
+            this.treeListColumn1.AppearanceCell.Options.UseTextOptions = true;
+            this.treeListColumn1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.treeListColumn1.AppearanceHeader.Options.UseTextOptions = true;
+            this.treeListColumn1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.treeListColumn1.Caption = "Название";
             this.treeListColumn1.FieldName = "name";
             this.treeListColumn1.Name = "treeListColumn1";
@@ -89,6 +93,10 @@
             // 
             // treeListColumn2
             // 
+            this.treeListColumn2.AppearanceCell.Options.UseTextOptions = true;
+            this.treeListColumn2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.treeListColumn2.AppearanceHeader.Options.UseTextOptions = true;
+            this.treeListColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.treeListColumn2.Caption = "Идентификатор";
             this.treeListColumn2.FieldName = "identificator";
             this.treeListColumn2.Name = "treeListColumn2";
@@ -116,6 +124,10 @@
             // 
             // nameColumn
             // 
+            this.nameColumn.AppearanceCell.Options.UseTextOptions = true;
+            this.nameColumn.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.nameColumn.AppearanceHeader.Options.UseTextOptions = true;
+            this.nameColumn.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.nameColumn.Caption = "Название объекта";
             this.nameColumn.FieldName = "name";
             this.nameColumn.MinWidth = 25;
@@ -126,6 +138,10 @@
             // 
             // objectCountColumn
             // 
+            this.objectCountColumn.AppearanceCell.Options.UseTextOptions = true;
+            this.objectCountColumn.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.objectCountColumn.AppearanceHeader.Options.UseTextOptions = true;
+            this.objectCountColumn.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.objectCountColumn.Caption = "Количество";
             this.objectCountColumn.FieldName = "count";
             this.objectCountColumn.MinWidth = 25;
@@ -233,6 +249,40 @@
             this.barManager1.MaxItemId = 1;
             this.barManager1.StatusBar = this.bar3;
             // 
+            // bar2
+            // 
+            this.bar2.BarName = "Main menu";
+            this.bar2.DockCol = 0;
+            this.bar2.DockRow = 0;
+            this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.backButton)});
+            this.bar2.OptionsBar.MultiLine = true;
+            this.bar2.OptionsBar.UseWholeRow = true;
+            this.bar2.Text = "Main menu";
+            // 
+            // backButton
+            // 
+            this.backButton.Caption = "Назад";
+            this.backButton.Id = 0;
+            this.backButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("backButton.ImageOptions.Image")));
+            this.backButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("backButton.ImageOptions.LargeImage")));
+            this.backButton.Name = "backButton";
+            this.backButton.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.backButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.backButton_ItemClick);
+            // 
+            // bar3
+            // 
+            this.bar3.BarName = "Status bar";
+            this.bar3.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom;
+            this.bar3.DockCol = 0;
+            this.bar3.DockRow = 0;
+            this.bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
+            this.bar3.OptionsBar.AllowQuickCustomization = false;
+            this.bar3.OptionsBar.DrawDragBorder = false;
+            this.bar3.OptionsBar.UseWholeRow = true;
+            this.bar3.Text = "Status bar";
+            // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
@@ -264,38 +314,6 @@
             this.barDockControlRight.Location = new System.Drawing.Point(712, 30);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 489);
-            // 
-            // bar2
-            // 
-            this.bar2.BarName = "Main menu";
-            this.bar2.DockCol = 0;
-            this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.backButton)});
-            this.bar2.OptionsBar.MultiLine = true;
-            this.bar2.OptionsBar.UseWholeRow = true;
-            this.bar2.Text = "Main menu";
-            // 
-            // bar3
-            // 
-            this.bar3.BarName = "Status bar";
-            this.bar3.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom;
-            this.bar3.DockCol = 0;
-            this.bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
-            this.bar3.OptionsBar.AllowQuickCustomization = false;
-            this.bar3.OptionsBar.DrawDragBorder = false;
-            this.bar3.OptionsBar.UseWholeRow = true;
-            this.bar3.Text = "Status bar";
-            // 
-            // backButton
-            // 
-            this.backButton.Caption = "Назад";
-            this.backButton.Id = 0;
-            this.backButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("backButton.ImageOptions.Image")));
-            this.backButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("backButton.ImageOptions.LargeImage")));
-            this.backButton.Name = "backButton";
-            this.backButton.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.backButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.backButton_ItemClick);
             // 
             // ObjectWindow
             // 
