@@ -91,7 +91,7 @@
             // 
             this.enteringReadingButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.enteringReadingButton.Appearance.Options.UseFont = true;
-            this.enteringReadingButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
+            this.enteringReadingButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("enteringReadingButton.ImageOptions.SvgImage")));
             this.enteringReadingButton.Location = new System.Drawing.Point(438, 44);
             this.enteringReadingButton.Name = "enteringReadingButton";
             this.enteringReadingButton.Size = new System.Drawing.Size(206, 74);
