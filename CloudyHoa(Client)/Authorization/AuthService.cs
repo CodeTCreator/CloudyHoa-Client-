@@ -1,5 +1,6 @@
 ﻿using CloudyHoa_Client_.General;
 using CloudyHoa_Client_.Properties;
+using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -108,6 +109,26 @@ namespace CloudyHoa_Client_.Authorization
             {
                 const string message =
                 "Сервер недоступен";
+                const string caption = "Подключение к серверу";
+                var serverResult = MessageBox.Show(message, caption,
+                                             MessageBoxButtons.OK,
+                                             MessageBoxIcon.Error);
+                return -1;
+            }
+            catch (System.ServiceModel.ProtocolException)
+            {
+                const string message =
+                "Неверная конфигурация клиента";
+                const string caption = "Подключение к серверу";
+                var serverResult = MessageBox.Show(message, caption,
+                                             MessageBoxButtons.OK,
+                                             MessageBoxIcon.Error);
+                return -1;
+            }
+            catch (System.ServiceModel.ServerTooBusyException)
+            {
+                const string message =
+                "В данный момент сервер перегружен. Повторите попытку позже.";
                 const string caption = "Подключение к серверу";
                 var serverResult = MessageBox.Show(message, caption,
                                              MessageBoxButtons.OK,
