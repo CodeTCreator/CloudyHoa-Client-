@@ -11,6 +11,8 @@ namespace CloudyHoa_Client_
         private readonly AuthService _authService;
         private bool autoLogin;
 
+        public int ExitFlag { get; set; } = 0;
+
         public Control ContainerForLoading => this;
         public Control LockControl => panelControl2;
         public LoginForm(AuthService authService, string login, string password,bool remember, bool auto)
@@ -50,6 +52,7 @@ namespace CloudyHoa_Client_
                         if (await _authService.Auth(login, password, remember))
                         {
                             //DialogResult = DialogResult.OK;
+                            ExitFlag = 1;
                             Close();
                         }
                         else
@@ -70,6 +73,10 @@ namespace CloudyHoa_Client_
             }
         }
 
-        
+        private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing & ExitFlag != 1)
+               ExitFlag = -1;
+        }
     }
 }
