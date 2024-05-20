@@ -74,6 +74,8 @@ namespace CloudyHoa_Client_.EnteringReadingsWindows
 
             ReloadDPTable();
             BindingDPsTable(_structure.TemporaryDPTable);
+
+            exportButton.Enabled = false;
         }
 
         private void ResetDPData()
@@ -165,6 +167,7 @@ namespace CloudyHoa_Client_.EnteringReadingsWindows
             _structure.EnteringTable.RowChanged += SaveButtonEnable;
             //SetObjectFilter();
             //SetServiceFilter();
+            exportButton.Enabled = true;
         }
         private void BindingServicesComboBox()
         {
@@ -337,6 +340,16 @@ namespace CloudyHoa_Client_.EnteringReadingsWindows
         {
             await GeneralLoadData.LoadData(this, _controller.LoadOldDynamicParams, _dynamicParamsDataStructure, _dynamicParamsDataService,
              _objectDataStructure.FocusedObject.objectId, _objectDataStructure.FocusedObject.typeObject);
+        }
+
+        private void exportButton_Click(object sender, EventArgs e)
+        {
+            ReadingExcel.ReadingExcelForm readingExcelForm = new ReadingExcel.ReadingExcelForm();
+            readingExcelForm.ShowDialog();
+            if(readingExcelForm.ExitFlag == 1)
+            {
+                _controller.ReadingExternalEnteringTable(_structure.TemporaryDPTable, readingExcelForm.DataTable);
+            }
         }
     }
 }

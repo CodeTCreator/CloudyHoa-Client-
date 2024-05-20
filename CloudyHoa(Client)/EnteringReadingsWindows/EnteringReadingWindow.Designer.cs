@@ -100,12 +100,14 @@
             // 
             this.exportButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.exportButton.Appearance.Options.UseFont = true;
+            this.exportButton.Enabled = false;
             this.exportButton.ImageOptions.Image = global::CloudyHoa_Client_.Properties.Resources.exporttocsv_32x32;
             this.exportButton.Location = new System.Drawing.Point(12, 520);
             this.exportButton.Name = "exportButton";
             this.exportButton.Size = new System.Drawing.Size(130, 42);
             this.exportButton.TabIndex = 5;
             this.exportButton.Text = "Экспорт";
+            this.exportButton.Click += new System.EventHandler(this.exportButton_Click);
             // 
             // svgImageBoxWarningData
             // 
