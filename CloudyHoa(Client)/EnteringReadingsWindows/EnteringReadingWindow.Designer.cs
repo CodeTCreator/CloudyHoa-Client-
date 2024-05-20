@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EnteringReadingWindow));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControlMain = new DevExpress.XtraEditors.PanelControl();
+            this.exportButton = new DevExpress.XtraEditors.SimpleButton();
             this.svgImageBoxWarningData = new DevExpress.XtraEditors.SvgImageBox();
             this.svgImageBoxWarningValue = new DevExpress.XtraEditors.SvgImageBox();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
@@ -84,6 +85,7 @@
             // 
             // panelControlMain
             // 
+            this.panelControlMain.Controls.Add(this.exportButton);
             this.panelControlMain.Controls.Add(this.svgImageBoxWarningData);
             this.panelControlMain.Controls.Add(this.svgImageBoxWarningValue);
             this.panelControlMain.Controls.Add(this.panelControl2);
@@ -93,6 +95,17 @@
             this.panelControlMain.Name = "panelControlMain";
             this.panelControlMain.Size = new System.Drawing.Size(1239, 567);
             this.panelControlMain.TabIndex = 7;
+            // 
+            // exportButton
+            // 
+            this.exportButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.exportButton.Appearance.Options.UseFont = true;
+            this.exportButton.ImageOptions.Image = global::CloudyHoa_Client_.Properties.Resources.exporttocsv_32x32;
+            this.exportButton.Location = new System.Drawing.Point(12, 520);
+            this.exportButton.Name = "exportButton";
+            this.exportButton.Size = new System.Drawing.Size(130, 42);
+            this.exportButton.TabIndex = 5;
+            this.exportButton.Text = "Экспорт";
             // 
             // svgImageBoxWarningData
             // 
@@ -452,5 +465,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private System.Windows.Forms.ComboBox comboBoxParentObject;
         private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.SimpleButton exportButton;
     }
 }

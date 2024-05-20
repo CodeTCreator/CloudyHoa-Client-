@@ -299,6 +299,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\exporttocsv_32x32.png" />
     <None Include="Resources\clear_32x32.png" />
     <None Include="Resources\clear_16x16.png" />
     <None Include="Resources\warning_16x16.png" />
