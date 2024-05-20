@@ -3,6 +3,7 @@ using CloudyHoa_Client_.DataObject.DataStructure;
 using CloudyHoa_Client_.General;
 using CloudyHoa_Client_.ObjectWindow.Service_Controller;
 using DevExpress.XtraBars.Objects;
+using DevExpress.XtraRichEdit;
 using System;
 using System.Data;
 using System.Data.Linq.Mapping;
@@ -289,6 +290,30 @@ namespace CloudyHoa_Client_.EnteringReadingsWindows.Controllers
         public bool CheckTableRows(DataTable dataTable)
         {
             return dataTable.Rows.Count > 0;
+        }
+
+        /// <summary>
+        /// Метод чтения показаний из внешней таблицы, вычитывает по л/с и id услуги
+        /// </summary>
+        /// <param name="maintTable"></param>
+        /// <param name="ExternalTable"></param>
+        public void ReadingExternalEnteringTable(DataTable maintTable,DataTable externalTable) 
+        {
+            if (externalTable.Columns.Contains("Л/С") & externalTable.Columns.Contains("Показание"))
+            {
+                foreach (DataRow row in maintTable.Rows)
+                {
+
+                    var result = from row1 in externalTable.AsEnumerable()
+                                 where row1.Field<object>("Л/С").ToString() == row["account"].ToString() & row1.Field<object>("id услуги").ToString() == row["property_id"].ToString()
+                                 select row1;
+                    row["curr_value"] = result.Count() > 0 ? result.FirstOrDefault()["Показание"] : DBNull.Value;
+                    if (externalTable.Columns.Contains("Период"))
+                    {
+                        row["curr_period"] = result.Count() > 0 ? result.FirstOrDefault()["Период"] : DBNull.Value;
+                    }
+                }
+            }
         }
 
     }
