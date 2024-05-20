@@ -20,35 +20,40 @@ namespace CloudyHoa_Client_
 
             while (workFlag)
             {
-                if (Auth())
+                int authFlag = Auth();
+                if (authFlag == 1)
                 {
                     MainForm.MainForm mainForm = new MainForm.MainForm();
                     Application.Run(mainForm);
                     workFlag = !mainForm.ExitFlag;
-                    //if(mainForm.ExitFlag) 
-                    //{ 
-                    //    Application.Exit();
-                    //}
-                }
+                    if (mainForm.ExitFlag)
+                    {
+                        Application.Exit();
+                    }
+                }else if(authFlag == -1) { workFlag = false; }
             }
             
         }
-        static bool Auth()
+        /// <summary>
+        /// 1 - успешный вход / 0 - неудачный / -1 - закрыть приложение
+        /// </summary>
+        /// <returns></returns>
+        static int Auth()
         {
             AuthService authService = null;
-            //try
-            //{
+            try
+            {
                 authService = new AuthService();
-            //}
-            //catch (System.ServiceModel.EndpointNotFoundException)
-            //{
-            //    const string message =
-            //    "Сервер недоступен";
-            //    const string caption = "Подключение к серверу";
-            //    var serverResult = MessageBox.Show(message, caption,
-            //                                 MessageBoxButtons.OK,
-            //                                 MessageBoxIcon.Error);
-            //}
+            }
+            catch (System.ServiceModel.EndpointNotFoundException)
+            {
+                const string message =
+                "Сервер недоступен";
+                const string caption = "Подключение к серверу";
+                var serverResult = MessageBox.Show(message, caption,
+                                             MessageBoxButtons.OK,
+                                             MessageBoxIcon.Error);
+            }
             string login = default;
             string password = default;
             bool remember = false;
@@ -60,13 +65,14 @@ namespace CloudyHoa_Client_
                 {
                     auto = true;
                 }
-                Form dialog = new LoginForm(authService, login, password, remember, auto);
+                LoginForm dialog = new LoginForm(authService, login, password, remember, auto);
                 dialog.ShowDialog();
-                return UserContext.Instance.IsAuthed;
+                if(dialog.ExitFlag == -1) { return -1; }
+                return UserContext.Instance.IsAuthed ? 1 : 0;
             }
             else
             {
-                return false;
+                return 0;
             }
         }
     }
