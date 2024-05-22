@@ -64,6 +64,7 @@ namespace CloudyHoa_Client_.PersonalAccountsWindows.MW
 
             if(modeWindow == 0)
             {
+                _structure.FocusedPA.objectId = _structure.FocusedObject.objectId;
                 saveButton.Click += AddPersonalAccount;
             }
             else
