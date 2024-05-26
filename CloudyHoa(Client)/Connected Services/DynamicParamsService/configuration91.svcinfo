@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="9.1" CheckSum="X1vnXqLQ8al2tVRILfcHLZv0phvXb9G/6jv4eILHrU4=">
+<SavedWcfConfigurationInformation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="9.1" CheckSum="U8k1wnSRG9Jjb4ChjM4qFkOlCTWs1qoC6h0985XwnQA=">
   <bindingConfigurations>
-    <bindingConfiguration bindingType="wsHttpBinding" name="DymamicParamsEP">
+    <bindingConfiguration bindingType="ws2007HttpBinding" name="DymamicParamsEP">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>DymamicParamsEP</serializedValue>
@@ -81,8 +81,8 @@
         <property path="/security" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.WSHttpSecurityElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.WSHttpSecurityElement</serializedValue>
         </property>
-        <property path="/security/mode" isComplexType="false" isExplicitlyDefined="true" clrType="System.ServiceModel.SecurityMode, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>None</serializedValue>
+        <property path="/security/mode" isComplexType="false" isExplicitlyDefined="false" clrType="System.ServiceModel.SecurityMode, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>Message</serializedValue>
         </property>
         <property path="/security/transport" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.WSHttpTransportSecurityElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.WSHttpTransportSecurityElement</serializedValue>
@@ -117,8 +117,8 @@
         <property path="/security/message/negotiateServiceCredential" isComplexType="false" isExplicitlyDefined="false" clrType="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>True</serializedValue>
         </property>
-        <property path="/security/message/algorithmSuite" isComplexType="false" isExplicitlyDefined="false" clrType="System.ServiceModel.Security.SecurityAlgorithmSuite, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>Default</serializedValue>
+        <property path="/security/message/algorithmSuite" isComplexType="false" isExplicitlyDefined="true" clrType="System.ServiceModel.Security.SecurityAlgorithmSuite, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>Basic256Sha256Rsa15</serializedValue>
         </property>
         <property path="/security/message/establishSecurityContext" isComplexType="false" isExplicitlyDefined="false" clrType="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>True</serializedValue>
@@ -127,7 +127,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="DymamicParamsEP" contract="DynamicParamsService.IDynamicParamsService" bindingType="wsHttpBinding" address="http://localhost:7744/WcfServiceLibrary.DPService.DynamicParamsService.svc" bindingConfiguration="DymamicParamsEP">
+    <endpoint name="DymamicParamsEP" contract="DynamicParamsService.IDynamicParamsService" bindingType="ws2007HttpBinding" address="http://localhost:7744/WcfServiceLibrary.DPService.DynamicParamsService.svc" bindingConfiguration="DymamicParamsEP">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://localhost:7744/WcfServiceLibrary.DPService.DynamicParamsService.svc</serializedValue>
@@ -136,7 +136,7 @@
           <serializedValue />
         </property>
         <property path="/binding" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>wsHttpBinding</serializedValue>
+          <serializedValue>ws2007HttpBinding</serializedValue>
         </property>
         <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>DymamicParamsEP</serializedValue>
