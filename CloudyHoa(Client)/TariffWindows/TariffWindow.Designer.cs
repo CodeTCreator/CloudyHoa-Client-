@@ -48,6 +48,7 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.typeObjectLabel = new DevExpress.XtraEditors.LabelControl();
             this.addButton = new DevExpress.XtraEditors.SimpleButton();
@@ -62,7 +63,6 @@
             this.propNameColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.deleteColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryDeleteButton = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.treeListTO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -80,7 +80,7 @@
             this.labelControl1.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(343, 38);
+            this.labelControl1.Location = new System.Drawing.Point(401, 38);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(98, 37);
             this.labelControl1.TabIndex = 5;
@@ -204,6 +204,12 @@
             this.barDockControlRight.Location = new System.Drawing.Point(870, 32);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 445);
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "barButtonItem1";
+            this.barButtonItem1.Id = 1;
+            this.barButtonItem1.Name = "barButtonItem1";
             // 
             // panelControl1
             // 
@@ -355,12 +361,6 @@
             this.repositoryDeleteButton.Name = "repositoryDeleteButton";
             this.repositoryDeleteButton.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.repositoryDeleteButton.Click += new System.EventHandler(this.repositoryDeleteButton_Click);
-            // 
-            // barButtonItem1
-            // 
-            this.barButtonItem1.Caption = "barButtonItem1";
-            this.barButtonItem1.Id = 1;
-            this.barButtonItem1.Name = "barButtonItem1";
             // 
             // TariffWindow
             // 
