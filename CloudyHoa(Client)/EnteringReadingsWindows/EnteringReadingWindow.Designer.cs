@@ -56,6 +56,9 @@
             this.gridColumnPAID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumnObjectName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumnObjectId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumnTariff = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumnaTariffId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumnPA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.saveButton = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControlMain)).BeginInit();
             this.panelControlMain.SuspendLayout();
@@ -238,11 +241,11 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(940, 15);
+            this.labelControl4.Location = new System.Drawing.Point(910, 15);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(55, 23);
+            this.labelControl4.Size = new System.Drawing.Size(94, 23);
             this.labelControl4.TabIndex = 1;
-            this.labelControl4.Text = "Услуга:";
+            this.labelControl4.Text = "Показатель:";
             // 
             // gridControlReadings
             // 
@@ -268,7 +271,10 @@
             this.gridColumnCurrValue,
             this.gridColumnPAID,
             this.gridColumnObjectName,
-            this.gridColumnObjectId});
+            this.gridColumnObjectId,
+            this.gridColumnTariff,
+            this.gridColumnaTariffId,
+            this.gridColumnPA});
             this.gridViewReadings.GridControl = this.gridControlReadings;
             this.gridViewReadings.Name = "gridViewReadings";
             this.gridViewReadings.CustomDrawCell += new DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventHandler(this.gridViewReadings_CustomDrawCell);
@@ -297,7 +303,7 @@
             this.gridColumnPropName.MinWidth = 25;
             this.gridColumnPropName.Name = "gridColumnPropName";
             this.gridColumnPropName.Visible = true;
-            this.gridColumnPropName.VisibleIndex = 1;
+            this.gridColumnPropName.VisibleIndex = 2;
             this.gridColumnPropName.Width = 94;
             // 
             // gridColumnPrevPeriod
@@ -311,7 +317,7 @@
             this.gridColumnPrevPeriod.MinWidth = 25;
             this.gridColumnPrevPeriod.Name = "gridColumnPrevPeriod";
             this.gridColumnPrevPeriod.Visible = true;
-            this.gridColumnPrevPeriod.VisibleIndex = 2;
+            this.gridColumnPrevPeriod.VisibleIndex = 3;
             this.gridColumnPrevPeriod.Width = 94;
             // 
             // gridColumnCurrPeriod
@@ -326,7 +332,7 @@
             this.gridColumnCurrPeriod.MinWidth = 25;
             this.gridColumnCurrPeriod.Name = "gridColumnCurrPeriod";
             this.gridColumnCurrPeriod.Visible = true;
-            this.gridColumnCurrPeriod.VisibleIndex = 3;
+            this.gridColumnCurrPeriod.VisibleIndex = 4;
             this.gridColumnCurrPeriod.Width = 94;
             // 
             // repositoryItemDateEdit1
@@ -349,7 +355,7 @@
             this.gridColumnPrevValue.MinWidth = 25;
             this.gridColumnPrevValue.Name = "gridColumnPrevValue";
             this.gridColumnPrevValue.Visible = true;
-            this.gridColumnPrevValue.VisibleIndex = 4;
+            this.gridColumnPrevValue.VisibleIndex = 5;
             this.gridColumnPrevValue.Width = 94;
             // 
             // gridColumnCurrValue
@@ -363,17 +369,15 @@
             this.gridColumnCurrValue.MinWidth = 25;
             this.gridColumnCurrValue.Name = "gridColumnCurrValue";
             this.gridColumnCurrValue.Visible = true;
-            this.gridColumnCurrValue.VisibleIndex = 5;
+            this.gridColumnCurrValue.VisibleIndex = 6;
             this.gridColumnCurrValue.Width = 94;
             // 
             // gridColumnPAID
             // 
-            this.gridColumnPAID.Caption = "Л/С";
+            this.gridColumnPAID.Caption = "Л/С id";
             this.gridColumnPAID.FieldName = "personal_account_id";
             this.gridColumnPAID.MinWidth = 25;
             this.gridColumnPAID.Name = "gridColumnPAID";
-            this.gridColumnPAID.Visible = true;
-            this.gridColumnPAID.VisibleIndex = 6;
             this.gridColumnPAID.Width = 94;
             // 
             // gridColumnObjectName
@@ -393,6 +397,34 @@
             this.gridColumnObjectId.MinWidth = 25;
             this.gridColumnObjectId.Name = "gridColumnObjectId";
             this.gridColumnObjectId.Width = 94;
+            // 
+            // gridColumnTariff
+            // 
+            this.gridColumnTariff.Caption = "Тариф";
+            this.gridColumnTariff.FieldName = "tariff_name";
+            this.gridColumnTariff.MinWidth = 25;
+            this.gridColumnTariff.Name = "gridColumnTariff";
+            this.gridColumnTariff.Visible = true;
+            this.gridColumnTariff.VisibleIndex = 7;
+            this.gridColumnTariff.Width = 94;
+            // 
+            // gridColumnaTariffId
+            // 
+            this.gridColumnaTariffId.Caption = "tariff id";
+            this.gridColumnaTariffId.FieldName = "tariff_id";
+            this.gridColumnaTariffId.MinWidth = 25;
+            this.gridColumnaTariffId.Name = "gridColumnaTariffId";
+            this.gridColumnaTariffId.Width = 94;
+            // 
+            // gridColumnPA
+            // 
+            this.gridColumnPA.Caption = "Л/С";
+            this.gridColumnPA.FieldName = "account";
+            this.gridColumnPA.MinWidth = 25;
+            this.gridColumnPA.Name = "gridColumnPA";
+            this.gridColumnPA.Visible = true;
+            this.gridColumnPA.VisibleIndex = 1;
+            this.gridColumnPA.Width = 94;
             // 
             // saveButton
             // 
@@ -468,5 +500,8 @@
         private System.Windows.Forms.ComboBox comboBoxParentObject;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.SimpleButton exportButton;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnTariff;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnaTariffId;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnPA;
     }
 }
