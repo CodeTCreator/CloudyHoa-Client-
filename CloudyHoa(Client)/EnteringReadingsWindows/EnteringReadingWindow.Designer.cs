@@ -298,7 +298,7 @@
             this.gridColumnPropName.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumnPropName.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumnPropName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumnPropName.Caption = "Услуга";
+            this.gridColumnPropName.Caption = "Показатель";
             this.gridColumnPropName.FieldName = "property_name";
             this.gridColumnPropName.MinWidth = 25;
             this.gridColumnPropName.Name = "gridColumnPropName";
