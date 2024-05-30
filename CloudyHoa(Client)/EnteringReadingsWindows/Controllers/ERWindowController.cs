@@ -305,7 +305,9 @@ namespace CloudyHoa_Client_.EnteringReadingsWindows.Controllers
                 {
 
                     var result = from row1 in externalTable.AsEnumerable()
-                                 where row1.Field<object>("Л/С").ToString() == row["account"].ToString() & row1.Field<object>("id услуги").ToString() == row["property_id"].ToString()
+                                 where row1.Field<object>("Л/С").ToString() == row["account"].ToString() 
+                                 & row1.Field<object>("Показатель").ToString() == row["property_name"].ToString()
+                                 & row1.Field<object>("Тариф").ToString() == row["tariff_name"].ToString()
                                  select row1;
                     row["curr_value"] = result.Count() > 0 ? result.FirstOrDefault()["Показание"] : DBNull.Value;
                     if (externalTable.Columns.Contains("Период"))
