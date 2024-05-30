@@ -63,6 +63,7 @@ namespace CloudyHoa_Client_.ReadingExcel
                             DataTable = ConvertExcelTodataTable(FilePath, comboBoxSheets.SelectedIndex);
                             SetSourceGrid(DataTable);
                             CreateColumnNameTextBoxes(DataTable);
+                            saveNameColunmButton.Enabled = true;
                         }
                     }
                 }
@@ -161,6 +162,11 @@ namespace CloudyHoa_Client_.ReadingExcel
         private void saveButton_Click(object sender, EventArgs e)
         {
             ExitFlag = 1;
+        }
+
+        private void ReadingExcelForm_Load(object sender, EventArgs e)
+        {
+            toolTipSaveColumn.SetToolTip(saveNameColunmButton, "Сохранить названия столбцов");
         }
     }
 }

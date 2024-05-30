@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.reviewButton = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.labelControlFileName = new DevExpress.XtraEditors.LabelControl();
@@ -40,6 +41,7 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.toolTipSaveColumn = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -127,6 +129,7 @@
             // 
             // saveNameColunmButton
             // 
+            this.saveNameColunmButton.Enabled = false;
             this.saveNameColunmButton.ImageOptions.Image = global::CloudyHoa_Client_.Properties.Resources.saveall_32x32;
             this.saveNameColunmButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.saveNameColunmButton.Location = new System.Drawing.Point(736, 10);
@@ -179,6 +182,7 @@
             this.Controls.Add(this.panelControl1);
             this.Name = "ReadingExcelForm";
             this.Text = "Загрузка данных";
+            this.Load += new System.EventHandler(this.ReadingExcelForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
@@ -207,5 +211,6 @@
         private DevExpress.Utils.Layout.StackPanel stackPanel1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private System.Windows.Forms.ToolTip toolTipSaveColumn;
     }
 }
