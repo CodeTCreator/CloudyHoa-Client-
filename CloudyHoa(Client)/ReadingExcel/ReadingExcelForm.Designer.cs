@@ -140,6 +140,7 @@
             // 
             // stackPanel1
             // 
+            this.stackPanel1.AutoScroll = true;
             this.stackPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.stackPanel1.Location = new System.Drawing.Point(2, 2);
             this.stackPanel1.Name = "stackPanel1";

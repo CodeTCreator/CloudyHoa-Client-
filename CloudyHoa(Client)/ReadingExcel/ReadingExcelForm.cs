@@ -87,8 +87,12 @@ namespace CloudyHoa_Client_.ReadingExcel
         private void comboBoxSheets_SelectionChangeCommitted(object sender, EventArgs e)
         {
             DataTable = ConvertExcelTodataTable(FilePath, comboBoxSheets.SelectedIndex);
+            ClearDataSourceGrid();
+            stackPanel1.Controls.Clear();
             SetSourceGrid(DataTable);
             CreateColumnNameTextBoxes(DataTable);
+
+            
             //SetSourceGrid(ConvertExcelTodataTable(FilePath, comboBox1.SelectedIndex));
         }
 
@@ -151,6 +155,7 @@ namespace CloudyHoa_Client_.ReadingExcel
             }
             ClearDataSourceGrid();
             SetSourceGrid(DataTable);
+           
         }
 
         private void ClearDataSourceGrid()
@@ -162,6 +167,7 @@ namespace CloudyHoa_Client_.ReadingExcel
         private void saveButton_Click(object sender, EventArgs e)
         {
             ExitFlag = 1;
+            this.Close();
         }
 
         private void ReadingExcelForm_Load(object sender, EventArgs e)
