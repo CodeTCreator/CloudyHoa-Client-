@@ -45,11 +45,29 @@ namespace CloudyHoa_Client_.ObjectServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IObjectsService/GetObjectsStructure", ReplyAction="http://tempuri.org/IObjectsService/GetObjectsStructureResponse")]
         System.Threading.Tasks.Task<System.Data.DataSet> GetObjectsStructureAsync(int hoa_id);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IObjectsService/GetAllChilds", ReplyAction="http://tempuri.org/IObjectsService/GetAllChildsResponse")]
+        System.Data.DataSet GetAllChilds(int objectId, int typeObject);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IObjectsService/GetAllChilds", ReplyAction="http://tempuri.org/IObjectsService/GetAllChildsResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetAllChildsAsync(int objectId, int typeObject);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IObjectsService/GetObjectsParents", ReplyAction="http://tempuri.org/IObjectsService/GetObjectsParentsResponse")]
         System.Data.DataSet GetObjectsParents(int hoa_id, int type_object);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IObjectsService/GetObjectsParents", ReplyAction="http://tempuri.org/IObjectsService/GetObjectsParentsResponse")]
         System.Threading.Tasks.Task<System.Data.DataSet> GetObjectsParentsAsync(int hoa_id, int type_object);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IObjectsService/GetPathObject", ReplyAction="http://tempuri.org/IObjectsService/GetPathObjectResponse")]
+        System.Data.DataSet GetPathObject(int objectId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IObjectsService/GetPathObject", ReplyAction="http://tempuri.org/IObjectsService/GetPathObjectResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetPathObjectAsync(int objectId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IObjectsService/GetTypesOfChilds", ReplyAction="http://tempuri.org/IObjectsService/GetTypesOfChildsResponse")]
+        System.Data.DataSet GetTypesOfChilds(int typeObject);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IObjectsService/GetTypesOfChilds", ReplyAction="http://tempuri.org/IObjectsService/GetTypesOfChildsResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetTypesOfChildsAsync(int typeObject);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -119,12 +137,36 @@ namespace CloudyHoa_Client_.ObjectServiceReference {
             return base.Channel.GetObjectsStructureAsync(hoa_id);
         }
         
+        public System.Data.DataSet GetAllChilds(int objectId, int typeObject) {
+            return base.Channel.GetAllChilds(objectId, typeObject);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetAllChildsAsync(int objectId, int typeObject) {
+            return base.Channel.GetAllChildsAsync(objectId, typeObject);
+        }
+        
         public System.Data.DataSet GetObjectsParents(int hoa_id, int type_object) {
             return base.Channel.GetObjectsParents(hoa_id, type_object);
         }
         
         public System.Threading.Tasks.Task<System.Data.DataSet> GetObjectsParentsAsync(int hoa_id, int type_object) {
             return base.Channel.GetObjectsParentsAsync(hoa_id, type_object);
+        }
+        
+        public System.Data.DataSet GetPathObject(int objectId) {
+            return base.Channel.GetPathObject(objectId);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetPathObjectAsync(int objectId) {
+            return base.Channel.GetPathObjectAsync(objectId);
+        }
+        
+        public System.Data.DataSet GetTypesOfChilds(int typeObject) {
+            return base.Channel.GetTypesOfChilds(typeObject);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetTypesOfChildsAsync(int typeObject) {
+            return base.Channel.GetTypesOfChildsAsync(typeObject);
         }
     }
 }
