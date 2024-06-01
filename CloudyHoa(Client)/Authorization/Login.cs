@@ -75,7 +75,7 @@ namespace CloudyHoa_Client_
 
         private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (e.CloseReason == CloseReason.UserClosing)
+            if (e.CloseReason == CloseReason.UserClosing & ExitFlag != 1)
                ExitFlag = -1;
         }
     }
