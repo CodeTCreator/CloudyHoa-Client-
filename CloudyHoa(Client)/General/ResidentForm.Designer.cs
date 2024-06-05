@@ -171,9 +171,9 @@
             this.labelName.Appearance.Options.UseFont = true;
             this.labelName.Location = new System.Drawing.Point(78, 18);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(277, 28);
+            this.labelName.Size = new System.Drawing.Size(280, 28);
             this.labelName.TabIndex = 19;
-            this.labelName.Text = "Ввод данных о проживающих";
+            this.labelName.Text = "Ввод данных о проживающем";
             // 
             // labelOwner
             // 

@@ -64,20 +64,19 @@
             // 
             // residentForm1
             // 
-            this.residentForm1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.residentForm1.Location = new System.Drawing.Point(0, 0);
+            this.residentForm1.Location = new System.Drawing.Point(3, 0);
             this.residentForm1.Name = "residentForm1";
-            this.residentForm1.Size = new System.Drawing.Size(449, 424);
-            this.residentForm1.TabIndex = 0;
+            this.residentForm1.Size = new System.Drawing.Size(444, 423);
+            this.residentForm1.TabIndex = 3;
             // 
             // ResidentMW
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(449, 478);
+            this.Controls.Add(this.residentForm1);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.saveButton);
-            this.Controls.Add(this.residentForm1);
             this.Name = "ResidentMW";
             this.Text = "Данные о жильце";
             this.Load += new System.EventHandler(this.ResidentMW_Load);
@@ -86,9 +85,8 @@
         }
 
         #endregion
-
-        private General.ResidentForm residentForm1;
         private DevExpress.XtraEditors.SimpleButton saveButton;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private General.ResidentForm residentForm1;
     }
 }
