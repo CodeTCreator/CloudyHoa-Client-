@@ -90,5 +90,19 @@ namespace CloudyHoa_Client_.ObjectWindow.Service_Controller
                 return null;
             }
         }
+
+        public DataTable GetObject(int objectId)
+        {
+            DataSet dataSet = null;
+            dataSet = _objectsServiceClient.GetObject(objectId);
+            if (dataSet != null)
+            {
+                return dataSet.Tables[0];
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }
