@@ -32,6 +32,7 @@
             this.exitButton = new DevExpress.XtraEditors.SimpleButton();
             this.objectButton = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.expenseButton = new DevExpress.XtraEditors.SimpleButton();
             this.enteringReadingButton = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.residentsButton = new DevExpress.XtraEditors.SimpleButton();
@@ -39,7 +40,6 @@
             this.tariffButton = new DevExpress.XtraEditors.SimpleButton();
             this.propButton = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.SuspendLayout();
@@ -75,7 +75,7 @@
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.CaptionImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("groupControl1.CaptionImageOptions.SvgImage")));
             this.groupControl1.CaptionLocation = DevExpress.Utils.Locations.Top;
-            this.groupControl1.Controls.Add(this.simpleButton2);
+            this.groupControl1.Controls.Add(this.expenseButton);
             this.groupControl1.Controls.Add(this.enteringReadingButton);
             this.groupControl1.Controls.Add(this.simpleButton1);
             this.groupControl1.Controls.Add(this.residentsButton);
@@ -88,6 +88,18 @@
             this.groupControl1.Size = new System.Drawing.Size(694, 284);
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "Какая-то группа";
+            // 
+            // expenseButton
+            // 
+            this.expenseButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.expenseButton.Appearance.Options.UseFont = true;
+            this.expenseButton.ImageOptions.SvgImage = global::CloudyHoa_Client_.Properties.Resources.bo_sale_item;
+            this.expenseButton.Location = new System.Drawing.Point(438, 125);
+            this.expenseButton.Name = "expenseButton";
+            this.expenseButton.Size = new System.Drawing.Size(206, 74);
+            this.expenseButton.TabIndex = 9;
+            this.expenseButton.Text = "Расходы";
+            this.expenseButton.Click += new System.EventHandler(this.expenseButton_Click);
             // 
             // enteringReadingButton
             // 
@@ -170,17 +182,6 @@
             this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Главное меню";
             // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.ImageOptions.SvgImage = global::CloudyHoa_Client_.Properties.Resources.bo_sale_item;
-            this.simpleButton2.Location = new System.Drawing.Point(438, 125);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(206, 74);
-            this.simpleButton2.TabIndex = 9;
-            this.simpleButton2.Text = "Расходы";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -211,6 +212,6 @@
         private DevExpress.XtraEditors.SimpleButton residentsButton;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton enteringReadingButton;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton expenseButton;
     }
 }

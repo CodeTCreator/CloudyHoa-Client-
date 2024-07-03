@@ -49,5 +49,11 @@ namespace CloudyHoa_Client_.MainForm
         {
 
         }
+
+        private void expenseButton_Click(object sender, EventArgs e)
+        {
+            ExpenseWindows.ExpenseWindow expenseWindow = new ExpenseWindows.ExpenseWindow();  
+            expenseWindow.Show();
+        }
     }
 }
