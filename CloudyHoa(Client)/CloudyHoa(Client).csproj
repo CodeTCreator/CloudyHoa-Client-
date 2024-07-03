@@ -96,6 +96,11 @@
       <DependentUpon>Login.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Connected Services\ExpenseService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ObjectServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -112,12 +117,50 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="DataObject\DAO.cs" />
+    <Compile Include="DataObject\DataStructure\ExpenseDataStructure.cs" />
+    <Compile Include="DataObject\DataStructure\ExpenseMWDataStructure.cs" />
+    <Compile Include="DataObject\DataStructure\FocusedCategory.cs" />
+    <Compile Include="DataObject\DataStructure\FocusedExpense.cs" />
     <Compile Include="DataObject\DataStructure\ObjectDataStructure.cs" />
     <Compile Include="DataObject\DataStructure\ObjectMWDataStructure.cs" />
     <Compile Include="DataObject\DataStructure\ObjectSPDataStructure.cs" />
     <Compile Include="DataObject\IDataStructure.cs" />
+    <Compile Include="ExpenseWindows\CategoryMW\CategoryMW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExpenseWindows\CategoryMW\CategoryMW.Designer.cs">
+      <DependentUpon>CategoryMW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpenseWindows\Controllers\ExpenseDataService.cs" />
+    <Compile Include="ExpenseWindows\Controllers\ExpenseWindowController.cs" />
+    <Compile Include="ExpenseWindows\ExpenseMW\ExpenseMW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExpenseWindows\ExpenseMW\ExpenseMW.Designer.cs">
+      <DependentUpon>ExpenseMW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpenseWindows\ExpenseWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExpenseWindows\ExpenseWindow.Designer.cs">
+      <DependentUpon>ExpenseWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpenseWindows\ExternalExpenseMW\ExternalExpenseMW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExpenseWindows\ExternalExpenseMW\ExternalExpenseMW.Designer.cs">
+      <DependentUpon>ExternalExpenseMW.cs</DependentUpon>
+    </Compile>
     <Compile Include="General\FocusedObject.cs" />
+    <Compile Include="General\GeneralLoadData.cs" />
+    <Compile Include="General\IDataService.cs" />
     <Compile Include="General\IFocusedObject.cs" />
+    <Compile Include="General\ListObjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\ListObjects.Designer.cs">
+      <DependentUpon>ListObjects.cs</DependentUpon>
+    </Compile>
     <Compile Include="General\ObjectDataService.cs" />
     <Compile Include="General\User.cs" />
     <Compile Include="General\UserContext.cs" />
@@ -144,6 +187,21 @@
     <EmbeddedResource Include="Authorization\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExpenseWindows\CategoryMW\CategoryMW.resx">
+      <DependentUpon>CategoryMW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpenseWindows\ExpenseMW\ExpenseMW.resx">
+      <DependentUpon>ExpenseMW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpenseWindows\ExpenseWindow.resx">
+      <DependentUpon>ExpenseWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpenseWindows\ExternalExpenseMW\ExternalExpenseMW.resx">
+      <DependentUpon>ExternalExpenseMW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\ListObjects.resx">
+      <DependentUpon>ListObjects.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,6 +219,16 @@
     <EmbeddedResource Include="SaveExecuteControl\LoadingControl.resx">
       <DependentUpon>LoadingControl.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Connected Services\ExpenseService\ExpensesService.wsdl" />
+    <None Include="Connected Services\ExpenseService\WcfServiceLibrary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ExpenseService\WcfServiceLibrary1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ExpenseService\WcfServiceLibrary2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\ObjectServiceReference\ObjectsService.wsdl" />
     <None Include="Connected Services\ObjectServiceReference\WcfServiceLibrary.xsd">
       <SubType>Designer</SubType>
@@ -225,6 +293,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ExpenseService\" />
     <WCFMetadataStorage Include="Connected Services\ObjectServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
     <WCFMetadataStorage Include="Connected Services\SPServiceReference\" />
@@ -242,6 +311,22 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\refreshallpivottable_32x32.png" />
+    <None Include="Resources\clear_32x32.png" />
+    <None Include="Resources\save_32x32.png" />
+    <None Include="Connected Services\ExpenseService\WcfServiceLibrary.disco" />
+    <None Include="Connected Services\ExpenseService\configuration91.svcinfo" />
+    <None Include="Connected Services\ExpenseService\configuration.svcinfo" />
+    <None Include="Connected Services\ExpenseService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Resources\bo_sale_item.svg" />
+    <None Include="Resources\bo_sale_item1.svg" />
+    <None Include="Resources\remove_32x32.png" />
+    <None Include="Resources\edit_32x321.png" />
+    <None Include="Resources\edit_32x32.png" />
+    <None Include="Resources\add_32x32.png" />
     <None Include="Connected Services\ObjectServiceReference\WcfServiceLibrary.disco" />
     <None Include="Connected Services\ObjectServiceReference\configuration91.svcinfo" />
     <None Include="Connected Services\ObjectServiceReference\configuration.svcinfo" />
