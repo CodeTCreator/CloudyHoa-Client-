@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="ExpensesService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:7744/WcfServiceLibrary.ExpensesService.ExpensesService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:7744/WcfServiceLibrary.ExpensesService.ExpensesService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:7744/WcfServiceLibrary.ExpensesService.ExpensesService.svc?xsd=xsd2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IExpensesService_AddCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCategory" />
+  </wsdl:message>
+  <wsdl:message name="IExpensesService_AddCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExpensesService_EditCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditCategory" />
+  </wsdl:message>
+  <wsdl:message name="IExpensesService_EditCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExpensesService_DeleteCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCategory" />
+  </wsdl:message>
+  <wsdl:message name="IExpensesService_DeleteCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExpensesService_AddExpense_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddExpense" />
+  </wsdl:message>
+  <wsdl:message name="IExpensesService_AddExpense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddExpenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExpensesService_AddExternalExpense_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddExternalExpense" />
+  </wsdl:message>
+  <wsdl:message name="IExpensesService_AddExternalExpense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddExternalExpenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExpensesService_EditExpense_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditExpense" />
+  </wsdl:message>
+  <wsdl:message name="IExpensesService_EditExpense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditExpenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExpensesService_EditExternalExpense_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditExternalExpense" />
+  </wsdl:message>
+  <wsdl:message name="IExpensesService_EditExternalExpense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditExternalExpenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExpensesService_DeleteExpense_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteExpense" />
+  </wsdl:message>
+  <wsdl:message name="IExpensesService_DeleteExpense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteExpenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExpensesService_GetCategories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategories" />
+  </wsdl:message>
+  <wsdl:message name="IExpensesService_GetCategories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExpensesService_GetExpenses_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpenses" />
+  </wsdl:message>
+  <wsdl:message name="IExpensesService_GetExpenses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpensesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExpensesService_GetAllExpenses_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllExpenses" />
+  </wsdl:message>
+  <wsdl:message name="IExpensesService_GetAllExpenses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllExpensesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExpensesService_GetInternalExpenses_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInternalExpenses" />
+  </wsdl:message>
+  <wsdl:message name="IExpensesService_GetInternalExpenses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInternalExpensesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExpensesService_GetExternalExpenses_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExternalExpenses" />
+  </wsdl:message>
+  <wsdl:message name="IExpensesService_GetExternalExpenses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExternalExpensesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IExpensesService">
+    <wsdl:operation name="AddCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExpensesService/AddCategory" message="tns:IExpensesService_AddCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExpensesService/AddCategoryResponse" message="tns:IExpensesService_AddCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExpensesService/EditCategory" message="tns:IExpensesService_EditCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExpensesService/EditCategoryResponse" message="tns:IExpensesService_EditCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExpensesService/DeleteCategory" message="tns:IExpensesService_DeleteCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExpensesService/DeleteCategoryResponse" message="tns:IExpensesService_DeleteCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddExpense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExpensesService/AddExpense" message="tns:IExpensesService_AddExpense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExpensesService/AddExpenseResponse" message="tns:IExpensesService_AddExpense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddExternalExpense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExpensesService/AddExternalExpense" message="tns:IExpensesService_AddExternalExpense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExpensesService/AddExternalExpenseResponse" message="tns:IExpensesService_AddExternalExpense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditExpense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExpensesService/EditExpense" message="tns:IExpensesService_EditExpense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExpensesService/EditExpenseResponse" message="tns:IExpensesService_EditExpense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditExternalExpense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExpensesService/EditExternalExpense" message="tns:IExpensesService_EditExternalExpense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExpensesService/EditExternalExpenseResponse" message="tns:IExpensesService_EditExternalExpense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExpense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExpensesService/DeleteExpense" message="tns:IExpensesService_DeleteExpense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExpensesService/DeleteExpenseResponse" message="tns:IExpensesService_DeleteExpense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExpensesService/GetCategories" message="tns:IExpensesService_GetCategories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExpensesService/GetCategoriesResponse" message="tns:IExpensesService_GetCategories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExpenses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExpensesService/GetExpenses" message="tns:IExpensesService_GetExpenses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExpensesService/GetExpensesResponse" message="tns:IExpensesService_GetExpenses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllExpenses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExpensesService/GetAllExpenses" message="tns:IExpensesService_GetAllExpenses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExpensesService/GetAllExpensesResponse" message="tns:IExpensesService_GetAllExpenses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInternalExpenses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExpensesService/GetInternalExpenses" message="tns:IExpensesService_GetInternalExpenses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExpensesService/GetInternalExpensesResponse" message="tns:IExpensesService_GetInternalExpenses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExternalExpenses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExpensesService/GetExternalExpenses" message="tns:IExpensesService_GetExternalExpenses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExpensesService/GetExternalExpensesResponse" message="tns:IExpensesService_GetExternalExpenses_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Expense" type="tns:IExpensesService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddCategory">
+      <soap:operation soapAction="http://tempuri.org/IExpensesService/AddCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditCategory">
+      <soap:operation soapAction="http://tempuri.org/IExpensesService/EditCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCategory">
+      <soap:operation soapAction="http://tempuri.org/IExpensesService/DeleteCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddExpense">
+      <soap:operation soapAction="http://tempuri.org/IExpensesService/AddExpense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddExternalExpense">
+      <soap:operation soapAction="http://tempuri.org/IExpensesService/AddExternalExpense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditExpense">
+      <soap:operation soapAction="http://tempuri.org/IExpensesService/EditExpense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditExternalExpense">
+      <soap:operation soapAction="http://tempuri.org/IExpensesService/EditExternalExpense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExpense">
+      <soap:operation soapAction="http://tempuri.org/IExpensesService/DeleteExpense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <soap:operation soapAction="http://tempuri.org/IExpensesService/GetCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpenses">
+      <soap:operation soapAction="http://tempuri.org/IExpensesService/GetExpenses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllExpenses">
+      <soap:operation soapAction="http://tempuri.org/IExpensesService/GetAllExpenses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInternalExpenses">
+      <soap:operation soapAction="http://tempuri.org/IExpensesService/GetInternalExpenses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExternalExpenses">
+      <soap:operation soapAction="http://tempuri.org/IExpensesService/GetExternalExpenses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ExpensesService">
+    <wsdl:port name="Expense" binding="tns:Expense">
+      <soap:address location="http://localhost:7744/WcfServiceLibrary.ExpensesService.ExpensesService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
