@@ -96,6 +96,12 @@
       <DependentUpon>Login.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CalculationWindows\CalculationWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalculationWindows\CalculationWindow.Designer.cs">
+      <DependentUpon>CalculationWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ObjectServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Authorization\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalculationWindows\CalculationWindow.resx">
+      <DependentUpon>CalculationWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -242,6 +251,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\clear_32x32.png" />
+    <None Include="Resources\calculatenow_32x321.png" />
+    <None Include="Resources\save_32x321.png" />
+    <None Include="Resources\save_32x32.png" />
+    <None Include="Resources\saveall_32x32.png" />
     <None Include="Resources\calculatenow_32x32.png" />
     <None Include="Connected Services\ObjectServiceReference\WcfServiceLibrary.disco" />
     <None Include="Connected Services\ObjectServiceReference\configuration91.svcinfo" />
