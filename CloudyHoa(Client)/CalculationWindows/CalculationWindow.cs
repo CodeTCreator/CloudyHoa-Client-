@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CloudyHoa_Client_.ObjectWindow.Service_Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,18 @@ namespace CloudyHoa_Client_.CalculationWindows
 {
     public partial class CalculationWindow : Form
     {
+
+        ObjectDataService _objectDataService {  get; set; }
+
         public CalculationWindow()
         {
             InitializeComponent();
+            _objectDataService = new ObjectDataService();
+        }
+
+        private void CalculationWindow_Load(object sender, EventArgs e)
+        {
+            treeListControl.BindingData(null);
         }
     }
 }
