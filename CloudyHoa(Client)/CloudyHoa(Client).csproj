@@ -125,6 +125,12 @@
     <Compile Include="General\FocusedObject.cs" />
     <Compile Include="General\IFocusedObject.cs" />
     <Compile Include="General\ObjectDataService.cs" />
+    <Compile Include="General\TreeListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="General\TreeListControl.Designer.cs">
+      <DependentUpon>TreeListControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="General\User.cs" />
     <Compile Include="General\UserContext.cs" />
     <Compile Include="MainForm\MainForm.cs">
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CalculationWindows\CalculationWindow.resx">
       <DependentUpon>CalculationWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\TreeListControl.resx">
+      <DependentUpon>TreeListControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
