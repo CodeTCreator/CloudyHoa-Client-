@@ -102,6 +102,7 @@
     <Compile Include="CalculationWindows\CalculationWindow.Designer.cs">
       <DependentUpon>CalculationWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="CalculationWindows\Controllers\CalculationWindowController.cs" />
     <Compile Include="Connected Services\ObjectServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -118,11 +119,13 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="DataObject\DAO.cs" />
+    <Compile Include="DataObject\DataStructure\CalculationDataStructure.cs" />
     <Compile Include="DataObject\DataStructure\ObjectDataStructure.cs" />
     <Compile Include="DataObject\DataStructure\ObjectMWDataStructure.cs" />
     <Compile Include="DataObject\DataStructure\ObjectSPDataStructure.cs" />
     <Compile Include="DataObject\IDataStructure.cs" />
     <Compile Include="General\FocusedObject.cs" />
+    <Compile Include="General\GeneralLoadData.cs" />
     <Compile Include="General\IFocusedObject.cs" />
     <Compile Include="General\ObjectDataService.cs" />
     <Compile Include="General\TreeListControl.cs">
