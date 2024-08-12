@@ -1,6 +1,6 @@
 ﻿namespace CloudyHoa_Client_.ObjectWindows.MW
 {
-    partial class SPControl_Num
+    partial class SPControl
     {
         /// <summary> 
         /// Required designer variable.
