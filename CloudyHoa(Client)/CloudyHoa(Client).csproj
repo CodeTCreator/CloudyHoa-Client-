@@ -96,14 +96,36 @@
       <DependentUpon>Login.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BenefitWindows\Controllers\BenefitDataService.cs" />
     <Compile Include="CalculationWindows\CalculationWindow.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CalculationWindows\CalculationWindow.Designer.cs">
       <DependentUpon>CalculationWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="CalculationWindows\Controllers\CalculationDataService.cs" />
     <Compile Include="CalculationWindows\Controllers\CalculationWindowController.cs" />
+    <Compile Include="Connected Services\BenefitService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\CalculationService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\MetadataService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ObjectServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\PersonalAccountService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -118,6 +140,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\TariffService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="DataObject\DAO.cs" />
     <Compile Include="DataObject\DataStructure\CalculationDataStructure.cs" />
     <Compile Include="DataObject\DataStructure\ObjectDataStructure.cs" />
@@ -126,7 +153,9 @@
     <Compile Include="DataObject\IDataStructure.cs" />
     <Compile Include="General\FocusedObject.cs" />
     <Compile Include="General\GeneralLoadData.cs" />
+    <Compile Include="General\IDataService.cs" />
     <Compile Include="General\IFocusedObject.cs" />
+    <Compile Include="General\MetadataDataService.cs" />
     <Compile Include="General\ObjectDataService.cs" />
     <Compile Include="General\TreeListControl.cs">
       <SubType>UserControl</SubType>
@@ -141,6 +170,19 @@
     </Compile>
     <Compile Include="MainForm\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalAccountsWindows\Controllers\PADataService.cs" />
+    <Compile Include="PersonalAccountsWindows\PAControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PersonalAccountsWindows\PAControl.Designer.cs">
+      <DependentUpon>PAControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalAccountsWindows\PAWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonalAccountsWindows\PAWindow.Designer.cs">
+      <DependentUpon>PAWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -168,6 +210,12 @@
     <EmbeddedResource Include="MainForm\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PersonalAccountsWindows\PAControl.resx">
+      <DependentUpon>PAControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonalAccountsWindows\PAWindow.resx">
+      <DependentUpon>PAWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -182,6 +230,36 @@
     <EmbeddedResource Include="SaveExecuteControl\LoadingControl.resx">
       <DependentUpon>LoadingControl.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Connected Services\BenefitService\BenefitService.wsdl" />
+    <None Include="Connected Services\BenefitService\WcfServiceLibrary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BenefitService\WcfServiceLibrary1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BenefitService\WcfServiceLibrary2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CalculationService\CalculationsService.wsdl" />
+    <None Include="Connected Services\CalculationService\WcfServiceLibrary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CalculationService\WcfServiceLibrary1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CalculationService\WcfServiceLibrary2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MetadataService\MetadataService.wsdl" />
+    <None Include="Connected Services\MetadataService\WcfServiceLibrary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MetadataService\WcfServiceLibrary1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MetadataService\WcfServiceLibrary2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\ObjectServiceReference\ObjectsService.wsdl" />
     <None Include="Connected Services\ObjectServiceReference\WcfServiceLibrary.xsd">
       <SubType>Designer</SubType>
@@ -190,6 +268,16 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ObjectServiceReference\WcfServiceLibrary2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PersonalAccountService\PersonalAccountService.wsdl" />
+    <None Include="Connected Services\PersonalAccountService\WcfServiceLibrary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PersonalAccountService\WcfServiceLibrary1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PersonalAccountService\WcfServiceLibrary2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ServiceReference1\ServiceHoaAccount1.wsdl" />
@@ -210,6 +298,16 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\SPServiceReference\WcfServiceLibrary2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TariffService\TariffService.wsdl" />
+    <None Include="Connected Services\TariffService\WcfServiceLibrary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TariffService\WcfServiceLibrary1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TariffService\WcfServiceLibrary2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\DataSources\CloudyHoa_Client_.DataObject.DataStructure.ObjectDataStructure.datasource" />
@@ -246,9 +344,14 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\BenefitService\" />
+    <WCFMetadataStorage Include="Connected Services\CalculationService\" />
+    <WCFMetadataStorage Include="Connected Services\MetadataService\" />
     <WCFMetadataStorage Include="Connected Services\ObjectServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\PersonalAccountService\" />
     <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
     <WCFMetadataStorage Include="Connected Services\SPServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\TariffService\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
@@ -281,6 +384,41 @@
     <None Include="Connected Services\SPServiceReference\configuration91.svcinfo" />
     <None Include="Connected Services\SPServiceReference\configuration.svcinfo" />
     <None Include="Connected Services\SPServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\MetadataService\WcfServiceLibrary.disco" />
+    <None Include="Connected Services\MetadataService\configuration91.svcinfo" />
+    <None Include="Connected Services\MetadataService\configuration.svcinfo" />
+    <None Include="Connected Services\MetadataService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\CalculationService\WcfServiceLibrary.disco" />
+    <None Include="Connected Services\CalculationService\configuration91.svcinfo" />
+    <None Include="Connected Services\CalculationService\configuration.svcinfo" />
+    <None Include="Connected Services\CalculationService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\PersonalAccountService\WcfServiceLibrary.disco" />
+    <None Include="Connected Services\PersonalAccountService\configuration91.svcinfo" />
+    <None Include="Connected Services\PersonalAccountService\configuration.svcinfo" />
+    <None Include="Connected Services\PersonalAccountService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\TariffService\WcfServiceLibrary.disco" />
+    <None Include="Connected Services\TariffService\configuration91.svcinfo" />
+    <None Include="Connected Services\TariffService\configuration.svcinfo" />
+    <None Include="Connected Services\TariffService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\BenefitService\WcfServiceLibrary.disco" />
+    <None Include="Connected Services\BenefitService\configuration91.svcinfo" />
+    <None Include="Connected Services\BenefitService\configuration.svcinfo" />
+    <None Include="Connected Services\BenefitService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
