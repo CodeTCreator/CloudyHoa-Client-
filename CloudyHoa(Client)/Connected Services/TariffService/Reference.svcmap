@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="b0ea8866-e897-48f7-bce6-9c8ac5cef912" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:7744/WcfServiceLibrary.TariffService.TariffService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TariffService.wsdl" MetadataType="Wsdl" ID="65c43b59-89c7-4816-9c37-a0133d391eee" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.TariffService.TariffService.svc?wsdl" />
+    <MetadataFile FileName="WcfServiceLibrary.xsd" MetadataType="Schema" ID="9c1af68c-73ea-4221-8539-61bd7dc40cb5" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.TariffService.TariffService.svc?xsd=xsd0" />
+    <MetadataFile FileName="WcfServiceLibrary1.xsd" MetadataType="Schema" ID="e8bfae5a-f736-4da2-93f6-26ae79fd5da8" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.TariffService.TariffService.svc?xsd=xsd1" />
+    <MetadataFile FileName="WcfServiceLibrary2.xsd" MetadataType="Schema" ID="40e258cc-b1cf-4e3a-8ed1-2ba38a163d06" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.TariffService.TariffService.svc?xsd=xsd2" />
+    <MetadataFile FileName="WcfServiceLibrary.disco" MetadataType="Disco" ID="b0ee40fb-0a64-4f3e-a137-ff6502e9c1fe" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.TariffService.TariffService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
