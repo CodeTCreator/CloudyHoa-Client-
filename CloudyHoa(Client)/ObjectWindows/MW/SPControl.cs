@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CloudyHoa_Client_.ObjectWindows.MW
 {
-    public partial class SPControl_Num : UserControl, ISPControl
+    public partial class SPControl : UserControl, ISPControl
     {
-        public SPControl_Num()
+        public SPControl()
         {
             InitializeComponent();
         }
