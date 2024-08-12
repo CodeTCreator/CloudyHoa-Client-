@@ -3,7 +3,7 @@ using System.Data;
 
 namespace CloudyHoa_Client_.DataObject.DataStructure
 {
-    internal class ObjectDataStructure : IDataStructure
+    public class ObjectDataStructure : IDataStructure
     {
         FocusedObject _focusedObject = new FocusedObject();
         DataTable _dataObjectTable = new DataTable();
