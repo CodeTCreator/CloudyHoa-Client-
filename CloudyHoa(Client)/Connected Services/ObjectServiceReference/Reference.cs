@@ -68,6 +68,12 @@ namespace CloudyHoa_Client_.ObjectServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IObjectsService/GetTypesOfChilds", ReplyAction="http://tempuri.org/IObjectsService/GetTypesOfChildsResponse")]
         System.Threading.Tasks.Task<System.Data.DataSet> GetTypesOfChildsAsync(int typeObject);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IObjectsService/GetObject", ReplyAction="http://tempuri.org/IObjectsService/GetObjectResponse")]
+        System.Data.DataSet GetObject(int objectId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IObjectsService/GetObject", ReplyAction="http://tempuri.org/IObjectsService/GetObjectResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetObjectAsync(int objectId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -167,6 +173,14 @@ namespace CloudyHoa_Client_.ObjectServiceReference {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> GetTypesOfChildsAsync(int typeObject) {
             return base.Channel.GetTypesOfChildsAsync(typeObject);
+        }
+        
+        public System.Data.DataSet GetObject(int objectId) {
+            return base.Channel.GetObject(objectId);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetObjectAsync(int objectId) {
+            return base.Channel.GetObjectAsync(objectId);
         }
     }
 }

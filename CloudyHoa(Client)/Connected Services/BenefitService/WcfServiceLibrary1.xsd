@@ -1,59 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="DeleteObject">
+  <xs:element name="AddBenefit">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="id" type="xs:int" />
+        <xs:element minOccurs="0" name="typeBenefit" type="xs:int" />
+        <xs:element minOccurs="0" name="objectId" type="xs:int" />
+        <xs:element minOccurs="0" name="metadataId" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="DeleteObjectResponse">
+  <xs:element name="AddBenefitResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="EditObject">
+  <xs:element name="EditBenefit">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="id" type="xs:int" />
-        <xs:element minOccurs="0" name="objectNumber" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="parentId" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="benefitId" type="xs:int" />
+        <xs:element minOccurs="0" name="typeBenefit" type="xs:int" />
+        <xs:element minOccurs="0" name="objectId" type="xs:int" />
+        <xs:element minOccurs="0" name="metadataId" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="EditObjectResponse">
+  <xs:element name="EditBenefitResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddObject">
+  <xs:element name="DeleteBenefit">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="hoa_id" type="xs:int" />
-        <xs:element minOccurs="0" name="type_object" type="xs:int" />
-        <xs:element minOccurs="0" name="objectNumber" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="parentId" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="benefitId" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddObjectResponse">
+  <xs:element name="DeleteBenefitResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddTypeBenefit">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="AddObjectResult" type="xs:int" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="value" type="xs:float" />
+        <xs:element minOccurs="0" name="hoaId" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetAllObjects">
+  <xs:element name="AddTypeBenefitResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditTypeBenefit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="typeBenefitId" type="xs:int" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="value" type="xs:float" />
+        <xs:element minOccurs="0" name="hoaId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditTypeBenefitResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTypeBenefit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="typeBenefitId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTypeBenefitResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTypeBenefits">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="hoaId" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetAllObjectsResponse">
+  <xs:element name="GetTypeBenefitsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="GetAllObjectsResult" nillable="true">
+        <xs:element minOccurs="0" name="GetTypeBenefitsResult" nillable="true">
           <xs:complexType>
             <xs:annotation>
               <xs:appinfo>
@@ -69,97 +108,17 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetObjectsStructure">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="hoa_id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetObjectsStructureResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="GetObjectsStructureResult" nillable="true">
-          <xs:complexType>
-            <xs:annotation>
-              <xs:appinfo>
-                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
-              </xs:appinfo>
-            </xs:annotation>
-            <xs:sequence>
-              <xs:element ref="xs:schema" />
-              <xs:any />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetAllChilds">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="objectId" type="xs:int" />
-        <xs:element minOccurs="0" name="typeObject" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetAllChildsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="GetAllChildsResult" nillable="true">
-          <xs:complexType>
-            <xs:annotation>
-              <xs:appinfo>
-                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
-              </xs:appinfo>
-            </xs:annotation>
-            <xs:sequence>
-              <xs:element ref="xs:schema" />
-              <xs:any />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetObjectsParents">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="hoa_id" type="xs:int" />
-        <xs:element minOccurs="0" name="type_object" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetObjectsParentsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="GetObjectsParentsResult" nillable="true">
-          <xs:complexType>
-            <xs:annotation>
-              <xs:appinfo>
-                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
-              </xs:appinfo>
-            </xs:annotation>
-            <xs:sequence>
-              <xs:element ref="xs:schema" />
-              <xs:any />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetPathObject">
+  <xs:element name="GetBenefitsForObject">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="objectId" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetPathObjectResponse">
+  <xs:element name="GetBenefitsForObjectResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="GetPathObjectResult" nillable="true">
+        <xs:element minOccurs="0" name="GetBenefitsForObjectResult" nillable="true">
           <xs:complexType>
             <xs:annotation>
               <xs:appinfo>
@@ -175,17 +134,17 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetTypesOfChilds">
+  <xs:element name="GetBenefitsForMetadata">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="typeObject" type="xs:int" />
+        <xs:element minOccurs="0" name="metadataId" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetTypesOfChildsResponse">
+  <xs:element name="GetBenefitsForMetadataResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="GetTypesOfChildsResult" nillable="true">
+        <xs:element minOccurs="0" name="GetBenefitsForMetadataResult" nillable="true">
           <xs:complexType>
             <xs:annotation>
               <xs:appinfo>
@@ -201,17 +160,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetObject">
+  <xs:element name="GetBenefits">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="objectId" type="xs:int" />
+        <xs:element minOccurs="0" name="metadataId" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetObjectResponse">
+  <xs:element name="GetBenefitsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="GetObjectResult" nillable="true">
+        <xs:element minOccurs="0" name="GetBenefitsResult" nillable="true">
           <xs:complexType>
             <xs:annotation>
               <xs:appinfo>

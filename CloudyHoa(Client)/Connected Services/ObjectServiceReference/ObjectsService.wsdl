@@ -68,6 +68,12 @@
   <wsdl:message name="IObjectsService_GetTypesOfChilds_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetTypesOfChildsResponse" />
   </wsdl:message>
+  <wsdl:message name="IObjectsService_GetObject_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetObject" />
+  </wsdl:message>
+  <wsdl:message name="IObjectsService_GetObject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetObjectResponse" />
+  </wsdl:message>
   <wsdl:portType name="IObjectsService">
     <wsdl:operation name="DeleteObject">
       <wsdl:input wsaw:Action="http://tempuri.org/IObjectsService/DeleteObject" message="tns:IObjectsService_DeleteObject_InputMessage" />
@@ -104,6 +110,10 @@
     <wsdl:operation name="GetTypesOfChilds">
       <wsdl:input wsaw:Action="http://tempuri.org/IObjectsService/GetTypesOfChilds" message="tns:IObjectsService_GetTypesOfChilds_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IObjectsService/GetTypesOfChildsResponse" message="tns:IObjectsService_GetTypesOfChilds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetObject">
+      <wsdl:input wsaw:Action="http://tempuri.org/IObjectsService/GetObject" message="tns:IObjectsService_GetObject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IObjectsService/GetObjectResponse" message="tns:IObjectsService_GetObject_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="ObjectServicePoint" type="tns:IObjectsService">
@@ -183,6 +193,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetTypesOfChilds">
       <soap12:operation soapAction="http://tempuri.org/IObjectsService/GetTypesOfChilds" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetObject">
+      <soap12:operation soapAction="http://tempuri.org/IObjectsService/GetObject" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
