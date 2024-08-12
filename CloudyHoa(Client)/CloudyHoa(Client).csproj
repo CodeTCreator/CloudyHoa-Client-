@@ -184,6 +184,9 @@
     <Compile Include="ObjectWindows\MW\SPControl%28Date%29.Designer.cs">
       <DependentUpon>SPControl%28Date%29.cs</DependentUpon>
     </Compile>
+    <Compile Include="ObjectWindows\MW\SPControl.Designer.cs">
+      <DependentUpon>SPControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="ObjectWindows\ObjectWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -294,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ObjectWindows\MW\ObjectMW.resx">
       <DependentUpon>ObjectMW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObjectWindows\MW\SPControl.resx">
+      <DependentUpon>SPControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ObjectWindows\ObjectWindow.resx">
       <DependentUpon>ObjectWindow.cs</DependentUpon>
