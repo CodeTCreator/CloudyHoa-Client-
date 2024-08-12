@@ -36,7 +36,7 @@ namespace CloudyHoa_Client_.PropertiesWindows
         {
             if (dataObject.structure.GetType() == typeof(SPDataStructure))
             {
-                ((SPDataStructure)dataObject.structure).DataObjectTable = dataTable;
+                //((SPDataStructure)dataObject.structure).DataObjectTable = dataTable;
             }
             else
             {
@@ -48,7 +48,7 @@ namespace CloudyHoa_Client_.PropertiesWindows
             DataTable dataTable = null;
             if (dataObject.structure.GetType() == typeof(SPDataStructure))
             {
-                dataTable = ((SPDataStructure)dataObject.structure).DataObjectTable;
+                //dataTable = ((SPDataStructure)dataObject.structure).DataObjectTable;
             }
             return dataTable;
         }
