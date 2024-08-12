@@ -1,13 +1,12 @@
 ﻿using CloudyHoa_Client_.General;
-using CloudyHoa_Client_.PAService;
-using CloudyHoa_Client_.ResidentsService;
+using CloudyHoa_Client_.PersonalAccountService;
 using System.Data;
 using System.Threading.Tasks;
 
 
 namespace CloudyHoa_Client_.PersonalAccountsWindows.Controllers
 {
-    public class PADataService
+    public class PADataService : IDataService
     {
         PersonalAccountServiceClient _personalAccountServiceClient;
        
@@ -16,27 +15,10 @@ namespace CloudyHoa_Client_.PersonalAccountsWindows.Controllers
             _personalAccountServiceClient = new PersonalAccountServiceClient();
         }
 
-        public void AddPA(FocusedPA focusedPA)
-        {
-            _personalAccountServiceClient.AddPersonalAccount(focusedPA.Account, focusedPA.objectId, 
-                focusedPA.resposibleId, focusedPA.Registered, focusedPA.Lives);
-        }
-
-        public void EditPA(FocusedPA focusedPA)
-        {
-            _personalAccountServiceClient.EditPersonalAccount(focusedPA.paId,focusedPA.Account,
-                focusedPA.objectId, focusedPA.resposibleId, focusedPA.Registered, focusedPA.Lives);
-        }
-
-        public void DeletePA(FocusedPA focusedPA)
-        {
-            _personalAccountServiceClient.DeletePersonalAccount(focusedPA.paId);
-        }
-
-        public DataTable GetPAs()
+        public async Task<DataTable> GetPA(int objectId)
         {
             DataSet dataSet = null;
-            dataSet = _personalAccountServiceClient.GetPersonalAccounts(UserContext.Instance.CurrentUser.hoaId);
+            dataSet = await _personalAccountServiceClient.GetPersonalAccountsAsync(objectId);
             if (dataSet != null)
             {
                 return dataSet.Tables[0];
@@ -46,10 +28,10 @@ namespace CloudyHoa_Client_.PersonalAccountsWindows.Controllers
                 return null;
             }
         }
-        public async Task<DataTable> GetPAs(int objectId)
+        public async Task<DataTable> GetPAs(int typeObject)
         {
             DataSet dataSet = null;
-            dataSet = await _personalAccountServiceClient.GetPersonalAccountsAsync(objectId);
+            dataSet = await _personalAccountServiceClient.GetPersonalAccountsAsync(typeObject);
             if (dataSet != null)
             {
                 return dataSet.Tables[0];
