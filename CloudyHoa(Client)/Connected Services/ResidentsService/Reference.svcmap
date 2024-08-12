@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="97e0bb3d-d311-438e-86a9-8ba04f7ccf25" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:7744/WcfServiceLibrary.ApartmentResidents.ApartmentResidents.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WcfServiceLibrary.xsd" MetadataType="Schema" ID="65fae1d1-b46f-47b8-b5d1-9ac0b074b97f" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.ApartmentResidents.ApartmentResidents.svc?xsd=xsd0" />
+    <MetadataFile FileName="WcfServiceLibrary1.xsd" MetadataType="Schema" ID="24c0efd4-c6aa-4c17-b983-7b019baccff0" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.ApartmentResidents.ApartmentResidents.svc?xsd=xsd1" />
+    <MetadataFile FileName="WcfServiceLibrary2.xsd" MetadataType="Schema" ID="aa4c9346-13a3-4e4d-8211-7c8a260accd4" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.ApartmentResidents.ApartmentResidents.svc?xsd=xsd2" />
+    <MetadataFile FileName="WcfServiceLibrary.disco" MetadataType="Disco" ID="245c631f-b760-4a47-aa33-c46aded0f0e1" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.ApartmentResidents.ApartmentResidents.svc?disco" />
+    <MetadataFile FileName="ApartmentResidents.wsdl" MetadataType="Wsdl" ID="00ddaeef-76b5-44cc-a8ff-f940a9793a29" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.ApartmentResidents.ApartmentResidents.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
