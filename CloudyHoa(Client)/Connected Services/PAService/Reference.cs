@@ -33,11 +33,17 @@ namespace CloudyHoa_Client_.PAService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPersonalAccountService/EditPersonalAccount", ReplyAction="http://tempuri.org/IPersonalAccountService/EditPersonalAccountResponse")]
         System.Threading.Tasks.Task EditPersonalAccountAsync(int id, string account, int objectId, int ownerId, int registered, int lives);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPersonalAccountService/GetPersonalAccounts", ReplyAction="http://tempuri.org/IPersonalAccountService/GetPersonalAccountsResponse")]
-        System.Data.DataSet GetPersonalAccounts(int objectId);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPersonalAccountService/GetPersonalAccount", ReplyAction="http://tempuri.org/IPersonalAccountService/GetPersonalAccountResponse")]
+        System.Data.DataSet GetPersonalAccount(int objectId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPersonalAccountService/GetPersonalAccount", ReplyAction="http://tempuri.org/IPersonalAccountService/GetPersonalAccountResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetPersonalAccountAsync(int objectId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPersonalAccountService/GetPersonalAccounts", ReplyAction="http://tempuri.org/IPersonalAccountService/GetPersonalAccountsResponse")]
-        System.Threading.Tasks.Task<System.Data.DataSet> GetPersonalAccountsAsync(int objectId);
+        System.Data.DataSet GetPersonalAccounts(int typeObject);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPersonalAccountService/GetPersonalAccounts", ReplyAction="http://tempuri.org/IPersonalAccountService/GetPersonalAccountsResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetPersonalAccountsAsync(int typeObject);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -91,12 +97,20 @@ namespace CloudyHoa_Client_.PAService {
             return base.Channel.EditPersonalAccountAsync(id, account, objectId, ownerId, registered, lives);
         }
         
-        public System.Data.DataSet GetPersonalAccounts(int objectId) {
-            return base.Channel.GetPersonalAccounts(objectId);
+        public System.Data.DataSet GetPersonalAccount(int objectId) {
+            return base.Channel.GetPersonalAccount(objectId);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> GetPersonalAccountsAsync(int objectId) {
-            return base.Channel.GetPersonalAccountsAsync(objectId);
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetPersonalAccountAsync(int objectId) {
+            return base.Channel.GetPersonalAccountAsync(objectId);
+        }
+        
+        public System.Data.DataSet GetPersonalAccounts(int typeObject) {
+            return base.Channel.GetPersonalAccounts(typeObject);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetPersonalAccountsAsync(int typeObject) {
+            return base.Channel.GetPersonalAccountsAsync(typeObject);
         }
     }
 }

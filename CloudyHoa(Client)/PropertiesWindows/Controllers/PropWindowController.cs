@@ -20,37 +20,27 @@ namespace CloudyHoa_Client_.PropertiesWindows
         public PropWindowController() { }
 
         
-        public void LoadAllObjects(ObjectDataService objectDataService, DAO dataObject)
+        public void LoadAllObjects(ObjectDataService objectDataService, 
+            ObjectDataStructure objectDataStructure)
         {
-            DataTable dataTable = objectDataService.GetAllObjects(dataObject.hoaId);
+            DataTable dataTable = objectDataService.GetAllObjects(UserContext.Instance.CurrentUser.hoaId);
             dataTable.TableName = "AllObjects";
-            SetDataTable(dataObject, dataTable);
+            SetDataTable(objectDataStructure, dataTable);
         }
-        public async Task LoadAllObjectAsync(ObjectDataService objectDataService, DAO dataObject)
+        public async Task LoadAllObjectAsync(ObjectDataService objectDataService, 
+            ObjectDataStructure objectDataStructure)
         {
-            DataTable dataTable = await objectDataService.GetAllObjectsAsync(dataObject.hoaId);
+            DataTable dataTable = await objectDataService.GetAllObjectsAsync(UserContext.Instance.CurrentUser.hoaId);
             dataTable.TableName = "AllObjects";
-            SetDataTable(dataObject, dataTable);
+            SetDataTable(objectDataStructure, dataTable);
         }
-        private void SetDataTable(DAO dataObject, DataTable dataTable)
+        private void SetDataTable(ObjectDataStructure objectDataStructure, DataTable dataTable)
         {
-            if (dataObject.structure.GetType() == typeof(SPDataStructure))
-            {
-                //((SPDataStructure)dataObject.structure).DataObjectTable = dataTable;
-            }
-            else
-            {
-                dataObject.structure = null;
-            }
+            objectDataStructure.DataTable = dataTable;
         }
-        public DataTable GetObjectsTable(DAO dataObject)
+        public DataTable GetObjectsTable(ObjectDataStructure objectDataStructure)
         {
-            DataTable dataTable = null;
-            if (dataObject.structure.GetType() == typeof(SPDataStructure))
-            {
-                //dataTable = ((SPDataStructure)dataObject.structure).DataObjectTable;
-            }
-            return dataTable;
+            return objectDataStructure.DataTable;
         }
         public DataTable GetCurrentSP(DAO dataObject)
         {
