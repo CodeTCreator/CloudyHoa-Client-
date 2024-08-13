@@ -49,7 +49,7 @@ namespace CloudyHoa_Client_.PersonalAccountsWindows.Controllers
         public async Task<DataTable> GetPAs(int objectId)
         {
             DataSet dataSet = null;
-            dataSet = await _personalAccountServiceClient.GetPersonalAccountsAsync(objectId);
+            dataSet = await _personalAccountServiceClient.GetPersonalAccountAsync(objectId);
             if (dataSet != null)
             {
                 return dataSet.Tables[0];

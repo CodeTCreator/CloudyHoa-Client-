@@ -32,6 +32,12 @@
   <wsdl:message name="IPersonalAccountService_EditPersonalAccount_OutputMessage">
     <wsdl:part name="parameters" element="tns:EditPersonalAccountResponse" />
   </wsdl:message>
+  <wsdl:message name="IPersonalAccountService_GetPersonalAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonalAccount" />
+  </wsdl:message>
+  <wsdl:message name="IPersonalAccountService_GetPersonalAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonalAccountResponse" />
+  </wsdl:message>
   <wsdl:message name="IPersonalAccountService_GetPersonalAccounts_InputMessage">
     <wsdl:part name="parameters" element="tns:GetPersonalAccounts" />
   </wsdl:message>
@@ -50,6 +56,10 @@
     <wsdl:operation name="EditPersonalAccount">
       <wsdl:input wsaw:Action="http://tempuri.org/IPersonalAccountService/EditPersonalAccount" message="tns:IPersonalAccountService_EditPersonalAccount_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IPersonalAccountService/EditPersonalAccountResponse" message="tns:IPersonalAccountService_EditPersonalAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonalAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonalAccountService/GetPersonalAccount" message="tns:IPersonalAccountService_GetPersonalAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonalAccountService/GetPersonalAccountResponse" message="tns:IPersonalAccountService_GetPersonalAccount_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetPersonalAccounts">
       <wsdl:input wsaw:Action="http://tempuri.org/IPersonalAccountService/GetPersonalAccounts" message="tns:IPersonalAccountService_GetPersonalAccounts_InputMessage" />
@@ -79,6 +89,15 @@
     </wsdl:operation>
     <wsdl:operation name="EditPersonalAccount">
       <soap12:operation soapAction="http://tempuri.org/IPersonalAccountService/EditPersonalAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonalAccount">
+      <soap12:operation soapAction="http://tempuri.org/IPersonalAccountService/GetPersonalAccount" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

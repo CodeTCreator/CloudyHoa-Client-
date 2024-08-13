@@ -151,7 +151,10 @@ namespace CloudyHoa_Client_.PersonalAccountsWindows
 
         private void deleteAccountButton_Click(object sender, EventArgs e)
         {
-
+            if (gridView1.GetFocusedRowCellValue("id") != null)
+            {
+                _paDataService.DeletePA(_structure.FocusedPA);
+            }
         }
     }
 }

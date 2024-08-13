@@ -5,12 +5,6 @@ using CloudyHoa_Client_.PropertiesWindows.Controllers.ServiceControllers;
 using CloudyHoa_Client_.PropertiesWindows.MW;
 using CloudyHoa_Client_.SaveExecuteControl;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -20,6 +14,7 @@ namespace CloudyHoa_Client_.PropertiesWindows
     {
         DAO _dataAccessObject;
         PropWindowController _controller;
+        ObjectDataStructure _objectDataStructure;
         ObjectDataService _objectDataService;
         PropertiesSC _propertySC;
 
@@ -37,6 +32,7 @@ namespace CloudyHoa_Client_.PropertiesWindows
             _dataAccessObject = new DAO(new SPDataStructure());
             _controller = new PropWindowController();
             _objectDataService = new ObjectDataService();
+            _objectDataStructure = new ObjectDataStructure();
             _propertySC = new PropertiesSC();
             await LoadObjectsData();
             BindingData();
@@ -50,7 +46,7 @@ namespace CloudyHoa_Client_.PropertiesWindows
                 {
                     //await Task.Run(() =>
                     //{
-                       await _controller.LoadAllObjectAsync(_objectDataService, _dataAccessObject);
+                       await _controller.LoadAllObjectAsync(_objectDataService, _objectDataStructure);
                     //});
                 }
                 catch (Exception e)
@@ -64,7 +60,7 @@ namespace CloudyHoa_Client_.PropertiesWindows
         }
         private async void BindingData()
         {
-            treeListObjects.DataSource = new BindingSource() { DataSource = _controller.GetObjectsTable(_dataAccessObject) };
+            treeListObjects.DataSource = new BindingSource() { DataSource = _controller.GetObjectsTable(_objectDataStructure) };
             await UpdateSPData();
         }
         private async Task UpdateSPData()

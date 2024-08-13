@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ObjectWindow));
             this.treeListObject = new DevExpress.XtraTreeList.TreeList();
             this.treeListColumn1 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.treeListColumn2 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
@@ -42,6 +41,8 @@
             this.editButton = new DevExpress.XtraEditors.SimpleButton();
             this.addButton = new DevExpress.XtraEditors.SimpleButton();
             this.tabNavigationPage2 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.gridColumnTypeName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumnCount = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.treeListObject)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -96,6 +97,9 @@
             // 
             // gridView1
             // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumnTypeName,
+            this.gridColumnCount});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
@@ -145,7 +149,8 @@
             // 
             // deleteButton
             // 
-            this.deleteButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("deleteButton.ImageOptions.SvgImage")));
+            this.deleteButton.ImageOptions.Image = global::CloudyHoa_Client_.Properties.Resources.removepivotfield_32x32;
+            this.deleteButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.deleteButton.Location = new System.Drawing.Point(5, 129);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(50, 45);
@@ -154,7 +159,8 @@
             // 
             // editButton
             // 
-            this.editButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editButton.ImageOptions.SvgImage")));
+            this.editButton.ImageOptions.Image = global::CloudyHoa_Client_.Properties.Resources.editname_32x32;
+            this.editButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.editButton.Location = new System.Drawing.Point(6, 68);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(50, 45);
@@ -163,8 +169,8 @@
             // 
             // addButton
             // 
-            this.addButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.addButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("addButton.ImageOptions.SvgImage")));
+            this.addButton.ImageOptions.Image = global::CloudyHoa_Client_.Properties.Resources.add_32x32;
+            this.addButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.addButton.Location = new System.Drawing.Point(6, 6);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(50, 45);
@@ -177,6 +183,26 @@
             this.tabNavigationPage2.Controls.Add(this.gridControl1);
             this.tabNavigationPage2.Name = "tabNavigationPage2";
             this.tabNavigationPage2.Size = new System.Drawing.Size(688, 431);
+            // 
+            // gridColumnTypeName
+            // 
+            this.gridColumnTypeName.Caption = "Тип объекта";
+            this.gridColumnTypeName.FieldName = "name";
+            this.gridColumnTypeName.MinWidth = 25;
+            this.gridColumnTypeName.Name = "gridColumnTypeName";
+            this.gridColumnTypeName.Visible = true;
+            this.gridColumnTypeName.VisibleIndex = 0;
+            this.gridColumnTypeName.Width = 94;
+            // 
+            // gridColumnCount
+            // 
+            this.gridColumnCount.Caption = "Количество";
+            this.gridColumnCount.FieldName = "count";
+            this.gridColumnCount.MinWidth = 25;
+            this.gridColumnCount.Name = "gridColumnCount";
+            this.gridColumnCount.Visible = true;
+            this.gridColumnCount.VisibleIndex = 1;
+            this.gridColumnCount.Width = 94;
             // 
             // ObjectWindow
             // 
@@ -217,5 +243,7 @@
         private DevExpress.XtraEditors.SimpleButton addButton;
         private DevExpress.XtraTreeList.Columns.TreeListColumn treeListColumn1;
         private DevExpress.XtraTreeList.Columns.TreeListColumn treeListColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnTypeName;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnCount;
     }
 }

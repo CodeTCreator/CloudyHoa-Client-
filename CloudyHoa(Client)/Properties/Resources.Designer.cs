@@ -63,6 +63,16 @@ namespace CloudyHoa_Client_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("add_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calculatenow_32x32 {
             get {
                 object obj = ResourceManager.GetObject("calculatenow_32x32", resourceCulture);
@@ -73,9 +83,29 @@ namespace CloudyHoa_Client_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap editname_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("editname_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap orig1 {
             get {
                 object obj = ResourceManager.GetObject("orig1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap removepivotfield_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("removepivotfield_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

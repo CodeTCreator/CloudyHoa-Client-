@@ -451,6 +451,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\removepivotfield_32x32.png" />
+    <None Include="Resources\editname_32x32.png" />
+    <None Include="Resources\add_32x32.png" />
     <None Include="Resources\calculatenow_32x32.png" />
     <None Include="Connected Services\ObjectServiceReference\WcfServiceLibrary.disco" />
     <None Include="Connected Services\ObjectServiceReference\configuration91.svcinfo" />
