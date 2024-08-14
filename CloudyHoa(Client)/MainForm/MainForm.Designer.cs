@@ -32,12 +32,12 @@
             this.exitButton = new DevExpress.XtraEditors.SimpleButton();
             this.objectButton = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.tariffButton = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.enteringReadingButton = new DevExpress.XtraEditors.SimpleButton();
             this.MDButton = new DevExpress.XtraEditors.SimpleButton();
             this.residentsButton = new DevExpress.XtraEditors.SimpleButton();
             this.paButton = new DevExpress.XtraEditors.SimpleButton();
-            this.tariffButton = new DevExpress.XtraEditors.SimpleButton();
             this.propButton = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -85,9 +85,21 @@
             this.groupControl1.Controls.Add(this.objectButton);
             this.groupControl1.Location = new System.Drawing.Point(22, 73);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(694, 284);
+            this.groupControl1.Size = new System.Drawing.Size(662, 284);
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "Какая-то группа";
+            // 
+            // tariffButton
+            // 
+            this.tariffButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tariffButton.Appearance.Options.UseFont = true;
+            this.tariffButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("tariffButton.ImageOptions.SvgImage")));
+            this.tariffButton.Location = new System.Drawing.Point(5, 204);
+            this.tariffButton.Name = "tariffButton";
+            this.tariffButton.Size = new System.Drawing.Size(206, 75);
+            this.tariffButton.TabIndex = 4;
+            this.tariffButton.Text = "Тарифы";
+            this.tariffButton.Click += new System.EventHandler(this.tariffButton_Click);
             // 
             // simpleButton2
             // 
@@ -146,18 +158,6 @@
             this.paButton.TabIndex = 5;
             this.paButton.Text = "Лицевые счета";
             this.paButton.Click += new System.EventHandler(this.paButton_Click);
-            // 
-            // tariffButton
-            // 
-            this.tariffButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tariffButton.Appearance.Options.UseFont = true;
-            this.tariffButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("tariffButton.ImageOptions.SvgImage")));
-            this.tariffButton.Location = new System.Drawing.Point(5, 204);
-            this.tariffButton.Name = "tariffButton";
-            this.tariffButton.Size = new System.Drawing.Size(206, 75);
-            this.tariffButton.TabIndex = 4;
-            this.tariffButton.Text = "Тарифы";
-            this.tariffButton.Click += new System.EventHandler(this.tariffButton_Click);
             // 
             // propButton
             // 
