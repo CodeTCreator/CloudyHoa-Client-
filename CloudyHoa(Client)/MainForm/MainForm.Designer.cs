@@ -32,14 +32,14 @@
             this.exitButton = new DevExpress.XtraEditors.SimpleButton();
             this.objectButton = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.enteringReadingButton = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.MDButton = new DevExpress.XtraEditors.SimpleButton();
             this.residentsButton = new DevExpress.XtraEditors.SimpleButton();
             this.paButton = new DevExpress.XtraEditors.SimpleButton();
             this.tariffButton = new DevExpress.XtraEditors.SimpleButton();
             this.propButton = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.SuspendLayout();
@@ -77,7 +77,7 @@
             this.groupControl1.CaptionLocation = DevExpress.Utils.Locations.Top;
             this.groupControl1.Controls.Add(this.simpleButton2);
             this.groupControl1.Controls.Add(this.enteringReadingButton);
-            this.groupControl1.Controls.Add(this.simpleButton1);
+            this.groupControl1.Controls.Add(this.MDButton);
             this.groupControl1.Controls.Add(this.residentsButton);
             this.groupControl1.Controls.Add(this.paButton);
             this.groupControl1.Controls.Add(this.tariffButton);
@@ -88,6 +88,17 @@
             this.groupControl1.Size = new System.Drawing.Size(694, 284);
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "Какая-то группа";
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.ImageOptions.Image = global::CloudyHoa_Client_.Properties.Resources.calculatenow_32x32;
+            this.simpleButton2.Location = new System.Drawing.Point(439, 125);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(205, 73);
+            this.simpleButton2.TabIndex = 9;
+            this.simpleButton2.Text = "Расчитать";
             // 
             // enteringReadingButton
             // 
@@ -100,16 +111,17 @@
             this.enteringReadingButton.TabIndex = 8;
             this.enteringReadingButton.Text = "Ввод \r\nпоказаний";
             // 
-            // simpleButton1
+            // MDButton
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.simpleButton1.Location = new System.Drawing.Point(226, 206);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(206, 73);
-            this.simpleButton1.TabIndex = 7;
-            this.simpleButton1.Text = "Счетчики";
+            this.MDButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MDButton.Appearance.Options.UseFont = true;
+            this.MDButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("MDButton.ImageOptions.SvgImage")));
+            this.MDButton.Location = new System.Drawing.Point(226, 206);
+            this.MDButton.Name = "MDButton";
+            this.MDButton.Size = new System.Drawing.Size(206, 73);
+            this.MDButton.TabIndex = 7;
+            this.MDButton.Text = "Счетчики";
+            this.MDButton.Click += new System.EventHandler(this.MDButton_Click);
             // 
             // residentsButton
             // 
@@ -171,17 +183,6 @@
             this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Главное меню";
             // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.ImageOptions.Image = global::CloudyHoa_Client_.Properties.Resources.calculatenow_32x32;
-            this.simpleButton2.Location = new System.Drawing.Point(439, 125);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(205, 73);
-            this.simpleButton2.TabIndex = 9;
-            this.simpleButton2.Text = "Расчитать";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -210,7 +211,7 @@
         private DevExpress.XtraEditors.SimpleButton tariffButton;
         private DevExpress.XtraEditors.SimpleButton paButton;
         private DevExpress.XtraEditors.SimpleButton residentsButton;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton MDButton;
         private DevExpress.XtraEditors.SimpleButton enteringReadingButton;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
     }

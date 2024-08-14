@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CloudyHoa_Client_.PersonalAccountsWindows.Controllers
 {
-    public class PADataService
+    public class PADataService:IDataService
     {
         PersonalAccountServiceClient _personalAccountServiceClient;
        
