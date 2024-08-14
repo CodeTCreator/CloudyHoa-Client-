@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CloudyHoa_Client_.DataObject.DataStructure
 {
-    internal class PADataStructure
+    internal class PADataStructure: IDataStructure
     {
         DataTable _paTable = new DataTable();
 

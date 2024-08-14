@@ -100,6 +100,26 @@
       <DependentUpon>Login.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Connected Services\MDService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\MDService\Reference1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\MetadataService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\MetadataService\Reference1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ObjectServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -126,6 +146,7 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="DataObject\DAO.cs" />
+    <Compile Include="DataObject\DataStructure\MDDataStructure.cs" />
     <Compile Include="DataObject\DataStructure\ObjectDataStructure.cs" />
     <Compile Include="DataObject\DataStructure\ObjectMWDataStructure.cs" />
     <Compile Include="DataObject\DataStructure\ObjectSPDataStructure.cs" />
@@ -135,8 +156,11 @@
     <Compile Include="DataObject\DataStructure\SPDataStructure.cs" />
     <Compile Include="DataObject\DataStructure\SPMWDataStructure.cs" />
     <Compile Include="DataObject\IDataStructure.cs" />
+    <Compile Include="General\FocusedMD.cs" />
     <Compile Include="General\FocusedObject.cs" />
     <Compile Include="General\FocusedPA.cs" />
+    <Compile Include="General\GeneralLoadData.cs" />
+    <Compile Include="General\IDataService.cs" />
     <Compile Include="General\FocusedResident.cs" />
     <Compile Include="General\GeneralMethods.cs" />
     <Compile Include="General\IFocusedObject.cs" />
@@ -166,6 +190,20 @@
     </Compile>
     <Compile Include="MainForm\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDWindows\Controllers\MDDataService.cs" />
+    <Compile Include="MDWindows\Controllers\MDWindowController.cs" />
+    <Compile Include="MDWindows\MDWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDWindows\MDWindow.Designer.cs">
+      <DependentUpon>MDWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDWindows\MW\MDMW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDWindows\MW\MDMW.Designer.cs">
+      <DependentUpon>MDMW.cs</DependentUpon>
     </Compile>
     <Compile Include="ObjectWindows\Controllers\ObjectWindowController.cs" />
     <Compile Include="ObjectWindows\MW\Controllers\ObjectMWController.cs" />
@@ -295,6 +333,12 @@
     <EmbeddedResource Include="MainForm\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MDWindows\MDWindow.resx">
+      <DependentUpon>MDWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDWindows\MW\MDMW.resx">
+      <DependentUpon>MDMW.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ObjectWindows\MW\ObjectMW.resx">
       <DependentUpon>ObjectMW.cs</DependentUpon>
     </EmbeddedResource>
@@ -348,6 +392,26 @@
     <EmbeddedResource Include="SaveExecuteControl\LoadingControl.resx">
       <DependentUpon>LoadingControl.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Connected Services\MDService\MDService.wsdl" />
+    <None Include="Connected Services\MDService\WcfServiceLibrary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MDService\WcfServiceLibrary1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MDService\WcfServiceLibrary2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MetadataService\MetadataService.wsdl" />
+    <None Include="Connected Services\MetadataService\WcfServiceLibrary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MetadataService\WcfServiceLibrary1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MetadataService\WcfServiceLibrary2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\ObjectServiceReference\ObjectsService.wsdl" />
     <None Include="Connected Services\ObjectServiceReference\WcfServiceLibrary.xsd">
       <SubType>Designer</SubType>
@@ -432,6 +496,8 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\MDService\" />
+    <WCFMetadataStorage Include="Connected Services\MetadataService\" />
     <WCFMetadataStorage Include="Connected Services\ObjectServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\PAService\" />
     <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
@@ -484,6 +550,20 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Connected Services\MDService\configuration.svcinfo" />
+    <Content Include="Connected Services\MDService\configuration91.svcinfo" />
+    <Content Include="Connected Services\MDService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Connected Services\MDService\WcfServiceLibrary.disco" />
+    <Content Include="Connected Services\MetadataService\configuration.svcinfo" />
+    <Content Include="Connected Services\MetadataService\configuration91.svcinfo" />
+    <Content Include="Connected Services\MetadataService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Connected Services\MetadataService\WcfServiceLibrary.disco" />
     <Content Include="images\Loading Gif.gif" />
   </ItemGroup>
   <ItemGroup>

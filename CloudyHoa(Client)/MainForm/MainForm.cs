@@ -1,4 +1,5 @@
-﻿using CloudyHoa_Client_.PersonalAccountsWindows;
+﻿using CloudyHoa_Client_.MDWindows;
+using CloudyHoa_Client_.PersonalAccountsWindows;
 using CloudyHoa_Client_.Properties;
 using CloudyHoa_Client_.ResidentsWindows;
 using CloudyHoa_Client_.PropertiesWindows;
@@ -59,6 +60,12 @@ namespace CloudyHoa_Client_.MainForm
         {
             PAWindow pAWindow = new PAWindow();
             pAWindow.Show();
+        }
+
+        private void MDButton_Click(object sender, EventArgs e)
+        {
+            MDWindow mDWindow = new MDWindow();
+            mDWindow.ShowDialog();
         }
     }
 }
