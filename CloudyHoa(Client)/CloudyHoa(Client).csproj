@@ -145,6 +145,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\TariffService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="DataObject\DAO.cs" />
     <Compile Include="DataObject\DataStructure\MDDataStructure.cs" />
     <Compile Include="DataObject\DataStructure\ObjectDataStructure.cs" />
@@ -155,6 +160,8 @@
     <Compile Include="DataObject\DataStructure\ResidentsDataStructure.cs" />
     <Compile Include="DataObject\DataStructure\SPDataStructure.cs" />
     <Compile Include="DataObject\DataStructure\SPMWDataStructure.cs" />
+    <Compile Include="DataObject\DataStructure\TariffDataStructure.cs" />
+    <Compile Include="DataObject\DataStructure\TariffMWDataStructure.cs" />
     <Compile Include="DataObject\IDataStructure.cs" />
     <Compile Include="General\FocusedMD.cs" />
     <Compile Include="General\FocusedObject.cs" />
@@ -314,6 +321,21 @@
     <Compile Include="SaveExecuteControl\LoadingControl.Designer.cs">
       <DependentUpon>LoadingControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="TariffWindows\Controllers\TariffDataService.cs" />
+    <Compile Include="TariffWindows\MW\Controllers\TariffMWController.cs" />
+    <Compile Include="TariffWindows\MW\TariffMW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TariffWindows\MW\TariffMW.Designer.cs">
+      <DependentUpon>TariffMW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TariffWindows\TariffWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TariffWindows\TariffWindow.Designer.cs">
+      <DependentUpon>TariffWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TariffWindows\Controllers\TariffWindowController.cs" />
     <EmbeddedResource Include="Authorization\AuthorizationControl.resx">
       <DependentUpon>AuthorizationControl.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -332,6 +354,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="MDWindows\MDWindow.resx">
       <DependentUpon>MDWindow.cs</DependentUpon>
@@ -412,6 +435,12 @@
     <None Include="Connected Services\MetadataService\WcfServiceLibrary2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <EmbeddedResource Include="TariffWindows\MW\TariffMW.resx">
+      <DependentUpon>TariffMW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TariffWindows\TariffWindow.resx">
+      <DependentUpon>TariffWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Connected Services\ObjectServiceReference\ObjectsService.wsdl" />
     <None Include="Connected Services\ObjectServiceReference\WcfServiceLibrary.xsd">
       <SubType>Designer</SubType>
@@ -462,7 +491,17 @@
     <None Include="Connected Services\SPServiceReference\WcfServiceLibrary2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="packages.config" />
+    <None Include="Connected Services\TariffService\TariffService.wsdl" />
+    <None Include="Connected Services\TariffService\WcfServiceLibrary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TariffService\WcfServiceLibrary1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TariffService\WcfServiceLibrary2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\CloudyHoa_Client_.DataObject.DataStructure.ObjectDataStructure.datasource" />
     <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -503,6 +542,7 @@
     <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
     <WCFMetadataStorage Include="Connected Services\ResidentsService\" />
     <WCFMetadataStorage Include="Connected Services\SPServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\TariffService\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
@@ -564,6 +604,13 @@
       <LastGenOutput>Reference1.cs</LastGenOutput>
     </Content>
     <Content Include="Connected Services\MetadataService\WcfServiceLibrary.disco" />
+    <None Include="Connected Services\TariffService\WcfServiceLibrary.disco" />
+    <None Include="Connected Services\TariffService\configuration91.svcinfo" />
+    <None Include="Connected Services\TariffService\configuration.svcinfo" />
+    <None Include="Connected Services\TariffService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="images\Loading Gif.gif" />
   </ItemGroup>
   <ItemGroup>
