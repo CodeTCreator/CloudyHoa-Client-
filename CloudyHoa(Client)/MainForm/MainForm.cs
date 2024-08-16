@@ -1,5 +1,6 @@
 ﻿using CloudyHoa_Client_.MDWindows;
 using CloudyHoa_Client_.PersonalAccountsWindows;
+using CloudyHoa_Client_.EnteringReadingsWindows;
 using CloudyHoa_Client_.Properties;
 using CloudyHoa_Client_.ResidentsWindows;
 using CloudyHoa_Client_.PropertiesWindows;
@@ -67,6 +68,12 @@ namespace CloudyHoa_Client_.MainForm
         {
             TariffWindow tariffWindow = new TariffWindow();
             tariffWindow.Show();
+        }
+
+        private void enteringReadingButton_Click(object sender, EventArgs e)
+        {
+            EnteringReadingWindow enteringReadingWindow = new EnteringReadingWindow();
+            enteringReadingWindow.ShowDialog();
         }
     }
 }

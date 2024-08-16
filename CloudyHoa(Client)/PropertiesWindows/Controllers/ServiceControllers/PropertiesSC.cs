@@ -1,6 +1,6 @@
 ﻿using CloudyHoa_Client_.DataObject;
 using CloudyHoa_Client_.DataObject.DataStructure;
-using CloudyHoa_Client_.ObjectServiceReference;
+using CloudyHoa_Client_.ObjectsService;
 using CloudyHoa_Client_.ObjectWindow.Service_Controller;
 using DevExpress.XtraBars.Objects;
 using System;

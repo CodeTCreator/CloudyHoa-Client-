@@ -8,11 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CloudyHoa_Client_.ObjectServiceReference {
+namespace CloudyHoa_Client_.ObjectsService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ObjectServiceReference.IObjectsService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ObjectsService.IObjectsService")]
     public interface IObjectsService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IObjectsService/DeleteObject", ReplyAction="http://tempuri.org/IObjectsService/DeleteObjectResponse")]
@@ -77,12 +77,12 @@ namespace CloudyHoa_Client_.ObjectServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IObjectsServiceChannel : CloudyHoa_Client_.ObjectServiceReference.IObjectsService, System.ServiceModel.IClientChannel {
+    public interface IObjectsServiceChannel : CloudyHoa_Client_.ObjectsService.IObjectsService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ObjectsServiceClient : System.ServiceModel.ClientBase<CloudyHoa_Client_.ObjectServiceReference.IObjectsService>, CloudyHoa_Client_.ObjectServiceReference.IObjectsService {
+    public partial class ObjectsServiceClient : System.ServiceModel.ClientBase<CloudyHoa_Client_.ObjectsService.IObjectsService>, CloudyHoa_Client_.ObjectsService.IObjectsService {
         
         public ObjectsServiceClient() {
         }

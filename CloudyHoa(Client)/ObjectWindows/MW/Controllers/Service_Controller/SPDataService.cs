@@ -1,4 +1,4 @@
-﻿using CloudyHoa_Client_.ObjectServiceReference;
+﻿using CloudyHoa_Client_.ObjectsService;
 using System;
 using System.Collections.Generic;
 using System.Data;

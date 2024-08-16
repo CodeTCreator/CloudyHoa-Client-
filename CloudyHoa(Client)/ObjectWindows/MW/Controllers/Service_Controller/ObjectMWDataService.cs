@@ -8,11 +8,11 @@ namespace CloudyHoa_Client_.ObjectWindows.MW.Controllers.Service_Controller
 {
     internal class ObjectMWDataService
     {
-        ObjectServiceReference.ObjectsServiceClient _objectsServiceClient;
+        ObjectsService.ObjectsServiceClient _objectsServiceClient;
         
         public ObjectMWDataService()
         {
-            _objectsServiceClient = new ObjectServiceReference.ObjectsServiceClient();
+            _objectsServiceClient = new ObjectsService.ObjectsServiceClient();
         }
 
         public int AddObject(int hoaId,int typeObject,string identificator,int? parentId)
