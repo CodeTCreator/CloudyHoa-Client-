@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="DynamicParamsService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="DymamicParamsEP_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:7744/WcfServiceLibrary.DPService.DynamicParamsService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:7744/WcfServiceLibrary.DPService.DynamicParamsService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:7744/WcfServiceLibrary.DPService.DynamicParamsService.svc?xsd=xsd2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDynamicParamsService_AddDynamicParam_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddDynamicParam" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicParamsService_AddDynamicParam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddDynamicParamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicParamsService_OldDynamicParams_InputMessage">
+    <wsdl:part name="parameters" element="tns:OldDynamicParams" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicParamsService_OldDynamicParams_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OldDynamicParamsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicParamsService_OldAllDynamicParams_InputMessage">
+    <wsdl:part name="parameters" element="tns:OldAllDynamicParams" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicParamsService_OldAllDynamicParams_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OldAllDynamicParamsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicParamsService_SchemeDPTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:SchemeDPTable" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicParamsService_SchemeDPTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SchemeDPTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicParamsService_BoneDynamicParams_InputMessage">
+    <wsdl:part name="parameters" element="tns:BoneDynamicParams" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicParamsService_BoneDynamicParams_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BoneDynamicParamsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicParamsService_DynamicParametersTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:DynamicParametersTable" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicParamsService_DynamicParametersTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DynamicParametersTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicParamsService_BoneDynamicParamsFromChildrens_InputMessage">
+    <wsdl:part name="parameters" element="tns:BoneDynamicParamsFromChildrens" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicParamsService_BoneDynamicParamsFromChildrens_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BoneDynamicParamsFromChildrensResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDynamicParamsService">
+    <wsdl:operation name="AddDynamicParam">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDynamicParamsService/AddDynamicParam" message="tns:IDynamicParamsService_AddDynamicParam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDynamicParamsService/AddDynamicParamResponse" message="tns:IDynamicParamsService_AddDynamicParam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OldDynamicParams">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDynamicParamsService/OldDynamicParams" message="tns:IDynamicParamsService_OldDynamicParams_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDynamicParamsService/OldDynamicParamsResponse" message="tns:IDynamicParamsService_OldDynamicParams_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OldAllDynamicParams">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDynamicParamsService/OldAllDynamicParams" message="tns:IDynamicParamsService_OldAllDynamicParams_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDynamicParamsService/OldAllDynamicParamsResponse" message="tns:IDynamicParamsService_OldAllDynamicParams_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SchemeDPTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDynamicParamsService/SchemeDPTable" message="tns:IDynamicParamsService_SchemeDPTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDynamicParamsService/SchemeDPTableResponse" message="tns:IDynamicParamsService_SchemeDPTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BoneDynamicParams">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDynamicParamsService/BoneDynamicParams" message="tns:IDynamicParamsService_BoneDynamicParams_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDynamicParamsService/BoneDynamicParamsResponse" message="tns:IDynamicParamsService_BoneDynamicParams_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DynamicParametersTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDynamicParamsService/DynamicParametersTable" message="tns:IDynamicParamsService_DynamicParametersTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDynamicParamsService/DynamicParametersTableResponse" message="tns:IDynamicParamsService_DynamicParametersTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BoneDynamicParamsFromChildrens">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDynamicParamsService/BoneDynamicParamsFromChildrens" message="tns:IDynamicParamsService_BoneDynamicParamsFromChildrens_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDynamicParamsService/BoneDynamicParamsFromChildrensResponse" message="tns:IDynamicParamsService_BoneDynamicParamsFromChildrens_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DymamicParamsEP" type="tns:IDynamicParamsService">
+    <wsp:PolicyReference URI="#DymamicParamsEP_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddDynamicParam">
+      <soap12:operation soapAction="http://tempuri.org/IDynamicParamsService/AddDynamicParam" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OldDynamicParams">
+      <soap12:operation soapAction="http://tempuri.org/IDynamicParamsService/OldDynamicParams" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OldAllDynamicParams">
+      <soap12:operation soapAction="http://tempuri.org/IDynamicParamsService/OldAllDynamicParams" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SchemeDPTable">
+      <soap12:operation soapAction="http://tempuri.org/IDynamicParamsService/SchemeDPTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BoneDynamicParams">
+      <soap12:operation soapAction="http://tempuri.org/IDynamicParamsService/BoneDynamicParams" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DynamicParametersTable">
+      <soap12:operation soapAction="http://tempuri.org/IDynamicParamsService/DynamicParametersTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BoneDynamicParamsFromChildrens">
+      <soap12:operation soapAction="http://tempuri.org/IDynamicParamsService/BoneDynamicParamsFromChildrens" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DynamicParamsService">
+    <wsdl:port name="DymamicParamsEP" binding="tns:DymamicParamsEP">
+      <soap12:address location="http://localhost:7744/WcfServiceLibrary.DPService.DynamicParamsService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:7744/WcfServiceLibrary.DPService.DynamicParamsService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>
+          </Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

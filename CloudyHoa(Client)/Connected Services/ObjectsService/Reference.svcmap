@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="9383258c-92fd-4b39-b214-c08f15646d4e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:7744/WcfServiceLibrary.ObjectsService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WcfServiceLibrary.xsd" MetadataType="Schema" ID="2c7a1959-d440-4a72-ac7a-226516939f7e" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.ObjectsService.svc?xsd=xsd2" />
+    <MetadataFile FileName="WcfServiceLibrary.disco" MetadataType="Disco" ID="27bf1e95-e1cb-4994-9150-235bc10b32f1" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.ObjectsService.svc?disco" />
+    <MetadataFile FileName="WcfServiceLibrary1.xsd" MetadataType="Schema" ID="440bcb5f-fb5d-4d2e-ace0-5d8e4b72e88a" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.ObjectsService.svc?xsd=xsd1" />
+    <MetadataFile FileName="WcfServiceLibrary2.xsd" MetadataType="Schema" ID="4eb89347-c1a2-4d51-a90c-8cd5d448bd98" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.ObjectsService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ObjectsService.wsdl" MetadataType="Wsdl" ID="ef34245a-c410-4bb3-a491-a83ae9986c2c" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.ObjectsService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

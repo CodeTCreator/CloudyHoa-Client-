@@ -10,11 +10,11 @@ namespace CloudyHoa_Client_.TariffWindows.Controllers
     public class TariffDataService
     {
         TariffService.TariffServiceClient _tariffServiceClient;
-        ObjectServiceReference.ObjectsServiceClient _objectServiceReference;
+        ObjectsService.ObjectsServiceClient _ObjectsService;
         public TariffDataService()
         {
             _tariffServiceClient = new TariffService.TariffServiceClient();
-            _objectServiceReference = new ObjectServiceReference.ObjectsServiceClient();
+            _ObjectsService = new ObjectsService.ObjectsServiceClient();
         }
 
         public DataTable GetTariffs(int hoaId, int? type_object)
@@ -47,7 +47,7 @@ namespace CloudyHoa_Client_.TariffWindows.Controllers
         public DataTable GetTOTable(int hoaId)
         {
             DataSet dataSet = null;
-            dataSet = _objectServiceReference.GetObjectsStructure(hoaId);
+            dataSet = _ObjectsService.GetObjectsStructure(hoaId);
             if (dataSet != null)
             {
                 return dataSet.Tables[0];
@@ -61,7 +61,7 @@ namespace CloudyHoa_Client_.TariffWindows.Controllers
         public async Task<DataTable> GetTOTableAsync(int hoaId)
         {
             DataSet dataSet = null;
-            dataSet = await _objectServiceReference.GetObjectsStructureAsync(hoaId);
+            dataSet = await _ObjectsService.GetObjectsStructureAsync(hoaId);
             if (dataSet != null)
             {
                 return dataSet.Tables[0];

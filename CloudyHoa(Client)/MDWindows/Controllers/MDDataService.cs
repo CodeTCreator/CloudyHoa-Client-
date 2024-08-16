@@ -1,6 +1,6 @@
 ﻿using CloudyHoa_Client_.General;
 using CloudyHoa_Client_.MDService;
-using CloudyHoa_Client_.ObjectServiceReference;
+using CloudyHoa_Client_.ObjectsService;
 using System;
 using System.Collections.Generic;
 using System.Data;

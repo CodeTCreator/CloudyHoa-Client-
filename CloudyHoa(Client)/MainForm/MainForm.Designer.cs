@@ -122,6 +122,7 @@
             this.enteringReadingButton.Size = new System.Drawing.Size(206, 74);
             this.enteringReadingButton.TabIndex = 8;
             this.enteringReadingButton.Text = "Ввод \r\nпоказаний";
+            this.enteringReadingButton.Click += new System.EventHandler(this.enteringReadingButton_Click);
             // 
             // MDButton
             // 
