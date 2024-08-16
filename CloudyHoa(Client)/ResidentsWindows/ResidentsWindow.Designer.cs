@@ -31,12 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResidentsWindow));
             this.panelControl = new DevExpress.XtraEditors.PanelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.svgImageAttention = new DevExpress.XtraEditors.SvgImageBox();
             this.deleteResidentButton = new DevExpress.XtraEditors.SimpleButton();
             this.editResidentButton = new DevExpress.XtraEditors.SimpleButton();
             this.addResidentButton = new DevExpress.XtraEditors.SimpleButton();
             this.residentsGridControl1 = new CloudyHoa_Client_.General.ResidentsGridControl();
             this.treeListControl1 = new CloudyHoa_Client_.General.TreeListControl();
-            this.svgImageAttention = new DevExpress.XtraEditors.SvgImageBox();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl)).BeginInit();
             this.panelControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -48,7 +49,7 @@
             // 
             this.panelControl.Controls.Add(this.panelControl1);
             this.panelControl.Controls.Add(this.treeListControl1);
-            this.panelControl.Location = new System.Drawing.Point(12, 38);
+            this.panelControl.Location = new System.Drawing.Point(12, 63);
             this.panelControl.Name = "panelControl";
             this.panelControl.Size = new System.Drawing.Size(1171, 400);
             this.panelControl.TabIndex = 2;
@@ -65,6 +66,19 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(824, 396);
             this.panelControl1.TabIndex = 3;
+            // 
+            // svgImageAttention
+            // 
+            this.svgImageAttention.Location = new System.Drawing.Point(771, 5);
+            this.svgImageAttention.Name = "svgImageAttention";
+            this.svgImageAttention.ShowToolTips = DevExpress.Utils.DefaultBoolean.True;
+            this.svgImageAttention.Size = new System.Drawing.Size(48, 47);
+            this.svgImageAttention.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageAttention.SvgImage")));
+            this.svgImageAttention.TabIndex = 8;
+            this.svgImageAttention.Text = "svgImageBox1";
+            this.svgImageAttention.ToolTip = "Несоответствие долей владения. Сумма не равна 1";
+            this.svgImageAttention.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Warning;
+            this.svgImageAttention.Visible = false;
             // 
             // deleteResidentButton
             // 
@@ -143,25 +157,23 @@
             this.treeListControl1.Size = new System.Drawing.Size(337, 396);
             this.treeListControl1.TabIndex = 2;
             // 
-            // svgImageAttention
+            // labelControl1
             // 
-            this.svgImageAttention.Location = new System.Drawing.Point(771, 5);
-            this.svgImageAttention.Name = "svgImageAttention";
-            this.svgImageAttention.ShowToolTips = DevExpress.Utils.DefaultBoolean.True;
-            this.svgImageAttention.Size = new System.Drawing.Size(48, 47);
-            this.svgImageAttention.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageAttention.SvgImage")));
-            this.svgImageAttention.TabIndex = 8;
-            this.svgImageAttention.Text = "svgImageBox1";
-            this.svgImageAttention.ToolTip = "Несоответствие долей владения. Сумма не равна 1";
-            this.svgImageAttention.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Warning;
-            this.svgImageAttention.Visible = false;
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(563, 12);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(87, 31);
+            this.labelControl1.TabIndex = 3;
+            this.labelControl1.Text = "Жильцы";
             // 
             // ResidentsWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1195, 450);
+            this.ClientSize = new System.Drawing.Size(1195, 473);
+            this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.panelControl);
             this.Name = "ResidentsWindow";
             this.Text = "Учет жильцов";
@@ -173,6 +185,7 @@
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageAttention)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -185,5 +198,6 @@
         private DevExpress.XtraEditors.SimpleButton editResidentButton;
         private DevExpress.XtraEditors.SimpleButton addResidentButton;
         private DevExpress.XtraEditors.SvgImageBox svgImageAttention;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }
