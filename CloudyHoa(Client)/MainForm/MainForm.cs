@@ -76,10 +76,20 @@ namespace CloudyHoa_Client_.MainForm
             enteringReadingWindow.ShowDialog();
         }
 
-        private void simpleButton2_Click(object sender, EventArgs e)
+        private void calculationButton_Click(object sender, EventArgs e)
         {
             CalculationWindows.CalculationWindow calculationWindow = new CalculationWindows.CalculationWindow();
             calculationWindow.Show();
+        }
+
+        private void historyEnteringButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void historyCalculatingButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

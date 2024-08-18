@@ -698,6 +698,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\accounting.svg" />
+    <None Include="Resources\gaugestylelinearvertical.svg" />
+    <None Include="Resources\portrait.svg" />
+    <None Include="Resources\actions_arrow4left.svg" />
+    <None Include="Resources\financial.svg" />
+    <None Include="Resources\calculatenow.svg" />
+    <None Include="Resources\bo_invoice.svg" />
+    <None Include="Resources\bo_resume.svg" />
+    <None Include="Resources\travel_hotel.svg" />
     <None Include="Resources\clear_32x32.png" />
     <None Include="Resources\save_32x32.png" />
     <None Include="Resources\saveall_32x32.png" />
