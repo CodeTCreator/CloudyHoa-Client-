@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="CalculationsService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:7744/WcfServiceLibrary.CalculationsService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:7744/WcfServiceLibrary.CalculationsService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:7744/WcfServiceLibrary.CalculationsService.svc?xsd=xsd2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICalculationsService_GetCalculations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCalculations" />
+  </wsdl:message>
+  <wsdl:message name="ICalculationsService_GetCalculations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCalculationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICalculationsService_GetTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTemplate" />
+  </wsdl:message>
+  <wsdl:message name="ICalculationsService_GetTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICalculationsService_AddCalculation_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCalculation" />
+  </wsdl:message>
+  <wsdl:message name="ICalculationsService_AddCalculation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCalculationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICalculationsService_EditCalculation_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditCalculation" />
+  </wsdl:message>
+  <wsdl:message name="ICalculationsService_EditCalculation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditCalculationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICalculationsService_DeleteCalcuation_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCalcuation" />
+  </wsdl:message>
+  <wsdl:message name="ICalculationsService_DeleteCalcuation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCalcuationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICalculationsService_CalculateResultValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateResultValue" />
+  </wsdl:message>
+  <wsdl:message name="ICalculationsService_CalculateResultValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateResultValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICalculationsService_GetCalculationsFromMetadata_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCalculationsFromMetadata" />
+  </wsdl:message>
+  <wsdl:message name="ICalculationsService_GetCalculationsFromMetadata_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCalculationsFromMetadataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICalculationsService">
+    <wsdl:operation name="GetCalculations">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICalculationsService/GetCalculations" message="tns:ICalculationsService_GetCalculations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICalculationsService/GetCalculationsResponse" message="tns:ICalculationsService_GetCalculations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICalculationsService/GetTemplate" message="tns:ICalculationsService_GetTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICalculationsService/GetTemplateResponse" message="tns:ICalculationsService_GetTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCalculation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICalculationsService/AddCalculation" message="tns:ICalculationsService_AddCalculation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICalculationsService/AddCalculationResponse" message="tns:ICalculationsService_AddCalculation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditCalculation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICalculationsService/EditCalculation" message="tns:ICalculationsService_EditCalculation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICalculationsService/EditCalculationResponse" message="tns:ICalculationsService_EditCalculation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCalcuation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICalculationsService/DeleteCalcuation" message="tns:ICalculationsService_DeleteCalcuation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICalculationsService/DeleteCalcuationResponse" message="tns:ICalculationsService_DeleteCalcuation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateResultValue">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICalculationsService/CalculateResultValue" message="tns:ICalculationsService_CalculateResultValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICalculationsService/CalculateResultValueResponse" message="tns:ICalculationsService_CalculateResultValue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCalculationsFromMetadata">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICalculationsService/GetCalculationsFromMetadata" message="tns:ICalculationsService_GetCalculationsFromMetadata_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICalculationsService/GetCalculationsFromMetadataResponse" message="tns:ICalculationsService_GetCalculationsFromMetadata_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CalculationService" type="tns:ICalculationsService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCalculations">
+      <soap:operation soapAction="http://tempuri.org/ICalculationsService/GetCalculations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplate">
+      <soap:operation soapAction="http://tempuri.org/ICalculationsService/GetTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCalculation">
+      <soap:operation soapAction="http://tempuri.org/ICalculationsService/AddCalculation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditCalculation">
+      <soap:operation soapAction="http://tempuri.org/ICalculationsService/EditCalculation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCalcuation">
+      <soap:operation soapAction="http://tempuri.org/ICalculationsService/DeleteCalcuation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateResultValue">
+      <soap:operation soapAction="http://tempuri.org/ICalculationsService/CalculateResultValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalculationsFromMetadata">
+      <soap:operation soapAction="http://tempuri.org/ICalculationsService/GetCalculationsFromMetadata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CalculationsService">
+    <wsdl:port name="CalculationService" binding="tns:CalculationService">
+      <soap:address location="http://localhost:7744/WcfServiceLibrary.CalculationsService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

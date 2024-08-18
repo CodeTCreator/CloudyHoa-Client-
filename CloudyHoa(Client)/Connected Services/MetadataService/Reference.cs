@@ -80,6 +80,12 @@ namespace CloudyHoa_Client_.MetadataService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMetadataService/GetServices", ReplyAction="http://tempuri.org/IMetadataService/GetServicesResponse")]
         System.Threading.Tasks.Task<System.Data.DataSet> GetServicesAsync(int typeObject);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMetadataService/GetCalculationServices", ReplyAction="http://tempuri.org/IMetadataService/GetCalculationServicesResponse")]
+        System.Data.DataSet GetCalculationServices(int typeObject);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMetadataService/GetCalculationServices", ReplyAction="http://tempuri.org/IMetadataService/GetCalculationServicesResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetCalculationServicesAsync(int typeObject);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -195,6 +201,14 @@ namespace CloudyHoa_Client_.MetadataService {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> GetServicesAsync(int typeObject) {
             return base.Channel.GetServicesAsync(typeObject);
+        }
+        
+        public System.Data.DataSet GetCalculationServices(int typeObject) {
+            return base.Channel.GetCalculationServices(typeObject);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetCalculationServicesAsync(int typeObject) {
+            return base.Channel.GetCalculationServicesAsync(typeObject);
         }
     }
 }

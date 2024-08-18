@@ -34,10 +34,10 @@ namespace CloudyHoa_Client_.MainForm
 
         private void objectButton_Click(object sender, EventArgs e)
         {
-            //this.Visible = false;
-            //ObjectWindow.ObjectWindow objectWindow = new ObjectWindow.ObjectWindow(); 
-            //objectWindow.ShowDialog();
-            //this.Visible = true;
+            this.Visible = false;
+            ObjectWindow.ObjectWindow objectWindow = new ObjectWindow.ObjectWindow();
+            objectWindow.ShowDialog();
+            this.Visible = true;
         }
 
         private void propButton_Click(object sender, EventArgs e)
@@ -74,6 +74,12 @@ namespace CloudyHoa_Client_.MainForm
         {
             EnteringReadingWindow enteringReadingWindow = new EnteringReadingWindow();
             enteringReadingWindow.ShowDialog();
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            CalculationWindows.CalculationWindow calculationWindow = new CalculationWindows.CalculationWindow();
+            calculationWindow.Show();
         }
     }
 }

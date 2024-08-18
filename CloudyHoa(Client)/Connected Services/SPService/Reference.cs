@@ -8,11 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CloudyHoa_Client_.SPServiceReference {
+namespace CloudyHoa_Client_.SPService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SPServiceReference.IStaticParamsService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SPService.IStaticParamsService")]
     public interface IStaticParamsService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticParamsService/AddStaticParam", ReplyAction="http://tempuri.org/IStaticParamsService/AddStaticParamResponse")]
@@ -59,12 +59,12 @@ namespace CloudyHoa_Client_.SPServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IStaticParamsServiceChannel : CloudyHoa_Client_.SPServiceReference.IStaticParamsService, System.ServiceModel.IClientChannel {
+    public interface IStaticParamsServiceChannel : CloudyHoa_Client_.SPService.IStaticParamsService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class StaticParamsServiceClient : System.ServiceModel.ClientBase<CloudyHoa_Client_.SPServiceReference.IStaticParamsService>, CloudyHoa_Client_.SPServiceReference.IStaticParamsService {
+    public partial class StaticParamsServiceClient : System.ServiceModel.ClientBase<CloudyHoa_Client_.SPService.IStaticParamsService>, CloudyHoa_Client_.SPService.IStaticParamsService {
         
         public StaticParamsServiceClient() {
         }

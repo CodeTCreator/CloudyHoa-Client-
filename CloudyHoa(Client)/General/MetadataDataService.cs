@@ -153,6 +153,19 @@ namespace CloudyHoa_Client_.General
                 return null;
             }
         }
+        public async Task<DataTable> GetCalculationServices(int typeObject)
+        {
+            DataSet dataSet = null;
+            dataSet = await _metadataServiceClient.GetCalculationServicesAsync(typeObject);
+            if (dataSet != null)
+            {
+                return dataSet.Tables[0];
+            }
+            else
+            {
+                return null;
+            }
+        }
 
     }
 

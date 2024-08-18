@@ -14,11 +14,11 @@ namespace CloudyHoa_Client_.PropertiesWindows.Controllers.ServiceControllers
 {
     public class PropertiesSC
     {
-        SPServiceReference.StaticParamsServiceClient _staticParamsServiceClient;
+        SPService.StaticParamsServiceClient _staticParamsServiceClient;
 
         public PropertiesSC() 
         {
-            _staticParamsServiceClient = new SPServiceReference.StaticParamsServiceClient();
+            _staticParamsServiceClient = new SPService.StaticParamsServiceClient();    
         }
 
         /// <summary>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="58b67f19-62ef-4358-b6c8-8632b0cbee5c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:7744/WcfServiceLibrary.StaticParamsService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WcfServiceLibrary.xsd" MetadataType="Schema" ID="d432779b-cf38-45bc-be9b-500eb2b0b74a" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.StaticParamsService.svc?xsd=xsd2" />
+    <MetadataFile FileName="WcfServiceLibrary.disco" MetadataType="Disco" ID="b4d0d8b1-bf68-4c09-b85e-f4446fcd6457" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.StaticParamsService.svc?disco" />
+    <MetadataFile FileName="WcfServiceLibrary1.xsd" MetadataType="Schema" ID="a3087ded-1b28-42c6-a1f8-1e9e8032ae14" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.StaticParamsService.svc?xsd=xsd0" />
+    <MetadataFile FileName="StaticParamsService.wsdl" MetadataType="Wsdl" ID="c39dd0bf-4370-4985-af75-839132283f4f" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.StaticParamsService.svc?wsdl" />
+    <MetadataFile FileName="WcfServiceLibrary2.xsd" MetadataType="Schema" ID="2c047ae4-fa87-4a1a-b1df-b463efe8e5d5" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.StaticParamsService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

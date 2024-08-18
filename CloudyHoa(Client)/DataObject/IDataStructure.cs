@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CloudyHoa_Client_.DataObject
 {
-    internal interface IDataStructure
+    public interface IDataStructure
     {
     }
 }

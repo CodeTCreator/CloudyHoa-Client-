@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="BenefitService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:7744/WcfServiceLibrary.BenefitService.BenefitService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:7744/WcfServiceLibrary.BenefitService.BenefitService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:7744/WcfServiceLibrary.BenefitService.BenefitService.svc?xsd=xsd2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBenefitService_AddBenefit_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddBenefit" />
+  </wsdl:message>
+  <wsdl:message name="IBenefitService_AddBenefit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddBenefitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBenefitService_EditBenefit_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditBenefit" />
+  </wsdl:message>
+  <wsdl:message name="IBenefitService_EditBenefit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditBenefitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBenefitService_DeleteBenefit_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBenefit" />
+  </wsdl:message>
+  <wsdl:message name="IBenefitService_DeleteBenefit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBenefitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBenefitService_AddTypeBenefit_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTypeBenefit" />
+  </wsdl:message>
+  <wsdl:message name="IBenefitService_AddTypeBenefit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTypeBenefitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBenefitService_EditTypeBenefit_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditTypeBenefit" />
+  </wsdl:message>
+  <wsdl:message name="IBenefitService_EditTypeBenefit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditTypeBenefitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBenefitService_DeleteTypeBenefit_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTypeBenefit" />
+  </wsdl:message>
+  <wsdl:message name="IBenefitService_DeleteTypeBenefit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTypeBenefitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBenefitService_GetTypeBenefits_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypeBenefits" />
+  </wsdl:message>
+  <wsdl:message name="IBenefitService_GetTypeBenefits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypeBenefitsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBenefitService_GetBenefitsForObject_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBenefitsForObject" />
+  </wsdl:message>
+  <wsdl:message name="IBenefitService_GetBenefitsForObject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBenefitsForObjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBenefitService_GetBenefitsForMetadata_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBenefitsForMetadata" />
+  </wsdl:message>
+  <wsdl:message name="IBenefitService_GetBenefitsForMetadata_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBenefitsForMetadataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBenefitService_GetBenefits_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBenefits" />
+  </wsdl:message>
+  <wsdl:message name="IBenefitService_GetBenefits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBenefitsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBenefitService">
+    <wsdl:operation name="AddBenefit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBenefitService/AddBenefit" message="tns:IBenefitService_AddBenefit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBenefitService/AddBenefitResponse" message="tns:IBenefitService_AddBenefit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditBenefit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBenefitService/EditBenefit" message="tns:IBenefitService_EditBenefit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBenefitService/EditBenefitResponse" message="tns:IBenefitService_EditBenefit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBenefit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBenefitService/DeleteBenefit" message="tns:IBenefitService_DeleteBenefit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBenefitService/DeleteBenefitResponse" message="tns:IBenefitService_DeleteBenefit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTypeBenefit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBenefitService/AddTypeBenefit" message="tns:IBenefitService_AddTypeBenefit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBenefitService/AddTypeBenefitResponse" message="tns:IBenefitService_AddTypeBenefit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditTypeBenefit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBenefitService/EditTypeBenefit" message="tns:IBenefitService_EditTypeBenefit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBenefitService/EditTypeBenefitResponse" message="tns:IBenefitService_EditTypeBenefit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTypeBenefit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBenefitService/DeleteTypeBenefit" message="tns:IBenefitService_DeleteTypeBenefit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBenefitService/DeleteTypeBenefitResponse" message="tns:IBenefitService_DeleteTypeBenefit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeBenefits">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBenefitService/GetTypeBenefits" message="tns:IBenefitService_GetTypeBenefits_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBenefitService/GetTypeBenefitsResponse" message="tns:IBenefitService_GetTypeBenefits_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBenefitsForObject">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBenefitService/GetBenefitsForObject" message="tns:IBenefitService_GetBenefitsForObject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBenefitService/GetBenefitsForObjectResponse" message="tns:IBenefitService_GetBenefitsForObject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBenefitsForMetadata">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBenefitService/GetBenefitsForMetadata" message="tns:IBenefitService_GetBenefitsForMetadata_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBenefitService/GetBenefitsForMetadataResponse" message="tns:IBenefitService_GetBenefitsForMetadata_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBenefits">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBenefitService/GetBenefits" message="tns:IBenefitService_GetBenefits_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBenefitService/GetBenefitsResponse" message="tns:IBenefitService_GetBenefits_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BenefitService" type="tns:IBenefitService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddBenefit">
+      <soap:operation soapAction="http://tempuri.org/IBenefitService/AddBenefit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditBenefit">
+      <soap:operation soapAction="http://tempuri.org/IBenefitService/EditBenefit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBenefit">
+      <soap:operation soapAction="http://tempuri.org/IBenefitService/DeleteBenefit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTypeBenefit">
+      <soap:operation soapAction="http://tempuri.org/IBenefitService/AddTypeBenefit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditTypeBenefit">
+      <soap:operation soapAction="http://tempuri.org/IBenefitService/EditTypeBenefit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTypeBenefit">
+      <soap:operation soapAction="http://tempuri.org/IBenefitService/DeleteTypeBenefit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeBenefits">
+      <soap:operation soapAction="http://tempuri.org/IBenefitService/GetTypeBenefits" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBenefitsForObject">
+      <soap:operation soapAction="http://tempuri.org/IBenefitService/GetBenefitsForObject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBenefitsForMetadata">
+      <soap:operation soapAction="http://tempuri.org/IBenefitService/GetBenefitsForMetadata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBenefits">
+      <soap:operation soapAction="http://tempuri.org/IBenefitService/GetBenefits" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BenefitService">
+    <wsdl:port name="BenefitService" binding="tns:BenefitService">
+      <soap:address location="http://localhost:7744/WcfServiceLibrary.BenefitService.BenefitService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

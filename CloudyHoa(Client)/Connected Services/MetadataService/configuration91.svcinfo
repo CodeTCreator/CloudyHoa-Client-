@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="9.1" CheckSum="MQzi57JrGTX8gHMZhEMOnXV5UYClc4SS6+mZQolbnyQ=">
+<SavedWcfConfigurationInformation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="9.1" CheckSum="aKhd6taBqQLLUDBsruy8gpNoQIyqFtMhOJCxaSJAIYY=">
   <bindingConfigurations>
-    <bindingConfiguration bindingType="wsHttpBinding" name="ObjectServicePoint">
-========
-<SavedWcfConfigurationInformation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="9.1" CheckSum="o/9HaQMp3WYTOjnXTMVdXLhmd+03gzjvw/iBYe4ebBQ=">
-  <bindingConfigurations>
-    <bindingConfiguration bindingType="wsHttpBinding" name="MetadataService">
->>>>>>>> EnteringReadingWindow:CloudyHoa(Client)/Connected Services/MetadataService/configuration91.svcinfo
+    <bindingConfiguration bindingType="wsHttpBinding" name="MetadataService1">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>MetadataService</serializedValue>
+          <serializedValue>MetadataService1</serializedValue>
         </property>
         <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -132,9 +127,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-
-    <endpoint name="ObjectServicePoint" contract="ObjectServiceReference.IObjectsService" bindingType="wsHttpBinding" address="http://localhost:7744/WcfServiceLibrary.ObjectsService.svc" bindingConfiguration="ObjectServicePoint">
-    <endpoint name="MetadataService" contract="MetadataService.IMetadataService" bindingType="wsHttpBinding" address="http://localhost:7744/WcfServiceLibrary.MetadataService.MetadataService.svc" bindingConfiguration="MetadataService">
+    <endpoint name="MetadataService" contract="MetadataService.IMetadataService" bindingType="wsHttpBinding" address="http://localhost:7744/WcfServiceLibrary.MetadataService.MetadataService.svc" bindingConfiguration="MetadataService1">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://localhost:7744/WcfServiceLibrary.MetadataService.MetadataService.svc</serializedValue>
@@ -146,7 +139,7 @@
           <serializedValue>wsHttpBinding</serializedValue>
         </property>
         <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>MetadataService</serializedValue>
+          <serializedValue>MetadataService1</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>MetadataService.IMetadataService</serializedValue>

@@ -10,11 +10,11 @@ namespace CloudyHoa_Client_.ObjectWindows.MW.Controllers.Service_Controller
 {
     internal class SPDataService
     {
-        SPServiceReference.StaticParamsServiceClient _staticParamsServiceClient;
+        SPService.StaticParamsServiceClient _staticParamsServiceClient;
 
         public SPDataService()
         {
-            _staticParamsServiceClient = new SPServiceReference.StaticParamsServiceClient();
+            _staticParamsServiceClient = new SPService.StaticParamsServiceClient();
         }
 
         public DataTable GetSPTable(int hoaId, int typeObject)
