@@ -112,7 +112,7 @@ namespace CloudyHoa_Client_.PersonalAccountsWindows
                 svgImageAttention.Visible = true;
             }
             else
-            {
+        {
                 LockTreeList(false);
                 svgImageAttention.Visible = false;
             }
@@ -181,7 +181,7 @@ namespace CloudyHoa_Client_.PersonalAccountsWindows
                     lives++;
                 }
                 if (row["registered"].ToString() == "True")
-                {
+        {
                     registered++;
                 }
             }

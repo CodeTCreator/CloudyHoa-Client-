@@ -44,6 +44,12 @@ namespace CloudyHoa_Client_.TariffService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITariffService/GetServices", ReplyAction="http://tempuri.org/ITariffService/GetServicesResponse")]
         System.Threading.Tasks.Task<System.Data.DataSet> GetServicesAsync(int hoaId, int type_object);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITariffService/GetTariffsFromMetadata", ReplyAction="http://tempuri.org/ITariffService/GetTariffsFromMetadataResponse")]
+        System.Data.DataSet GetTariffsFromMetadata(int metadataId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITariffService/GetTariffsFromMetadata", ReplyAction="http://tempuri.org/ITariffService/GetTariffsFromMetadataResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetTariffsFromMetadataAsync(int metadataId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -111,6 +117,14 @@ namespace CloudyHoa_Client_.TariffService {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> GetServicesAsync(int hoaId, int type_object) {
             return base.Channel.GetServicesAsync(hoaId, type_object);
+        }
+        
+        public System.Data.DataSet GetTariffsFromMetadata(int metadataId) {
+            return base.Channel.GetTariffsFromMetadata(metadataId);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetTariffsFromMetadataAsync(int metadataId) {
+            return base.Channel.GetTariffsFromMetadataAsync(metadataId);
         }
     }
 }

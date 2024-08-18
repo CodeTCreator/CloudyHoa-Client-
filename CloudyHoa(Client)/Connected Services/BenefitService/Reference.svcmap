@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="383c5e12-3ad4-4045-a212-566ebca4fa34" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:7744/WcfServiceLibrary.BenefitService.BenefitService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WcfServiceLibrary.disco" MetadataType="Disco" ID="0b086eeb-e4e5-4224-912f-51b6130b979b" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.BenefitService.BenefitService.svc?disco" />
+    <MetadataFile FileName="WcfServiceLibrary.xsd" MetadataType="Schema" ID="dd6def49-3eb2-4b5e-a0e9-fe26120ca610" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.BenefitService.BenefitService.svc?xsd=xsd1" />
+    <MetadataFile FileName="WcfServiceLibrary1.xsd" MetadataType="Schema" ID="554d8753-84d7-486d-89ea-af379b62e0b9" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.BenefitService.BenefitService.svc?xsd=xsd0" />
+    <MetadataFile FileName="BenefitService.wsdl" MetadataType="Wsdl" ID="02e1bc74-fb35-4659-8202-1dfd26287d54" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.BenefitService.BenefitService.svc?wsdl" />
+    <MetadataFile FileName="WcfServiceLibrary2.xsd" MetadataType="Schema" ID="0dcd2e0d-ac35-4868-8098-05170205855f" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.BenefitService.BenefitService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -69,5 +69,24 @@ namespace CloudyHoa_Client_.General
                 }
             }, "Ошибка подключения к северу.");
         }
+        public static async Task LoadData(ISafeExecuteControl form, Func<IDataService, IDataStructure, int, DateTime, Task> func, IDataStructure structure, IDataService service,
+           int arg1, DateTime arg2)
+        {
+            await form.SafeUIExecuteAsync(async () =>
+            {
+                try
+                {
+                    await func(service, structure, arg1, arg2);
+
+                }
+                catch (Exception e)
+                {
+                    const string caption = "Подключение к серверу";
+                    var result = MessageBox.Show(e.Message, caption,
+                                                 MessageBoxButtons.OK,
+                                                 MessageBoxIcon.Error);
+                }
+            }, "Ошибка подключения к северу.");
+        }
     }
 }

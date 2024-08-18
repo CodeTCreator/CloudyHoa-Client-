@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="9585ddc3-cf8f-46f6-8691-bb687347ae00" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:7744/WcfServiceLibrary.CalculationsService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WcfServiceLibrary.xsd" MetadataType="Schema" ID="ae0da17a-27d1-47c1-8cde-2316ab58d2e4" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.CalculationsService.svc?xsd=xsd0" />
+    <MetadataFile FileName="WcfServiceLibrary1.xsd" MetadataType="Schema" ID="b67d474d-0156-47ae-9432-44c6088e9923" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.CalculationsService.svc?xsd=xsd2" />
+    <MetadataFile FileName="WcfServiceLibrary.disco" MetadataType="Disco" ID="e61ffa3e-4b3f-4be8-9098-c8622911fcce" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.CalculationsService.svc?disco" />
+    <MetadataFile FileName="WcfServiceLibrary2.xsd" MetadataType="Schema" ID="e1b2b791-2fdd-4beb-af1b-35b5596f324d" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.CalculationsService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CalculationsService.wsdl" MetadataType="Wsdl" ID="3be78672-387a-4902-a895-5fa86e481083" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.CalculationsService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
