@@ -160,7 +160,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\CHService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\DynamicParamsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\EHService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -213,6 +223,7 @@
     <Compile Include="DataObject\DAO.cs" />
     <Compile Include="DataObject\DataStructure\CalculationDataStructure.cs" />
     <Compile Include="DataObject\DataStructure\DPsDataStructure.cs" />
+    <Compile Include="DataObject\DataStructure\EHDataStructure.cs" />
     <Compile Include="DataObject\DataStructure\ERDataStructure.cs" />
     <Compile Include="DataObject\DataStructure\MDDataStructure.cs" />
     <Compile Include="DataObject\DataStructure\ObjectDataStructure.cs" />
@@ -226,6 +237,14 @@
     <Compile Include="DataObject\DataStructure\TariffDataStructure.cs" />
     <Compile Include="DataObject\DataStructure\TariffMWDataStructure.cs" />
     <Compile Include="DataObject\IDataStructure.cs" />
+    <Compile Include="EHWindows\Controllers\EHDataService.cs" />
+    <Compile Include="EHWindows\Controllers\EHWindowController.cs" />
+    <Compile Include="EHWindows\EHWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EHWindows\EHWindow.Designer.cs">
+      <DependentUpon>EHWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="EnteringReadingsWindows\Controllers\ERWindowController.cs" />
     <Compile Include="EnteringReadingsWindows\EnteringReadingWindow.cs">
       <SubType>Form</SubType>
@@ -423,6 +442,9 @@
     <EmbeddedResource Include="CalculationWindows\CalculationWindow.resx">
       <DependentUpon>CalculationWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EHWindows\EHWindow.resx">
+      <DependentUpon>EHWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="General\TreeListControl.resx">
       <DependentUpon>TreeListControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -501,6 +523,7 @@
     <EmbeddedResource Include="SaveExecuteControl\LoadingControl.resx">
       <DependentUpon>LoadingControl.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="App.config" />
     <None Include="Connected Services\BenefitService\BenefitService.wsdl" />
     <None Include="Connected Services\BenefitService\WcfServiceLibrary.xsd">
       <SubType>Designer</SubType>
@@ -521,6 +544,26 @@
     <None Include="Connected Services\CalculationService\WcfServiceLibrary2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\CHService\CHService.wsdl" />
+    <None Include="Connected Services\CHService\WcfServiceLibrary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CHService\WcfServiceLibrary1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CHService\WcfServiceLibrary2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EHService\EHService.wsdl" />
+    <None Include="Connected Services\EHService\WcfServiceLibrary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EHService\WcfServiceLibrary1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EHService\WcfServiceLibrary2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\MDService\MDService.wsdl" />
     <None Include="Connected Services\MDService\WcfServiceLibrary.xsd">
       <SubType>Designer</SubType>
@@ -537,7 +580,6 @@
     <EmbeddedResource Include="TariffWindows\TariffWindow.resx">
       <DependentUpon>TariffWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="App.config" />
     <None Include="Connected Services\DynamicParamsService\DynamicParamsService.wsdl" />
     <None Include="Connected Services\DynamicParamsService\WcfServiceLibrary.xsd">
       <SubType>Designer</SubType>
@@ -672,6 +714,8 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\BenefitService\" />
     <WCFMetadataStorage Include="Connected Services\CalculationService\" />
+    <WCFMetadataStorage Include="Connected Services\CHService\" />
+    <WCFMetadataStorage Include="Connected Services\EHService\" />
     <WCFMetadataStorage Include="Connected Services\MetadataService\" />
     <WCFMetadataStorage Include="Connected Services\MetadataService\" />
     <WCFMetadataStorage Include="Connected Services\PersonalAccountService\" />
@@ -759,6 +803,20 @@
     <None Include="Connected Services\SPService\configuration91.svcinfo" />
     <None Include="Connected Services\SPService\configuration.svcinfo" />
     <None Include="Connected Services\SPService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\CHService\WcfServiceLibrary.disco" />
+    <None Include="Connected Services\CHService\configuration91.svcinfo" />
+    <None Include="Connected Services\CHService\configuration.svcinfo" />
+    <None Include="Connected Services\CHService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\EHService\WcfServiceLibrary.disco" />
+    <None Include="Connected Services\EHService\configuration91.svcinfo" />
+    <None Include="Connected Services\EHService\configuration.svcinfo" />
+    <None Include="Connected Services\EHService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
