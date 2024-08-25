@@ -84,7 +84,8 @@ namespace CloudyHoa_Client_.MainForm
 
         private void historyEnteringButton_Click(object sender, EventArgs e)
         {
-
+            EHWindows.EHWindow eHWindow = new EHWindows.EHWindow();
+            eHWindow.Show();
         }
 
         private void historyCalculatingButton_Click(object sender, EventArgs e)
