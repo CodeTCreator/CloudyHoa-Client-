@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="8f37e2e9-dd04-4ef0-95dd-9eff4ccb25d9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:7744/WcfServiceLibrary.CHService.CHService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WcfServiceLibrary.xsd" MetadataType="Schema" ID="d1deb16c-4b36-4d09-8c6b-c86a86caf622" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.CHService.CHService.svc?xsd=xsd0" />
+    <MetadataFile FileName="WcfServiceLibrary1.xsd" MetadataType="Schema" ID="afd53f5d-e928-43ee-9a44-a6d3e21f8ae1" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.CHService.CHService.svc?xsd=xsd2" />
+    <MetadataFile FileName="WcfServiceLibrary.disco" MetadataType="Disco" ID="edee22d0-de0b-403d-b3ae-0853604d2df8" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.CHService.CHService.svc?disco" />
+    <MetadataFile FileName="CHService.wsdl" MetadataType="Wsdl" ID="81a8f027-9fc6-419d-ba43-57ffae4ebffa" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.CHService.CHService.svc?wsdl" />
+    <MetadataFile FileName="WcfServiceLibrary2.xsd" MetadataType="Schema" ID="de26afee-431d-4a76-b00b-b3c6f8f55895" SourceId="1" SourceUrl="http://localhost:7744/WcfServiceLibrary.CHService.CHService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
