@@ -150,6 +150,15 @@
     </Compile>
     <Compile Include="CalculationWindows\Controllers\CalculationDataService.cs" />
     <Compile Include="CalculationWindows\Controllers\CalculationWindowController.cs" />
+    <Compile Include="CHWindows\CHWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CHWindows\CHWindow.Designer.cs">
+      <DependentUpon>CHWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CHWindows\Controllers\CHDataService.cs" />
+    <Compile Include="CHWindows\Controllers\CHDataStructure.cs" />
+    <Compile Include="CHWindows\Controllers\CHWindowController.cs" />
     <Compile Include="Connected Services\BenefitService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -441,6 +450,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CalculationWindows\CalculationWindow.resx">
       <DependentUpon>CalculationWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CHWindows\CHWindow.resx">
+      <DependentUpon>CHWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EHWindows\EHWindow.resx">
       <DependentUpon>EHWindow.cs</DependentUpon>
