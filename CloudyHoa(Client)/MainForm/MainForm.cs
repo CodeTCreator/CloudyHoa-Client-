@@ -7,6 +7,7 @@ using CloudyHoa_Client_.PropertiesWindows;
 using CloudyHoa_Client_.TariffWindows;
 using System;
 using System.Windows.Forms;
+using CloudyHoa_Client_.CHWindows;
 
 namespace CloudyHoa_Client_.MainForm
 {
@@ -90,7 +91,8 @@ namespace CloudyHoa_Client_.MainForm
 
         private void historyCalculatingButton_Click(object sender, EventArgs e)
         {
-
+            CHWindow cHWindowq = new CHWindow();
+            cHWindowq.Show();
         }
     }
 }
